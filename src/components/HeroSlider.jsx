@@ -146,7 +146,7 @@ export default function HeroSlider() {
                 </p>
 
                 <h1 
-                  className="brand-foil mt-3 sm:mt-5 font-display text-[clamp(1.75rem,5.8vw,5.5rem)] 2xl:text-[6rem] font-medium leading-[0.95] sm:leading-[0.9] tracking-[0.04em] sm:tracking-[0.06em] lg:tracking-[0.08em] select-none uppercase whitespace-nowrap max-w-full"
+                  className="brand-foil mt-3 sm:mt-5 font-display text-[clamp(1.5rem,4.6vw,4.75rem)] 2xl:text-[5.25rem] font-medium leading-[1.05] sm:leading-[0.95] tracking-[0.03em] sm:tracking-[0.05em] lg:tracking-[0.07em] select-none uppercase text-center max-w-full break-words px-2"
                   style={{ filter: "drop-shadow(0 8px 35px rgba(29, 78, 216, 0.45)) drop-shadow(0 2px 10px rgba(56, 182, 255, 0.3))" }}
                 >
                   {slide.title || "SMART COMPUTER"}
@@ -155,7 +155,7 @@ export default function HeroSlider() {
                 {(slide.titleHighlight || slide.secondaryTitle) && (
                   <div className="mt-2 sm:mt-3 flex items-center justify-center gap-2 sm:gap-3 w-full max-w-2xl mx-auto">
                     <span className="h-px w-4 sm:w-8 md:w-12 bg-gradient-to-r from-transparent to-[#38B6FF]/60 shrink" />
-                    <span className="font-serif-i italic text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-sky-200/95 tracking-[0.15em] sm:tracking-[0.22em] uppercase font-light whitespace-nowrap">
+                    <span className="font-serif-i italic text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-sky-200/95 tracking-[0.12em] sm:tracking-[0.18em] uppercase font-light text-center">
                       {slide.titleHighlight || slide.secondaryTitle}
                     </span>
                     <span className="h-px w-4 sm:w-8 md:w-12 bg-gradient-to-l from-transparent to-[#38B6FF]/60 shrink" />
