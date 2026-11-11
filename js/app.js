@@ -8,7 +8,7 @@ const CONFIG = {
   phone: "+8801711652361",
   whatsappNumber: "8801711652361", // Standard international format without '+' for wa.me
   storeName: "Smart Computer & Stationery",
-  location: "স্কুল অ্যান্ড কলেজ ক্যান্টিন গেট সংলগ্ন",
+  location: "Beside School & College Canteen Gate",
   rates: {
     bw_copy: 2.0,
     bw_copy_bulk: 1.8, // 50+ copies
@@ -22,116 +22,116 @@ const CONFIG = {
   }
 };
 
-// Stationery and 99 Taka Corner Products Data
+// Stationery and Tk 99 Corner Products Data
 const PRODUCTS = [
   {
     id: 1,
-    title: "মাল্টি-ফাংশন OTG অ্যাডাপ্টার ও কেবল প্রোটেক্টর",
+    title: "Multi-Function OTG Adapter & Cable Protector",
     category: "gadget",
-    tag: "৯৯ টাকা স্পেশাল",
+    tag: "Tk 99 Special",
     price: 99,
     originalPrice: 150,
     icon: "fa-usb",
-    desc: "টাইপ-সি এবং মাইক্রো USB সাপোর্টেড। পেনড্রাইভ থেকে ফোনে ফাইল ট্রান্সফারের জন্য জরুরি।",
+    desc: "Type-C and Micro USB supported. Essential for fast file transfer from flash drive to smartphone.",
     badgeColor: "bg-red-500"
   },
   {
     id: 2,
-    title: "স্টিকি নোটস কম্বো + নিয়ন হাইলাইটার প্যাক",
+    title: "Sticky Notes Combo + Neon Highlighter Pack",
     category: "stationery",
-    tag: "৯৯ টাকা স্পেশাল",
+    tag: "Tk 99 Special",
     price: 99,
     originalPrice: 140,
     icon: "fa-highlighter",
-    desc: "বই দাগানো ও গুরুত্বপূর্ণ নোট মনে রাখার জন্য ৩ কালারের ফ্লুরোসেন্ট হাইলাইটার ও প্যাড।",
+    desc: "3-color fluorescent highlighters and memo pad set for textbook marking and note-taking.",
     badgeColor: "bg-amber-500"
   },
   {
     id: 3,
-    title: "ম্যাথমেটিক্যাল জ্যামিতি বক্স সম্পূর্ণ সেট",
+    title: "Complete Mathematical Geometry Box Set",
     category: "geometry",
-    tag: "শিক্ষার্থীদের পছন্দ",
+    tag: "Student Choice",
     price: 99,
     originalPrice: 130,
     icon: "fa-compass-drafting",
-    desc: "কম্পাস, ডিভাইডার, স্কেল, চাঁদা ও পেন্সিলসহ ক্লাসের জন্য কমপ্লিট ম্যাথ সেট।",
-    badgeColor: "bg-teal-600"
+    desc: "Complete math set with compass, divider, ruler, protractor, and pencil for exams and class.",
+    badgeColor: "bg-blue-600"
   },
   {
     id: 4,
-    title: "প্রিমিয়াম স্পাইরাল খাতা (২০০ পৃষ্ঠা রুলড)",
+    title: "Premium Spiral Notebook (200 Pages Ruled)",
     category: "notebook",
-    tag: "বেস্টসেলার",
+    tag: "Bestseller",
     price: 99,
     originalPrice: 130,
     icon: "fa-book-open",
-    desc: "স্মুথ হোয়াইট পেপার, কলেজ ও কোচিং ক্লাসের নোট তৈরির জন্য আদর্শ স্পাইরাল বাইন্ডিং।",
+    desc: "Smooth white paper with durable spiral binding, ideal for college and coaching lecture notes.",
     badgeColor: "bg-sky-500"
   },
   {
     id: 5,
-    title: "আর্ট পেপার ও ওয়াটার কালার ব্রাশ কিট",
+    title: "Art Paper & Watercolor Brush Kit",
     category: "art",
-    tag: "৯৯ টাকা স্পেশাল",
+    tag: "Tk 99 Special",
     price: 99,
     originalPrice: 150,
     icon: "fa-palette",
-    desc: "স্কুলের ড্রয়িং ক্লাস ও প্রজেক্ট প্রদর্শনের জন্য ১২ কালার কেক ও ৩ সাইজের পেইন্ট ব্রাশ।",
+    desc: "12-color paint cakes and 3-size paintbrush set for school drawing classes and art projects.",
     badgeColor: "bg-purple-600"
   },
   {
     id: 6,
-    title: "সাইন্টিফিক ক্যালকুলেটর ব্যাকআপ ব্যাটারি + স্কেল",
+    title: "Scientific Calculator Backup Battery + Steel Ruler",
     category: "gadget",
-    tag: "এসএসসি/এইচএসসি স্পেশাল",
+    tag: "Exam Special",
     price: 99,
     originalPrice: 140,
     icon: "fa-calculator",
-    desc: "পরীক্ষার হলে যাতে ক্যালকুলেটর বন্ধ না হয়! অরিজিনাল লং-লাইফ সেল ও ৩০ সেমি স্টিল স্কেল।",
+    desc: "Never let your calculator die in an exam hall! Original long-life cell with 30cm steel ruler.",
     badgeColor: "bg-rose-500"
   },
   {
     id: 7,
-    title: "স্মুথ জেল পেন ডজন প্যাক (১২টি কলম কম্বো)",
+    title: "Smooth Gel Pen Dozen Pack (12-Pen Combo)",
     category: "stationery",
-    tag: "৯৯ টাকা স্পেশাল",
+    tag: "Tk 99 Special",
     price: 99,
     originalPrice: 140,
     icon: "fa-pen-nib",
-    desc: "০.৫ মিমি স্মুথ ফ্লো জেল পেন। দ্রুত ও সুন্দর হাতের লেখার জন্য সেরা চয়েস।",
+    desc: "0.5mm smooth-flow gel pens. The ultimate choice for fast, clean, and fatigue-free handwriting.",
     badgeColor: "bg-indigo-600"
   },
   {
     id: 8,
-    title: "মেটাল কি-রিং ও পকেট এলইডি টর্চ লাইট",
+    title: "Metal Keyring & Pocket LED Torch Light",
     category: "gadget",
-    tag: "৯৯ টাকা স্পেশাল",
+    tag: "Tk 99 Special",
     price: 99,
     originalPrice: 150,
     icon: "fa-lightbulb",
-    desc: "রিচার্জেবল মিনি পকেট লাইট ও স্টাইলিশ স্টুডেন্ট কি-রিং। ব্যাগে রাখার জন্য দারুণ গ্যাজেট।",
-    badgeColor: "bg-emerald-600"
+    desc: "Rechargeable mini pocket light and stylish student keyring. A handy gadget for your backpack.",
+    badgeColor: "bg-blue-600"
   },
   {
     id: 9,
-    title: "ক্যাসিও অরিজিনাল সাইন্টিফিক ক্যালকুলেটর (FX-991CW)",
+    title: "Casio Original Scientific Calculator (FX-991CW)",
     category: "gadget",
-    tag: "অরিজিনাল ৩ বছর ওয়ারেন্টি",
+    tag: "Original 3-Year Warranty",
     price: 1850,
     originalPrice: 2100,
     icon: "fa-microchip",
-    desc: "কলেজ ও ভার্সিটি এডমিশন পরীক্ষার্থীদের জন্য দ্রুততম ক্যালকুলেশন ফিচার সম্পন্ন।",
+    desc: "Advanced high-speed calculation features recommended for college, engineering, and university admissions.",
     badgeColor: "bg-blue-600"
   },
   {
     id: 10,
-    title: "A4 সাইজ প্রিমিয়াম পেপার রিম (৮০ GSM - ৫০০ শিট)",
+    title: "A4 Size Premium Paper Ream (80 GSM - 500 Sheets)",
     category: "stationery",
-    tag: "অফিস ও স্টুডেন্ট",
+    tag: "Office & Student",
     price: 360,
     originalPrice: 400,
     icon: "fa-copy",
-    desc: "প্রজেক্ট পেপার, ল্যাব রিপোর্ট এবং ফটোকপির জন্য সেরা মানের ব্রাইট হোয়াইট কাগজ।",
+    desc: "Bright white premium paper ream for lab reports, project documentation, thesis, and photocopying.",
     badgeColor: "bg-slate-700"
   }
 ];
@@ -141,74 +141,74 @@ const NOTICES = [
   {
     id: "job-1",
     type: "govt",
-    title: "বাংলাদেশ রেলওয়ে সহকারী স্টেশন মাস্টার ও বিভিন্ন পদে নিয়োগ",
-    organization: "বাংলাদেশ রেলওয়ে",
-    posts: "৫৬০ জন",
-    deadline: "৩০ নভেম্বর ২০২৬",
+    title: "Bangladesh Railway Assistant Station Master & Various Posts Recruitment",
+    organization: "Bangladesh Railway",
+    posts: "560 Posts",
+    deadline: "30 Nov 2026",
     daysLeft: 6,
-    fee: "৳২২৩",
+    fee: "Tk 223",
     urgent: true,
-    desc: "শিক্ষাগত যোগ্যতা: যেকোনো স্বীকৃত বিশ্ববিদ্যালয় থেকে স্নাতক বা সমমানের ডিগ্রি।"
+    desc: "Eligibility: Graduate or equivalent degree from any recognized university."
   },
   {
     id: "adm-1",
     type: "admission",
-    title: "একাদশ শ্রেণিতে অনলাইন ভর্তি ও কলেজ চয়েস আবেদন শুরু",
-    organization: "শিক্ষা মন্ত্রণালয় (ঢাকা বোর্ড)",
-    posts: "সারাদেশ",
-    deadline: "১৫ ডিসেম্বর ২০২৬",
+    title: "Online Class XI Admission & College Choice Selection Open",
+    organization: "Ministry of Education (Dhaka Board)",
+    posts: "Nationwide",
+    deadline: "15 Dec 2026",
     daysLeft: 12,
-    fee: "৳১৫০",
+    fee: "Tk 150",
     urgent: false,
-    desc: "এসএসসি উত্তীর্ণ শিক্ষার্থীদের জন্য সর্বনিম্ন ৫টি ও সর্বোচ্চ ১০টি কলেজ চয়েস সুবিধা।"
+    desc: "Online choice selection for minimum 5 and maximum 10 colleges for SSC graduates."
   },
   {
     id: "job-2",
     type: "govt",
-    title: "প্রাথমিক সহকারী শিক্ষক নিয়োগ সার্কুলার (সকল বিভাগ)",
-    organization: "প্রাথমিক শিক্ষা অধিদপ্তর",
-    posts: "১৩,৭৫০ জন",
-    deadline: "২৫ ডিসেম্বর ২০২৬",
+    title: "Primary Assistant Teacher Recruitment Circular (All Divisions)",
+    organization: "Directorate of Primary Education",
+    posts: "13,750 Posts",
+    deadline: "25 Dec 2026",
     daysLeft: 18,
-    fee: "৳১১২",
+    fee: "Tk 112",
     urgent: false,
-    desc: "দ্বিতীয় শ্রেণি বা সমমানের সিজিপিএসহ স্নাতক ডিগ্রিধারী প্রার্থীরা আবেদন করতে পারবেন।"
+    desc: "Candidates with a bachelor's degree with 2nd division or equivalent CGPA are eligible."
   },
   {
     id: "adm-2",
     type: "admission",
-    title: "ঢাকা বিশ্ববিদ্যালয় (DU) স্নাতক প্রথম বর্ষ ভর্তি পরীক্ষা",
-    organization: "ঢাকা বিশ্ববিদ্যালয়",
-    posts: "ক, খ, গ, চারুকলা ইউনিট",
-    deadline: "০৫ জানুয়ারি ২০২৭",
+    title: "Dhaka University (DU) Undergraduate 1st Year Admission Test",
+    organization: "University of Dhaka",
+    posts: "A, B, C, Fine Arts Units",
+    deadline: "05 Jan 2027",
     daysLeft: 24,
-    fee: "৳১,০৫০",
+    fee: "Tk 1,050",
     urgent: false,
-    desc: "কলা, বিজ্ঞান ও বাণিজ্য ইউনিটের অনলাইন আবেদন এবং প্রবেশপত্র ডাউনলোড সহায়তা।"
+    desc: "Online application submission and admit card download assistance for Arts, Science, and Business units."
   },
   {
     id: "job-3",
     type: "ntrca",
-    title: "১৯তম বেসরকারি শিক্ষক নিবন্ধন পরীক্ষা (NTRCA)",
-    organization: "এনটিআরসিএ ঢাকা",
-    posts: "স্কুল ও কলেজ পর্যায়",
-    deadline: "১০ ডিসেম্বর ২০২৬",
+    title: "19th Non-Government Teachers' Registration Examination (NTRCA)",
+    organization: "NTRCA Dhaka",
+    posts: "School & College Levels",
+    deadline: "10 Dec 2026",
     daysLeft: 9,
-    fee: "৳৩৫০",
+    fee: "Tk 350",
     urgent: true,
-    desc: "প্রিলিমিনারি টেস্ট ও প্রফেশনাল অনলাইন আবেদন নির্ভুলভাবে পূরণ করে দেওয়া হয়।"
+    desc: "100% accurate online application processing and subject registration."
   },
   {
     id: "job-4",
     type: "govt",
-    title: "বাংলাদেশ পুলিশ কনস্টেবল (পুরুষ ও নারী) নতুন নিয়োগ",
-    organization: "পুলিশ হেডকোয়ার্টার্স",
-    posts: "৪,০০০ জন",
-    deadline: "২০ ডিসেম্বর ২০২৬",
+    title: "Bangladesh Police Trainee Recruit Constable (TRC) Recruitment",
+    organization: "Police Headquarters",
+    posts: "4,000 Posts",
+    deadline: "20 Dec 2026",
     daysLeft: 15,
-    fee: "৳৪০",
+    fee: "Tk 40",
     urgent: false,
-    desc: "এসএসসি পাস প্রার্থীদের জন্য ফিজিক্যাল টেস্ট রেজিস্ট্রেশন ও অনলাইন আবেদন।"
+    desc: "Physical endurance test registration and online form submission for SSC pass candidates."
   }
 ];
 
@@ -284,8 +284,8 @@ function initNoticeBoard() {
       container.innerHTML = `
         <div class="col-span-full py-12 text-center text-gray-500 bg-white rounded-2xl border border-dashed border-gray-300">
           <i class="fa-solid fa-file-circle-xmark text-4xl text-gray-400 mb-3 block"></i>
-          <p class="text-lg font-medium">কোনো বিজ্ঞপ্তি পাওয়া যায়নি</p>
-          <p class="text-sm text-gray-400">অনুগ্রহ করে অন্য কি-ওয়ার্ড বা ক্যাটাগরি বেছে নিন।</p>
+          <p class="text-lg font-medium">No Notices Found</p>
+          <p class="text-sm text-gray-400">Please choose a different keyword or category.</p>
         </div>
       `;
       return;
@@ -293,14 +293,14 @@ function initNoticeBoard() {
 
     container.innerHTML = filtered.map(notice => {
       const isUrgent = notice.urgent;
-      const typeLabel = notice.type === "govt" ? "সরকারি চাকরি" : (notice.type === "admission" ? "ভর্তি বিজ্ঞপ্তি" : "শিক্ষক নিবন্ধন");
-      const badgeStyle = notice.type === "govt" ? "bg-emerald-100 text-emerald-800 border-emerald-300" : (notice.type === "admission" ? "bg-sky-100 text-sky-800 border-sky-300" : "bg-purple-100 text-purple-800 border-purple-300");
+      const typeLabel = notice.type === "govt" ? "Govt Job" : (notice.type === "admission" ? "Admission" : "Teacher Registration");
+      const badgeStyle = notice.type === "govt" ? "bg-blue-100 text-blue-800 border-blue-300" : (notice.type === "admission" ? "bg-sky-100 text-sky-800 border-sky-300" : "bg-purple-100 text-purple-800 border-purple-300");
 
       return `
-        <div class="bg-white rounded-2xl p-6 border border-gray-200/80 hover:border-teal-500 transition-all duration-300 shadow-sm hover:shadow-lg flex flex-col justify-between relative group">
+        <div class="bg-white rounded-2xl p-6 border border-gray-200/80 hover:border-blue-500 transition-all duration-300 shadow-sm hover:shadow-lg flex flex-col justify-between relative group">
           ${isUrgent ? `
             <div class="absolute -top-3 right-5 bg-red-600 text-white text-xs px-3 py-1 rounded-full font-bold shadow-md animate-pulse flex items-center gap-1.5">
-              <i class="fa-solid fa-bolt"></i> ডেডলাইন ঘনিয়ে এসেছে!
+              <i class="fa-solid fa-bolt"></i> Deadline Approaching!
             </div>
           ` : ''}
 
@@ -314,7 +314,7 @@ function initNoticeBoard() {
               </span>
             </div>
 
-            <h4 class="text-base sm:text-lg font-bold text-gray-900 group-hover:text-teal-700 transition leading-snug mb-2">
+            <h4 class="text-base sm:text-lg font-bold text-gray-900 group-hover:text-blue-700 transition leading-snug mb-2">
               ${notice.title}
             </h4>
             <p class="text-xs sm:text-sm text-gray-600 mb-4 line-clamp-2">
@@ -323,18 +323,18 @@ function initNoticeBoard() {
 
             <div class="grid grid-cols-2 gap-2 text-xs bg-slate-50 p-3 rounded-xl border border-gray-100 mb-4">
               <div>
-                <span class="text-gray-500 block">পদসংখ্যা/আসন:</span>
+                <span class="text-gray-500 block">Positions / Seats:</span>
                 <span class="font-bold text-gray-800">${notice.posts}</span>
               </div>
               <div>
-                <span class="text-gray-500 block">সরকারি ফি:</span>
-                <span class="font-bold text-teal-700">${notice.fee}</span>
+                <span class="text-gray-500 block">Govt Fee:</span>
+                <span class="font-bold text-blue-700">${notice.fee}</span>
               </div>
               <div class="col-span-2 pt-1 border-t border-gray-200/60 flex items-center justify-between">
-                <span class="text-gray-500">আবেদনের শেষ তারিখ:</span>
+                <span class="text-gray-500">Application Deadline:</span>
                 <span class="font-bold text-red-600 flex items-center gap-1">
                   <i class="fa-regular fa-calendar-xmark"></i> ${notice.deadline}
-                  <span class="bg-red-50 text-red-700 text-[11px] px-1.5 py-0.5 rounded font-semibold ml-1">(${notice.daysLeft} দিন বাকি)</span>
+                  <span class="bg-red-50 text-red-700 text-[11px] px-1.5 py-0.5 rounded font-semibold ml-1">(${notice.daysLeft} days left)</span>
                 </span>
               </div>
             </div>
@@ -342,9 +342,9 @@ function initNoticeBoard() {
 
           <div class="pt-2">
             <button onclick="applyJobNotice('${notice.title.replace(/'/g, "\\'")}', '${notice.organization}')"
-              class="w-full py-2.5 px-4 rounded-xl font-medium text-sm text-white bg-gradient-to-r from-[#0A3622] to-[#138A72] hover:from-[#138A72] hover:to-[#0A3622] transition-all flex items-center justify-center gap-2 shadow hover:shadow-teal-500/20">
-              <i class="fa-brands fa-whatsapp text-lg text-emerald-300"></i>
-              <span>আমাদের মাধ্যমে আবেদন করুন</span>
+              class="w-full py-2.5 px-4 rounded-xl font-medium text-sm text-white bg-gradient-to-r from-[#0B192C] to-[#1D4ED8] hover:from-[#1D4ED8] hover:to-[#0B192C] transition-all flex items-center justify-center gap-2 shadow hover:shadow-blue-500/20">
+              <i class="fa-brands fa-whatsapp text-lg text-sky-300"></i>
+              <span>Apply via Our Center</span>
             </button>
           </div>
         </div>
@@ -359,10 +359,10 @@ function initNoticeBoard() {
   filterBtns.forEach(btn => {
     btn.addEventListener("click", () => {
       filterBtns.forEach(b => {
-        b.classList.remove("bg-teal-700", "text-white");
+        b.classList.remove("bg-blue-700", "text-white");
         b.classList.add("bg-white", "text-gray-700", "border-gray-300");
       });
-      btn.classList.add("bg-teal-700", "text-white");
+      btn.classList.add("bg-blue-700", "text-white");
       btn.classList.remove("bg-white", "text-gray-700", "border-gray-300");
 
       const filterType = btn.getAttribute("data-filter");
@@ -373,14 +373,14 @@ function initNoticeBoard() {
   // Search input handler
   if (searchInput) {
     searchInput.addEventListener("input", (e) => {
-      const activeBtn = document.querySelector(".notice-filter-btn.bg-teal-700");
+      const activeBtn = document.querySelector(".notice-filter-btn.bg-blue-700");
       const currentFilter = activeBtn ? activeBtn.getAttribute("data-filter") : "all";
       renderNotices(currentFilter, e.target.value);
     });
   }
 }
 
-// 3. 99 Taka Corner & Stationery Products
+// 3. Tk 99 Corner & Stationery Products
 function initStationeryProducts() {
   const container = document.getElementById("stationery-grid");
   const filterBtns = document.querySelectorAll(".product-filter-btn");
@@ -397,18 +397,18 @@ function initStationeryProducts() {
 
     container.innerHTML = filtered.map(prod => {
       return `
-        <div class="bg-white rounded-2xl p-5 border border-gray-200/80 hover:border-teal-500 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col justify-between group">
+        <div class="bg-white rounded-2xl p-5 border border-gray-200/80 hover:border-blue-500 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col justify-between group">
           <div>
-            <div class="relative bg-gradient-to-br from-slate-50 to-teal-50/40 rounded-xl p-8 mb-4 flex items-center justify-center text-teal-800 overflow-hidden">
+            <div class="relative bg-gradient-to-br from-slate-50 to-blue-50/40 rounded-xl p-8 mb-4 flex items-center justify-center text-blue-900 overflow-hidden">
               <span class="absolute top-2.5 left-2.5 text-[11px] font-bold text-white px-2.5 py-0.8 rounded-full ${prod.badgeColor} shadow">
                 ${prod.tag}
               </span>
-              <div class="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300 text-teal-700">
-                <i class="fa-solid ${prod.icon} text-3xl text-teal-700"></i>
+              <div class="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300 text-blue-700">
+                <i class="fa-solid ${prod.icon} text-3xl text-blue-700"></i>
               </div>
             </div>
 
-            <h4 class="font-bold text-base text-gray-900 group-hover:text-teal-700 transition leading-snug mb-2">
+            <h4 class="font-bold text-base text-gray-900 group-hover:text-blue-700 transition leading-snug mb-2">
               ${prod.title}
             </h4>
             <p class="text-xs text-gray-500 mb-4 leading-relaxed">
@@ -418,19 +418,19 @@ function initStationeryProducts() {
 
           <div>
             <div class="flex items-baseline gap-2 mb-3">
-              <span class="text-2xl font-extrabold text-teal-800">৳${prod.price}</span>
+              <span class="text-2xl font-extrabold text-blue-900">Tk ${prod.price}</span>
               ${prod.originalPrice ? `
-                <span class="text-xs text-gray-400 line-through">৳${prod.originalPrice}</span>
-                <span class="text-xs text-emerald-600 font-semibold bg-emerald-50 px-1.5 py-0.5 rounded">
-                  ৳${prod.originalPrice - prod.price} সাশ্রয়
+                <span class="text-xs text-gray-400 line-through">Tk ${prod.originalPrice}</span>
+                <span class="text-xs text-blue-600 font-semibold bg-blue-50 px-1.5 py-0.5 rounded">
+                  Tk ${prod.originalPrice - prod.price} OFF
                 </span>
               ` : ''}
             </div>
 
             <button onclick="orderStationery('${prod.title.replace(/'/g, "\\'")}', ${prod.price})"
-              class="w-full py-2.5 px-3 bg-teal-50 hover:bg-teal-700 text-teal-800 hover:text-white rounded-xl text-sm font-semibold transition-all duration-200 flex items-center justify-center gap-2 border border-teal-200 hover:border-teal-700">
+              class="w-full py-2.5 px-3 bg-blue-50 hover:bg-blue-700 text-blue-800 hover:text-white rounded-xl text-sm font-semibold transition-all duration-200 flex items-center justify-center gap-2 border border-blue-200 hover:border-blue-700">
               <i class="fa-brands fa-whatsapp text-base"></i>
-              <span>হোয়াটসঅ্যাপে বুক করুন</span>
+              <span>Book on WhatsApp</span>
             </button>
           </div>
         </div>
@@ -444,10 +444,10 @@ function initStationeryProducts() {
   filterBtns.forEach(btn => {
     btn.addEventListener("click", () => {
       filterBtns.forEach(b => {
-        b.classList.remove("bg-teal-700", "text-white");
+        b.classList.remove("bg-blue-700", "text-white");
         b.classList.add("bg-white", "text-gray-700", "border-gray-200");
       });
-      btn.classList.add("bg-teal-700", "text-white");
+      btn.classList.add("bg-blue-700", "text-white");
       btn.classList.remove("bg-white", "text-gray-700", "border-gray-200");
 
       const cat = btn.getAttribute("data-category");
@@ -484,24 +484,24 @@ function initPrintCalculator() {
     const bindingType = bindingSelect.value;
 
     let ratePerPage = 2.0;
-    let serviceLabel = "লেজার ফটোকপি";
+    let serviceLabel = "Laser Photocopy";
 
     switch (service) {
       case "bw_copy":
         ratePerPage = (pages * copies >= 50) ? CONFIG.rates.bw_copy_bulk : CONFIG.rates.bw_copy;
-        serviceLabel = "সাদাকালো ফটোকপি";
+        serviceLabel = "B&W Photocopy";
         break;
       case "bw_print":
         ratePerPage = CONFIG.rates.bw_print;
-        serviceLabel = "সাদাকালো লেজার প্রিন্ট";
+        serviceLabel = "B&W Laser Print";
         break;
       case "color_print":
         ratePerPage = CONFIG.rates.color_print;
-        serviceLabel = "রঙিন কালার প্রিন্ট";
+        serviceLabel = "Color Laser Print";
         break;
       case "glossy_photo":
         ratePerPage = CONFIG.rates.glossy_photo;
-        serviceLabel = "ল্যাব কোয়ালিটি গ্লসি ফটো";
+        serviceLabel = "Lab Glossy Photo";
         break;
     }
 
@@ -510,19 +510,19 @@ function initPrintCalculator() {
     
     // Binding cost per set
     let bindingCost = 0;
-    let bindingLabel = "কোনো বাইন্ডিং ছাড়া";
+    let bindingLabel = "No Binding";
     switch (bindingType) {
       case "staple":
         bindingCost = CONFIG.rates.staple;
-        bindingLabel = "স্ট্যাপলার পিন";
+        bindingLabel = "Stapler Pin";
         break;
       case "spiral":
         bindingCost = CONFIG.rates.spiral;
-        bindingLabel = "প্লাস্টিক স্পাইরাল বাইন্ডিং";
+        bindingLabel = "Plastic Spiral Binding";
         break;
       case "lamination":
         bindingCost = CONFIG.rates.lamination;
-        bindingLabel = "ওয়াটারপ্রুফ লেমিনেশন";
+        bindingLabel = "Waterproof Lamination";
         break;
     }
 
@@ -532,26 +532,26 @@ function initPrintCalculator() {
     const grandTotal = Math.round(totalPerSet * copies);
 
     // Update UI
-    totalCostDisplay.textContent = `৳ ${grandTotal}`;
+    totalCostDisplay.textContent = `Tk ${grandTotal}`;
     if (perPageDisplay) {
-      perPageDisplay.textContent = `৳${ratePerPage.toFixed(1)}/পৃষ্ঠা`;
+      perPageDisplay.textContent = `Tk ${ratePerPage.toFixed(1)}/page`;
     }
 
     if (summaryDisplay) {
-      summaryDisplay.textContent = `${serviceLabel} (${pages} পৃষ্ঠা x ${copies} সেট) + ${bindingLabel}`;
+      summaryDisplay.textContent = `${serviceLabel} (${pages} pages x ${copies} sets) + ${bindingLabel}`;
     }
 
     // Update WhatsApp button URL
     if (whatsappCalcBtn) {
       const message = encodeURIComponent(
-        `হ্যালো Smart Computer & Stationery! আমি ওয়েবসাইট থেকে প্রিন্টিং হিসেব করেছি:\n\n` +
-        `• সেবা: ${serviceLabel}\n` +
-        `• পৃষ্ঠার সংখ্যা: ${pages} টি\n` +
-        `• কপির সংখ্যা: ${copies} সেট\n` +
-        `• মুদ্রণ ধরন: ${isDoubleSided ? "ডাবল সাইড (উভয় পিঠ)" : "সিঙ্গেল সাইড (এক পিঠ)"}\n` +
-        `• বাইন্ডিং: ${bindingLabel}\n` +
-        `• আনুমানিক মোট খরচ: ৳${grandTotal}\n\n` +
-        `আমি প্রিন্টের ফাইল পাঠাচ্ছি, দয়া করে রেডি করে জানাবেন!`
+        `Hello Smart Computer & Stationery! I calculated my printing cost on your website:\n\n` +
+        `• Service: ${serviceLabel}\n` +
+        `• Pages: ${pages}\n` +
+        `• Copies: ${copies} sets\n` +
+        `• Print Type: ${isDoubleSided ? "Double-Sided" : "Single-Sided"}\n` +
+        `• Binding: ${bindingLabel}\n` +
+        `• Estimated Total: Tk ${grandTotal}\n\n` +
+        `I am sending my files, please let me know when they are ready!`
       );
       whatsappCalcBtn.href = `https://wa.me/${CONFIG.whatsappNumber}?text=${message}`;
     }
@@ -589,21 +589,21 @@ function initQuickWhatsAppOrder() {
 
     const service = document.getElementById("qo-service").value;
     const name = document.getElementById("qo-name").value.trim();
-    const copies = document.getElementById("qo-copies").value || "১";
+    const copies = document.getElementById("qo-copies").value || "1";
     const notes = document.getElementById("qo-notes").value.trim();
 
-    let text = `হ্যালো Smart Computer & Stationery! আমি ফাইল প্রিন্ট/অনলাইন কাজের জন্য মেসেজ দিচ্ছি:\n\n`;
-    if (name) text += `• নাম/শিক্ষার্থী: ${name}\n`;
-    text += `• প্রয়োজনীয় সেবা: ${service}\n`;
-    text += `• কপির সংখ্যা: ${copies}\n`;
-    if (notes) text += `• বিশেষ নির্দেশনা: ${notes}\n`;
-    text += `\nআমি সাথে ফাইল অ্যাটাচ করছি। দয়া করে প্রস্তুত করে আমাকে জানাবেন!`;
+    let text = `Hello Smart Computer & Stationery! I would like to order printing / online services:\n\n`;
+    if (name) text += `• Name/Student: ${name}\n`;
+    text += `• Service Needed: ${service}\n`;
+    text += `• Copies: ${copies}\n`;
+    if (notes) text += `• Special Instructions: ${notes}\n`;
+    text += `\nI have attached my file(s). Please confirm once ready!`;
 
     const encoded = encodeURIComponent(text);
     const url = `https://wa.me/${CONFIG.whatsappNumber}?text=${encoded}`;
     window.open(url, "_blank");
 
-    showToast("হোয়াটসঅ্যাপ খোলা হচ্ছে! ফাইল অ্যাটাচ করে পাঠিয়ে দিন।");
+    showToast("Opening WhatsApp! Please attach your file and send.");
   });
 }
 
@@ -648,18 +648,18 @@ function initCourseModal() {
       const shift = document.getElementById("modal-student-shift").value;
 
       const message = encodeURIComponent(
-        `হ্যালো! আমি Smart Computer Training Academy-তে ভর্তি হতে আগ্রহী:\n\n` +
-        `• কোর্সের নাম: ${course}\n` +
-        `• শিক্ষার্থীর নাম: ${studentName}\n` +
-        `• মোবাইল নম্বর: ${phone}\n` +
-        `• স্কুল/কলেজ/প্রতিষ্ঠান: ${institute}\n` +
-        `• পছন্দের শিফট: ${shift}\n\n` +
-        `অনুগ্রহ করে ব্যাচের সময়সূচি ও ভর্তির প্রক্রিয়া নিশ্চিত করুন।`
+        `Hello! I would like to enroll in Smart Computer Training Academy:\n\n` +
+        `• Course Name: ${course}\n` +
+        `• Student Name: ${studentName}\n` +
+        `• Mobile Phone: ${phone}\n` +
+        `• School/College/Institution: ${institute}\n` +
+        `• Preferred Shift: ${shift}\n\n` +
+        `Please confirm batch schedule and enrollment procedure.`
       );
 
       closeModal();
       window.open(`https://wa.me/${CONFIG.whatsappNumber}?text=${message}`, "_blank");
-      showToast("আপনার আবেদন প্রস্তুত! হোয়াটসঅ্যাপে পাঠিয়ে দিন।");
+      showToast("Your application is ready! Please send it on WhatsApp.");
     });
   }
 }
@@ -667,15 +667,15 @@ function initCourseModal() {
 // 7. Interactive Helper Actions (Job apply, Stationery order)
 window.applyJobNotice = function(jobTitle, organization) {
   const message = encodeURIComponent(
-    `হ্যালো Smart Computer! আমি "${jobTitle}" (${organization})-এর জন্য অনলাইন আবেদন করতে চাই।\n` +
-    `আবেদন করতে কী কী ডকুমেন্ট (ছবি, সার্টিফিকেট, NID) নিয়ে আসব বা হোয়াটসঅ্যাপে পাঠাবো জানাবেন প্লিজ!`
+    `Hello Smart Computer! I would like to apply online for "${jobTitle}" (${organization}).\n` +
+    `Please let me know what documents (photo, certificates, NID) I should bring or send on WhatsApp!`
   );
   window.open(`https://wa.me/${CONFIG.whatsappNumber}?text=${message}`, "_blank");
 };
 
 window.orderStationery = function(productTitle, price) {
   const message = encodeURIComponent(
-    `হ্যালো Smart Computer & Stationery! আমি "${productTitle}" (৳${price}) আইটেমটি বুক/অর্ডার করতে চাই। ক্যান্টিন গেটের দোকান থেকে এসে সংগ্রহ করবো। স্টক আছে কি?`
+    `Hello Smart Computer & Stationery! I would like to book/order "${productTitle}" (Tk ${price}). I will collect it from the store beside the Canteen Gate. Is it in stock?`
   );
   window.open(`https://wa.me/${CONFIG.whatsappNumber}?text=${message}`, "_blank");
 };
@@ -717,12 +717,12 @@ function showToast(text) {
   if (!toast) {
     toast = document.createElement("div");
     toast.id = "site-toast";
-    toast.className = "fixed bottom-6 right-6 z-50 bg-[#0A3622] text-white px-5 py-3.5 rounded-2xl shadow-2xl border border-teal-500/40 flex items-center gap-3 transition-all duration-300 transform translate-y-12 opacity-0 pointer-events-none";
+    toast.className = "fixed bottom-6 right-6 z-50 bg-[#0B192C] text-white px-5 py-3.5 rounded-2xl shadow-2xl border border-blue-500/40 flex items-center gap-3 transition-all duration-300 transform translate-y-12 opacity-0 pointer-events-none";
     document.body.appendChild(toast);
   }
 
   toast.innerHTML = `
-    <div class="w-8 h-8 rounded-full bg-teal-500/20 text-[#38B6FF] flex items-center justify-center flex-shrink-0">
+    <div class="w-8 h-8 rounded-full bg-blue-500/20 text-[#38B6FF] flex items-center justify-center flex-shrink-0">
       <i class="fa-solid fa-circle-check text-lg"></i>
     </div>
     <span class="text-sm font-medium">${text}</span>
@@ -766,4 +766,3 @@ function initScrollEffects() {
     });
   }
 }
-

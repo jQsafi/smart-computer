@@ -8,20 +8,27 @@ export default {
     extend: {
       colors: {
         brand: {
-          forest: '#0A3622',
-          forestDark: '#05180f',
-          teal: '#138A72',
-          tealLight: '#19A98C',
+          // Modern Tech Navy & Cobalt Palette (Zero Green)
+          navy: '#0B192C',
+          navyDark: '#060D17',
+          blue: '#1D4ED8',
+          blueLight: '#2563EB',
           sky: '#38B6FF',
           dark: '#0f172a',
           muted: '#64748b',
           border: '#e2e8f0',
           bgLight: '#FAFAF9',
+          // Brand aliases mapped to new Navy & Blue palette (Zero Green)
+          forest: '#0B192C',
+          forestDark: '#060D17',
+          teal: '#1D4ED8',
+          tealLight: '#2563EB',
         }
       },
       fontFamily: {
-        sans: ['"Plus Jakarta Sans"', '"Hind Siliguri"', 'system-ui', 'sans-serif'],
-        bn: ['"Hind Siliguri"', 'sans-serif'],
+        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        cinzel: ['"Cinzel"', '"Cormorant Garamond"', 'serif'],
       }
     },
   },

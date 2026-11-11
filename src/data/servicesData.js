@@ -2,76 +2,76 @@ export const servicesData = [
   {
     id: "online-services",
     code: "01",
-    title: "অনলাইন ও নাগরিক সেবা (Online Citizen Services)",
-    description: "বিসিএস, প্রাথমিক সহকারী শিক্ষক, ডিফেন্স ও সরকারি-বেসরকারি চাকরির নির্ভুল আবেদন। স্কুল, কলেজ ও বিশ্ববিদ্যালয় ভর্তি ফরম পূরণ, NID ও জন্মনিবন্ধন সংশোধন।",
+    title: "Online Citizen & Government Services",
+    description: "Accurate online application services for BCS, Primary Assistant Teacher recruitment, Defence, and public/private career openings. College & university admission processing, NID and birth registration corrections.",
     category: "CITIZEN_SERVICES",
     items: [
-      "বিসিএস ও সকল সরকারি/স্বায়ত্তশাসিত চাকরির আবেদন",
-      "একাদশ শ্রেণি (XI Class) ও বিশ্ববিদ্যালয় ভর্তি আবেদন",
-      "NID ও জন্ম নিবন্ধন সংশোধন এবং অনলাইন কপি ডাউনলোড",
-      "ই-টিন (e-TIN) সার্টিফিকেট ও নাগরিক প্রত্যয়ন"
+      "BCS and all government & autonomous job application submissions",
+      "Class XI college admission and university entrance form processing",
+      "National ID (NID) & birth registration correction and document retrieval",
+      "e-TIN certificate generation and citizen verification documents"
     ],
-    whatsappMsg: "হ্যালো শাফায়েত ভাই! আমি অনলাইন আবেদন বা নাগরিক সেবা নিতে চাই।",
-    badge: "100% নির্ভুল সেবা"
+    whatsappMsg: "Hello Shafayat! I would like to get assistance with online applications or citizen services.",
+    badge: "100% Accurate Submission"
   },
   {
     id: "photo-lab",
     code: "02",
-    title: "ডিজিটাল ফটো ল্যাব ও সিভি মেকিং (Photo Lab & Resume)",
-    description: "২ মিনিটে ইনস্ট্যান্ট পাসপোর্ট সাইজ ছবি প্রিন্ট। ফর্মাল ড্রেস ও ব্যাকগ্রাউন্ড রিটাচ। চাকরি ও স্কলারশিপের জন্য স্ট্যান্ডার্ড প্রফেশনাল ATS-friendly CV তৈরি।",
+    title: "Digital Photo Studio & Resume Crafting",
+    description: "Instant 2-minute passport & stamp size photo prints. Digital formal attire adjustment (suit/blazer) and background retouching. Professional ATS-compliant resume creation.",
     category: "CREATIVE_STUDIO",
     items: [
-      "২ মিনিটে পাসপোর্ট ও স্ট্যাম্প সাইজ ছবি প্রিন্ট",
-      "ডিজিটাল কোট-টাই/ব্লেজার ড্রেস চেঞ্জ ও স্কিন রিটাচ",
-      "বিডিজবস ও ইউরোপাস ফরম্যাটে স্ট্যান্ডার্ড সিভি তৈরি",
-      "জরুরি ছবি এনলার্জমেন্ট ও ল্যাব গ্লসি ফিনিশ"
+      "Instant 2-minute passport and stamp-size photo printing",
+      "Digital formal attire (suit/blazer) adjustment & skin retouching",
+      "Standard ATS-friendly resume and CV formatting (Bdjobs & Europass)",
+      "High-resolution photo enlargement and lab glossy finish"
     ],
-    whatsappMsg: "হ্যালো শাফায়েত ভাই! আমি ছবি তোলা বা সিভি তৈরির সেবা নিতে চাই।",
-    badge: "২ মিনিটে ডেলিভারি"
+    whatsappMsg: "Hello Shafayat! I would like to inquire about photo printing or resume crafting services.",
+    badge: "2-Minute Delivery"
   },
   {
     id: "printing",
     code: "03",
-    title: "ফটোকপি, প্রিন্ট ও স্পাইরাল বাইন্ডিং (Printing & Binding)",
-    description: "উচ্চগতির ডিজিটাল লেজার ফটোকপি ও অফসেট কোয়ালিটি কালার প্রিন্টিং। শিক্ষার্থীদের অ্যাসাইনমেন্ট ও থিসিস পেপারের জন্য হেভি-ডিউটি স্পাইরাল ও হার্ডকভার বাইন্ডিং।",
+    title: "Photocopying, Laser Print & Document Binding",
+    description: "High-speed digital laser photocopying and sharp color printing. Heavy-duty spiral binding, tape binding, and hot thermal lamination for student assignments, term papers, and thesis reports.",
     category: "REPRODUCTION",
     items: [
-      "হাই-স্পিড ডিজিটাল লেজার ফটোকপি (উভয় পিঠ)",
-      "ল্যাব কোয়ালিটি কালার প্রিন্ট ও প্রজেক্ট পেপার",
-      "স্পাইরাল বাইন্ডিং, টেপ বাইন্ডিং ও বুকলেট মেকিং",
-      "ওয়াটারপ্রুফ হট লেমিনেশন (সার্টিফিকেট ও NID)"
+      "High-speed double-sided digital laser photocopying",
+      "High-resolution color printing for academic projects & thesis reports",
+      "Spiral binding, tape binding, and professional booklet preparation",
+      "Waterproof thermal lamination for certificates and National ID cards"
     ],
-    whatsappMsg: "হ্যালো শাফায়েত ভাই! আমি প্রিন্ট বা ফটোকপি অর্ডার করতে চাই।",
-    badge: "আল্ট্রা হাই-স্পিড"
+    whatsappMsg: "Hello Shafayat! I would like to order printing, photocopy, or binding services.",
+    badge: "Ultra High-Speed"
   },
   {
     id: "training",
     code: "04",
-    title: "কম্পিউটার প্রশিক্ষণ একাডেমি (Computer Training)",
-    description: "শিক্ষার্থী ও চাকরিপ্রার্থীদের জন্য প্র্যাকটিক্যাল কম্পিউটার কোর্স। শীতাতপ নিয়ন্ত্রিত ল্যাবে প্রত্যেকের জন্য আলাদা কম্পিউটার এবং সরকারি সিলেবাসের সার্টিফিকেট।",
+    title: "Computer Training Academy",
+    description: "Hands-on, practical IT training courses for students and career seekers. Fully air-conditioned computer lab with 1-to-1 dedicated workstation guarantee and government curriculum certification.",
     category: "ACADEMY",
     items: [
-      "বেসিক কম্পিউটার ও এমএস অফিস (Word, Excel, PPT)",
-      "বাংলা ও ইংরেজি দ্রুত টাইপিং প্রশিক্ষণ",
-      "ক্যানভা ও ফটোশপ গ্রাফিক্স ডিজাইন বেসিকস",
-      "ইন্টারনেট ব্রাউজিং, ইমেইল ও ফ্রিল্যান্সিং গাইডলাইন"
+      "Certificate in Basic Computer Applications (MS Word, Excel, PowerPoint)",
+      "Touch typing speed mastery in English and Bengali",
+      "Graphic design essentials with Canva and Adobe Photoshop",
+      "Internet navigation, professional email etiquette, and freelancing basics"
     ],
-    whatsappMsg: "হ্যালো শাফায়েত ভাই! আমি কম্পিউটার কোর্সে ভর্তি হতে চাই।",
-    badge: "১ জন ১ পিসি নিশ্চয়তা"
+    whatsappMsg: "Hello Shafayat! I would like to enroll or learn more about computer training courses.",
+    badge: "1 Workstation Per Student"
   },
   {
     id: "stationery",
     code: "05",
-    title: "স্টুডেন্ট স্টেশনারি ও ৯৯ টাকা কর্নার (Stationery & Gadgets)",
-    description: "স্কুল ও কলেজ শিক্ষার্থীদের প্রয়োজনীয় সব ব্র্যান্ডের খাতা, কলম, জ্যামিতি বক্স ও ক্যালকুলেটর। সাথে ৯৯ টাকা কর্নারে আকর্ষণীয় পকেট গ্যাজেট ও অ্যাক্সেসরিজ।",
+    title: "Student Stationery & Tk 99 Value Corner",
+    description: "Comprehensive collection of notebooks, ballpoint and gel pens, geometry sets, and scientific calculators for school and college students. Plus our popular Tk 99 Value Corner for mobile & PC gadgets.",
     category: "RETAIL",
     items: [
-      "ম্যাটাডোর, পিনপয়েন্ট ও জেল পেন কালেকশন",
-      "ক্লাস নোটবুক, প্র্যাকটিক্যাল ও ড্রয়িং খাতা",
-      "ক্যাসিও সায়েন্টিফিক ক্যালকুলেটর ও জ্যামিতি বক্স",
-      "৯৯ টাকা কর্নার: ওটিজি, ইউএসবি কেবল, কি-রিং ও গ্যাজেট"
+      "Matador, Pinpoint, and premium gel pen collections",
+      "Class notebooks, practical laboratory books, and art sketchbooks",
+      "Casio scientific calculators and complete mathematical geometry sets",
+      "Tk 99 Value Corner: OTG adapters, USB cables, keychains & tech gadgets"
     ],
-    whatsappMsg: "হ্যালো শাফায়েত ভাই! আমি স্টেশনারি বা গ্যাজেট সামগ্রী নিতে চাই।",
-    badge: "৯৯ টাকা কর্নার"
+    whatsappMsg: "Hello Shafayat! I would like to inquire about stationery items or student corner gadgets.",
+    badge: "Tk 99 Value Corner"
   }
 ];

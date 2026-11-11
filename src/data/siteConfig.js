@@ -1,28 +1,27 @@
 export const siteConfig = {
   businessName: "Smart Computer and Stationary",
   tagline: "Tech for a Brighter Tomorrow",
-  subTagline: "অনলাইন সার্ভিস, প্রিন্টিং ও ট্রেনিং জোন",
+  subTagline: "Online Citizen Services, Printing & Computer Training Hub",
   motto: "Smart Choices • Brighter Tomorrows • Learn, Work, Grow Together",
   proprietor: {
     name: "Shafayat Hossain",
-    nameBn: "শাফায়েত হোসেন",
-    title: "স্বত্বাধিকারী",
+    title: "Proprietor",
   },
   contact: {
     phone: "01711-652361",
     rawPhone: "01711652361",
     whatsappLink: "https://wa.me/8801711652361",
-    defaultWhatsAppMsg: "হ্যালো শাফায়েত ভাই! আমি Smart Computer থেকে সেবা নিতে চাই।",
-    location: "স্কুল অ্যান্ড কলেজ ক্যান্টিন গেট সংলগ্ন (প্রধান ফটকের ডানে), মেইন রোড",
+    defaultWhatsAppMsg: "Hello Shafayat! I would like to inquire about services at Smart Computer.",
+    location: "Beside School & College Canteen Gate (Right of Main Gate), Main Road",
   },
   hours: {
-    satThu: "সকাল ৮:০০ – রাত ৯:০০",
-    fri: "বিকেল ৩:০০ – রাত ৯:০০",
+    satThu: "8:00 AM – 9:00 PM",
+    fri: "3:00 PM – 9:00 PM",
   },
   pillars: [
     { id: "computers", label: "Computers", icon: "laptop", color: "text-brand-sky" },
-    { id: "accessories", label: "Accessories", icon: "printer", color: "text-emerald-400" },
+    { id: "accessories", label: "Accessories", icon: "printer", color: "text-blue-400" },
     { id: "stationary", label: "Stationary", icon: "pen-tool", color: "text-brand-sky" },
-    { id: "school", label: "School Needs", icon: "book-open", color: "text-emerald-400" },
+    { id: "school", label: "School Needs", icon: "book-open", color: "text-indigo-400" },
   ]
 };

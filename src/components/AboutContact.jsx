@@ -5,7 +5,7 @@ export default function AboutContact() {
   const whatsappUrl = `${siteConfig.contact.whatsappLink}?text=${encodeURIComponent(siteConfig.contact.defaultWhatsAppMsg)}`;
 
   return (
-    <section id="about" className="pt-6 border-t border-brand-border">
+    <section id="about" className="pt-6 border-t border-brand-border scroll-mt-24">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 text-sm">
         
         {/* Identity & Emblem */}
@@ -21,7 +21,7 @@ export default function AboutContact() {
               <div className="font-extrabold text-brand-forest text-base sm:text-lg leading-tight">
                 {siteConfig.businessName}
               </div>
-              <p className="text-xs text-slate-500 font-bn">
+              <p className="text-xs text-slate-500">
                 {siteConfig.subTagline}
               </p>
             </div>
@@ -29,7 +29,7 @@ export default function AboutContact() {
           <div className="pt-2">
             <span className="text-xs text-brand-muted block uppercase font-mono tracking-wider">Proprietor</span>
             <div className="font-bold text-slate-800">
-              {siteConfig.proprietor.name} ({siteConfig.proprietor.nameBn})
+              {siteConfig.proprietor.name}
             </div>
             <span className="text-[11px] text-brand-teal font-mono block mt-0.5 font-medium">
               {siteConfig.tagline}
@@ -55,7 +55,7 @@ export default function AboutContact() {
                 rel="noopener noreferrer" 
                 className="text-brand-teal font-bold hover:underline text-base flex items-center gap-1.5"
               >
-                <i className="fa-brands fa-whatsapp text-emerald-600"></i> {siteConfig.contact.phone}
+                <i className="fa-brands fa-whatsapp text-sky-500"></i> {siteConfig.contact.phone}
               </a>
             </div>
           </div>
@@ -64,13 +64,13 @@ export default function AboutContact() {
         {/* Location & Hours */}
         <div className="md:col-span-4 space-y-3">
           <span className="text-xs font-mono uppercase tracking-wider text-brand-muted block">Location &amp; Hours</span>
-          <p className="text-slate-700 font-bn text-xs leading-relaxed">
+          <p className="text-slate-700 text-xs leading-relaxed">
             {siteConfig.contact.location}
           </p>
           <div className="text-xs text-brand-muted pt-1">
-            <span className="block text-slate-800 font-semibold">শনিবার — বৃহস্পতিবার:</span>
+            <span className="block text-slate-800 font-semibold">Saturday — Thursday:</span>
             <span>{siteConfig.hours.satThu}</span>
-            <span className="block text-slate-800 font-semibold mt-1">শুক্রবার:</span>
+            <span className="block text-slate-800 font-semibold mt-1">Friday:</span>
             <span>{siteConfig.hours.fri}</span>
           </div>
         </div>

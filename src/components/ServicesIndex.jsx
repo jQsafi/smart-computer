@@ -10,7 +10,7 @@ export default function ServicesIndex() {
     : servicesData.filter(s => s.category === activeDepartment);
 
   return (
-    <section id="services" className="space-y-10 pt-4">
+    <section id="services" className="space-y-10 pt-4 scroll-mt-24">
       
       <div className="border-b border-brand-forest pb-3 flex flex-wrap items-baseline justify-between gap-4">
         <div>
@@ -45,6 +45,16 @@ export default function ServicesIndex() {
             Citizen [01]
           </button>
           <button
+            onClick={() => setActiveDepartment('CREATIVE_STUDIO')}
+            className={`px-3 py-1 rounded-full transition-all ${
+              activeDepartment === 'CREATIVE_STUDIO'
+                ? 'bg-brand-forest text-white font-bold'
+                : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+            }`}
+          >
+            Photo Studio [02]
+          </button>
+          <button
             onClick={() => setActiveDepartment('REPRODUCTION')}
             className={`px-3 py-1 rounded-full transition-all ${
               activeDepartment === 'REPRODUCTION'
@@ -63,6 +73,16 @@ export default function ServicesIndex() {
             }`}
           >
             Training [04]
+          </button>
+          <button
+            onClick={() => setActiveDepartment('RETAIL')}
+            className={`px-3 py-1 rounded-full transition-all ${
+              activeDepartment === 'RETAIL'
+                ? 'bg-brand-forest text-white font-bold'
+                : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+            }`}
+          >
+            Stationery [05]
           </button>
         </div>
       </div>
@@ -85,7 +105,7 @@ export default function ServicesIndex() {
                     {service.category}
                   </span>
                   {service.badge && (
-                    <span className="inline-block mt-2 px-2 py-0.5 text-[10px] font-bold font-bn bg-emerald-50 text-emerald-700 border border-emerald-200 rounded">
+                    <span className="inline-block mt-2 px-2 py-0.5 text-[10px] font-bold bg-blue-50 text-blue-700 border border-blue-200 rounded">
                       {service.badge}
                     </span>
                   )}
@@ -93,15 +113,15 @@ export default function ServicesIndex() {
 
                 {/* Details */}
                 <div className="md:col-span-7 space-y-3">
-                  <h3 className="text-lg sm:text-xl font-bold text-brand-forest font-bn">
+                  <h3 className="text-lg sm:text-xl font-bold text-brand-forest">
                     {service.title}
                   </h3>
-                  <p className="text-sm text-slate-600 font-bn leading-relaxed">
+                  <p className="text-sm text-slate-600 leading-relaxed">
                     {service.description}
                   </p>
                   
                   {/* Detailed Items */}
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-700 font-bn pt-2">
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-700 pt-2">
                     {service.items.map((item, idx) => (
                       <li key={idx} className="flex items-center gap-2">
                         <i className="fa-solid fa-check text-brand-teal text-[10px]"></i>
@@ -119,7 +139,7 @@ export default function ServicesIndex() {
                     rel="noopener noreferrer"
                     className="abc-link text-xs group-hover:text-brand-teal transition"
                   >
-                    <span>হোয়াটসঅ্যাপে যোগাযোগ</span>
+                    <span>Contact on WhatsApp</span>
                     <span>&rarr;</span>
                   </a>
                 </div>

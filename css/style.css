@@ -1,14 +1,14 @@
 /* Smart Computer & Stationery - Custom Stylesheet */
 
-@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --forest-dark: #061e13;
-  --forest-primary: #0A3622;
-  --forest-light: #0E492E;
-  --teal-primary: #138A72;
-  --teal-light: #19A98C;
-  --teal-soft: #e6f6f2;
+  --navy-dark: #060D17;
+  --navy-primary: #0B192C;
+  --navy-light: #1E3A8A;
+  --blue-primary: #1D4ED8;
+  --blue-light: #2563EB;
+  --blue-soft: #eff6ff;
   --sky-blue: #38B6FF;
   --sky-hover: #1ba5f2;
   --white: #ffffff;
@@ -19,7 +19,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Plus Jakarta Sans', 'Hind Siliguri', sans-serif;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
 }
 
 body {
@@ -33,24 +33,19 @@ body {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #0A3622;
+  background: #0B192C;
 }
 ::-webkit-scrollbar-thumb {
-  background: #138A72;
+  background: #1D4ED8;
   border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #38B6FF;
 }
 
-/* Bengali Typography Optimization */
-.bn-font {
-  font-family: 'Hind Siliguri', sans-serif;
-}
-
 /* Glassmorphism effects */
 .glass-nav {
-  background: rgba(10, 54, 34, 0.92);
+  background: rgba(11, 25, 44, 0.92);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(56, 182, 255, 0.15);
@@ -63,7 +58,7 @@ body {
 }
 
 .glass-dark {
-  background: rgba(10, 54, 34, 0.7);
+  background: rgba(11, 25, 44, 0.7);
   backdrop-filter: blur(16px);
   border: 1px solid rgba(56, 182, 255, 0.2);
 }
@@ -74,11 +69,11 @@ body {
 }
 
 .glow-teal {
-  box-shadow: 0 10px 30px rgba(19, 138, 114, 0.25);
+  box-shadow: 0 10px 30px rgba(29, 78, 216, 0.25);
 }
 
 .glow-subtle {
-  box-shadow: 0 4px 20px rgba(10, 54, 34, 0.08);
+  box-shadow: 0 4px 20px rgba(11, 25, 44, 0.08);
 }
 
 /* Floating animation */
@@ -133,7 +128,7 @@ body {
 }
 
 .badge-fresh {
-  background: linear-gradient(135deg, #138A72 0%, #0E492E 100%);
+  background: linear-gradient(135deg, #1D4ED8 0%, #1E3A8A 100%);
   color: white;
 }
 
@@ -145,30 +140,30 @@ body {
 
 /* Custom interactive input range */
 input[type=range] {
-  accent-color: #138A72;
+  accent-color: #1D4ED8;
 }
 
 /* Button hover transitions */
 .btn-primary {
-  background: linear-gradient(135deg, #138A72 0%, #0A3622 100%);
+  background: linear-gradient(135deg, #1D4ED8 0%, #0B192C 100%);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #19A98C 0%, #0E492E 100%);
-  box-shadow: 0 10px 25px -5px rgba(19, 138, 114, 0.4);
+  background: linear-gradient(135deg, #2563EB 0%, #1E3A8A 100%);
+  box-shadow: 0 10px 25px -5px rgba(29, 78, 216, 0.4);
   transform: translateY(-2px);
 }
 
 .btn-whatsapp {
-  background: #25D366;
+  background: #1D4ED8;
   color: white;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-whatsapp:hover {
-  background: #20BA5A;
-  box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.5);
+  background: #2563EB;
+  box-shadow: 0 10px 25px -5px rgba(29, 78, 216, 0.5);
   transform: translateY(-2px);
 }
 
@@ -191,12 +186,12 @@ input[type=range] {
 
 .hover-lift:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 30px -10px rgba(10, 54, 34, 0.15);
+  box-shadow: 0 20px 30px -10px rgba(11, 25, 44, 0.15);
 }
 
 /* Custom Modal Backdrop */
 .modal-backdrop {
-  background-color: rgba(6, 30, 19, 0.75);
+  background-color: rgba(6, 13, 23, 0.75);
   backdrop-filter: blur(6px);
 }
 

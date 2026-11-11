@@ -1,19 +1,20 @@
 # Smart Computer and Stationary
 > **Minimalist Single-Page React Application — Inspired by Alphabet ([abc.xyz](https://abc.xyz/))**  
-> *Proprietor: Shafayat Hossain (শাফায়েত হোসেন)*  
-> *Location: স্কুল অ্যান্ড কলেজ ক্যান্টিন গেট সংলগ্ন*  
+> *Proprietor: Shafayat Hossain*  
+> *Location: Beside School & College Canteen Gate*  
 > *Contact / WhatsApp: 01711-652361*  
 > **Live URL:** [https://jqsafi.github.io/smart-computer/](https://jqsafi.github.io/smart-computer/)
 
-A modern, responsive, and typography-first single-page application built with **React 18**, **Vite**, **Tailwind CSS**, and Google Fonts (`Plus Jakarta Sans` & `Hind Siliguri`).
+A modern, responsive, and typography-first single-page application built with **React 18**, **Vite**, **Tailwind CSS**, and Google Fonts (`Plus Jakarta Sans`).
 
 ---
 
 ## 🏛️ Design Identity (Inspired by Alphabet `abc.xyz`)
 - **Aesthetic:** Clean editorial structure, generous whitespace, confident typography, subtle borders, and zero clutter.
 - **Brand Colors:**
-  - Dark Forest Green (`#0A3622`)
-  - Teal Green (`#138A72`)
+  - Deep Navy Blue (`#0B192C`)
+  - Dark Midnight Navy (`#060D17`)
+  - Cobalt Royal Blue (`#1D4ED8`)
   - Sky Blue Accent (`#38B6FF`)
   - Crisp White Background (`#FFFFFF`) with slate borders
 - **Logo & Imagery:**
@@ -25,11 +26,11 @@ A modern, responsive, and typography-first single-page application built with **
 ## 📋 Fullscreen Hero Slider & React Components
 1. **`Navbar`:** Fixed glassmorphic navigation with official logo, brand name, proprietor name, and instant WhatsApp order CTA.
 2. **`HeroSlider` (5 Dynamic Slides):**
-   - **Slide 01:** Official Brand Emblem Showcase (`assets/logo.png`) with brand pillars (*Computers, Accessories, Stationary, School & Office Needs*), taglines, proprietor info, and instant WhatsApp/Call buttons.
+   - **Slide 01:** Monograph Editorial Cover ("SMART COMPUTER & STATIONARY" — Collector's Volume) adapted to the deep navy and cobalt/sky blue palette with architectural colonnade arches, titanium-sky chrome typography, and direct WhatsApp/Call links.
    - **Slide 02:** Alphabet-inspired wooden alphabet blocks (`assets/smart_blocks.png`) spelling **"SMART COMPUTER"** on transparent background in minimalist abc.xyz style.
-   - **Slide 03:** **[01]** অনলাইন ও নাগরিক সেবা (Online & Citizen Services).
-   - **Slide 04:** **[02 & 03]** ডিজিটাল ফটো ল্যাব ও প্রিন্টিং (Digital Photo Lab & High-Speed Laser Print).
-   - **Slide 05:** **[04 & 05]** কম্পিউটার ট্রেনিং একাডেমি ও ৯৯ টাকা কর্নার (Training Academy & Stationery).
+   - **Slide 03:** **[01]** Online Citizen & Government Services.
+   - **Slide 04:** **[02 & 03]** Digital Photo Studio & High-Speed Laser Print.
+   - **Slide 05:** **[04 & 05]** Computer Training Academy & Tk 99 Student Value Corner.
    - Features: Touch swipe gestures, keyboard arrow navigation, 5.5s auto-rotation, and interactive dot indicators.
 3. **`ExecutiveSummary`:** Minimalist statement, proprietor credentials (*Shafayat Hossain*), and direct contact strip.
 4. **`NoticeBoard`:** Interactive live job notices and college admission deadlines board with direct application links.

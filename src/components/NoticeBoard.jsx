@@ -5,36 +5,36 @@ const initialNotices = [
   {
     id: 1,
     category: "JOB",
-    tag: "সরকারি চাকরি",
-    title: "বাংলাদেশ রেলওয়ে সহকারী স্টেশন মাস্টার নিয়োগ আবেদন চলমান",
-    deadline: "২৫ নভেম্বর ২০২৬",
+    tag: "Govt Job",
+    title: "Bangladesh Railway Assistant Station Master Recruitment Application Open",
+    deadline: "25 Nov 2026",
     status: "Active",
-    badgeColor: "bg-emerald-100 text-emerald-800 border-emerald-300"
+    badgeColor: "bg-blue-100 text-blue-800 border-blue-300"
   },
   {
     id: 2,
     category: "ADMISSION",
-    tag: "কলেজ ভর্তি",
-    title: "একাদশ শ্রেণিতে অনলাইন ভর্তি আবেদন ও কলেজ চয়েস ফরম পূরণ শুরু",
-    deadline: "৩০ নভেম্বর ২০২৬",
+    tag: "Admission",
+    title: "Class XI Online College Admission & Preference Choice Form Open",
+    deadline: "30 Nov 2026",
     status: "Urgent",
     badgeColor: "bg-amber-100 text-amber-800 border-amber-300"
   },
   {
     id: 3,
     category: "JOB",
-    tag: "ব্যাংক জব",
-    title: "সমন্বিত ১০ ব্যাংক সিনিয়র অফিসার ও অফিসার (জেনারেল) আবেদন",
-    deadline: "১৫ ডিসেম্বর ২০২৬",
+    tag: "Bank Job",
+    title: "Combined 10 Banks Senior Officer & Officer (General) Recruitment",
+    deadline: "15 Dec 2026",
     status: "Active",
     badgeColor: "bg-sky-100 text-sky-800 border-sky-300"
   },
   {
     id: 4,
     category: "TRAINING",
-    tag: "ট্রেনিং ব্যাচ",
-    title: "কম্পিউটার অফিস অ্যাপ্লিকেশন ও টাইপিং নতুন ব্যাচে ভর্তি চলছে",
-    deadline: "সীমিত আসন (১০ জন)",
+    tag: "Training",
+    title: "Computer Office Applications & Typing New Batch Enrolling Now",
+    deadline: "Limited Seats (10 Only)",
     status: "Enrolling",
     badgeColor: "bg-purple-100 text-purple-800 border-purple-300"
   }
@@ -48,7 +48,7 @@ export default function NoticeBoard() {
     : initialNotices.filter(n => n.category === filter);
 
   return (
-    <section id="notices" className="bg-gradient-to-br from-slate-900 to-brand-forestDark text-white rounded-2xl p-6 sm:p-8 space-y-6 shadow-xl">
+    <section id="notices" className="bg-gradient-to-br from-slate-900 to-brand-forestDark text-white rounded-2xl p-6 sm:p-8 space-y-6 shadow-xl scroll-mt-24">
       <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-4">
         <div className="flex items-center gap-3">
           <span className="relative flex h-3 w-3">
@@ -56,17 +56,17 @@ export default function NoticeBoard() {
             <span className="relative inline-flex rounded-full h-3 w-3 bg-brand-sky"></span>
           </span>
           <div>
-            <h3 className="text-xl sm:text-2xl font-bold font-bn tracking-tight">
-              লাইভ নোটিশ ও জব আপডেট বোর্ড
+            <h3 className="text-xl sm:text-2xl font-bold tracking-tight">
+              Live Notices &amp; Job Updates
             </h3>
-            <p className="text-xs text-gray-400 font-bn">
-              সরকারি ও বেসরকারি চাকরির সার্কুলার এবং কলেজ-বিশ্ববিদ্যালয় ভর্তি বিজ্ঞপ্তি
+            <p className="text-xs text-gray-400">
+              Government and private job circulars, college &amp; university admission alerts
             </p>
           </div>
         </div>
 
         {/* Filter buttons */}
-        <div className="flex items-center gap-2 text-xs font-mono">
+        <div className="flex flex-wrap items-center gap-2 text-xs font-mono">
           <button
             onClick={() => setFilter('ALL')}
             className={`px-3 py-1 rounded-lg transition ${
@@ -91,13 +91,21 @@ export default function NoticeBoard() {
           >
             Admissions
           </button>
+          <button
+            onClick={() => setFilter('TRAINING')}
+            className={`px-3 py-1 rounded-lg transition ${
+              filter === 'TRAINING' ? 'bg-brand-sky text-brand-forestDark font-bold' : 'bg-white/10 hover:bg-white/20 text-gray-300'
+            }`}
+          >
+            Training
+          </button>
         </div>
       </div>
 
       {/* Notices Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {filteredNotices.map((notice) => {
-          const applyMsg = `হ্যালো শাফায়েত ভাই! আমি "${notice.title}" সংক্রান্ত আবেদনের জন্য সহায়তা চাই।`;
+          const applyMsg = `Hello Shafayat! I would like assistance with the application for "${notice.title}".`;
           const applyUrl = `${siteConfig.contact.whatsappLink}?text=${encodeURIComponent(applyMsg)}`;
 
           return (
@@ -108,25 +116,25 @@ export default function NoticeBoard() {
                     {notice.tag}
                   </span>
                   <span className="text-gray-400">
-                    শেষ তারিখ: <strong className="text-white">{notice.deadline}</strong>
+                    Deadline: <strong className="text-white">{notice.deadline}</strong>
                   </span>
                 </div>
-                <h4 className="text-sm font-semibold font-bn text-gray-100 leading-snug">
+                <h4 className="text-sm font-semibold text-gray-100 leading-snug">
                   {notice.title}
                 </h4>
               </div>
 
               <div className="pt-4 flex items-center justify-between border-t border-white/10 mt-3">
-                <span className="text-[11px] text-emerald-400 font-mono">
-                  ● নির্ভুল আবেদন গ্যারান্টি
+                <span className="text-[11px] text-sky-400 font-mono">
+                  ● 100% Error-Free Submission
                 </span>
                 <a
                   href={applyUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs font-bold text-brand-sky hover:underline flex items-center gap-1 font-bn"
+                  className="text-xs font-bold text-brand-sky hover:underline flex items-center gap-1"
                 >
-                  <span>আবেদন ফরম পূরণ করুন</span>
+                  <span>Apply Online Now</span>
                   <span>&rarr;</span>
                 </a>
               </div>
