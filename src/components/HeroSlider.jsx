@@ -7,7 +7,7 @@ function MonographArches({ color = "#030812", opacity = 0.95 }) {
     <svg
       viewBox="0 0 500 220"
       preserveAspectRatio="xMidYMax slice"
-      className="absolute inset-x-0 bottom-0 h-[62%] w-full"
+      className="absolute inset-x-0 bottom-0 h-[62%] w-full pointer-events-none"
       style={{ opacity }}
     >
       {[0, 1, 2, 3, 4].map((r) => (
@@ -47,7 +47,7 @@ export default function HeroSlider() {
     if (isPaused) return;
     const interval = setInterval(() => {
       nextSlide();
-    }, 5500);
+    }, 6000);
     return () => clearInterval(interval);
   }, [isPaused, nextSlide]);
 
@@ -73,12 +73,10 @@ export default function HeroSlider() {
     if (diff > 50) prevSlide();
   };
 
-  const activeSlide = sliderData[currentSlide];
-
   return (
     <section 
       id="hero-slider" 
-      className="relative h-screen min-h-[620px] overflow-hidden text-white bg-brand-forestDark"
+      className="relative h-screen min-h-[620px] overflow-hidden text-white bg-[#060D17]"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onTouchStart={handleTouchStart}
@@ -92,327 +90,130 @@ export default function HeroSlider() {
         return (
           <div
             key={slide.id}
-            className={`absolute inset-0 flex items-center transition-all duration-800 ease-in-out ${
+            className={`absolute inset-0 flex items-center transition-all duration-1000 ease-in-out ${
               isActive ? 'opacity-100 visible z-10' : 'opacity-0 invisible z-0 pointer-events-none'
             }`}
-            style={{ background: slide.bgGradient }}
           >
-            {slide.type === 'editorial' ? (
-              /* MONOGRAPH EDITORIAL COVER (Smart Computer & Stationary Edition) */
-              <div className="relative flex h-full w-full flex-col justify-between overflow-hidden bg-[#060D17]">
-                {/* Layer 1: Radial Depth in Deep Midnight/Cobalt Navy */}
-                <div 
-                  className="absolute inset-0 pointer-events-none" 
-                  style={{ background: "radial-gradient(130% 100% at 50% 0%, #132D54 0%, #0B192C 42%, #060D17 100%)" }} 
+            {/* MONOGRAPH EDITORIAL SLIDE (Permanent Cohesive Design System) */}
+            <div className="relative flex h-full w-full flex-col justify-between overflow-hidden bg-[#060D17]">
+              
+              {/* Layer 1: Radial Depth in Deep Midnight/Cobalt Navy */}
+              <div 
+                className="absolute inset-0 pointer-events-none" 
+                style={{ background: slide.bgGradient || "radial-gradient(130% 100% at 50% 0%, #132D54 0%, #0B192C 42%, #060D17 100%)" }} 
+              />
+
+              {/* Layer 2: Subtle Geometric Dot Grid in Sky Blue */}
+              <div 
+                className="absolute inset-0 opacity-[0.08] pointer-events-none" 
+                style={{ backgroundImage: "radial-gradient(#38B6FF 1px, transparent 1px)", backgroundSize: "30px 30px" }} 
+              />
+
+              {/* Layer 3: Architectural Colonnade Arches */}
+              <div className="absolute inset-x-0 bottom-0 top-[28%] opacity-35 pointer-events-none">
+                <MonographArches color="#030812" opacity={0.95} />
+              </div>
+
+              {/* Layer 4: Background Watermark */}
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0 overflow-hidden">
+                <img 
+                  src={slide.image || "assets/logo.webp"} 
+                  alt="" 
+                  aria-hidden="true"
+                  className={`object-contain opacity-[0.09] filter drop-shadow-[0_0_60px_rgba(56,182,255,0.3)] transition-transform duration-1000 ${
+                    slide.id === 2 ? 'w-[320px] sm:w-[480px] lg:w-[620px] scale-100' : 'w-[280px] sm:w-[440px] lg:w-[560px] scale-105'
+                  }`}
                 />
+              </div>
 
-                {/* Layer 2: Subtle Geometric Dot Grid in Sky Blue */}
-                <div 
-                  className="absolute inset-0 opacity-[0.08] pointer-events-none" 
-                  style={{ backgroundImage: "radial-gradient(#38B6FF 1px, transparent 1px)", backgroundSize: "30px 30px" }} 
-                />
+              {/* Layer 5: Vignette Overlay */}
+              <div 
+                className="absolute inset-0 pointer-events-none" 
+                style={{ background: "radial-gradient(85% 65% at 50% 45%, transparent 35%, rgba(6,13,23,0.85) 100%)" }} 
+              />
 
-                {/* Layer 3: Architectural Colonnade Arches */}
-                <div className="absolute inset-x-0 bottom-0 top-[28%] opacity-35 pointer-events-none">
-                  <MonographArches color="#030812" opacity={0.95} />
-                </div>
+              {/* Top Bar Metadata */}
+              <div className="relative z-10 flex items-center justify-between px-6 pt-16 sm:pt-20 text-[9px] sm:text-[10px] tracking-[0.35em] sm:tracking-[0.5em] text-[#38B6FF]/80 sm:px-12 font-mono sm:font-sans">
+                <span>{slide.vol || `VOL. 0${slide.id}`}</span>
+                <span className="hidden sm:inline">{slide.edition || "SHAFAYAT HOSSAIN · FOUNDER"}</span>
+                <span>{slide.yearRoman || "EST. 2026"}</span>
+              </div>
 
-                {/* Layer 4: Background Logo Watermark ("জলছাপ") */}
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0 overflow-hidden">
-                  <img 
-                    src={slide.image || "assets/logo.webp"} 
-                    alt="" 
-                    aria-hidden="true"
-                    className="w-[280px] h-[280px] sm:w-[440px] sm:h-[440px] lg:w-[560px] lg:h-[560px] object-contain opacity-[0.09] filter drop-shadow-[0_0_60px_rgba(56,182,255,0.3)] transition-transform duration-1000 scale-105"
-                  />
-                </div>
+              {/* Center Editorial Monograph Proclamation */}
+              <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-4 sm:px-6 text-center my-auto py-4 sm:py-6 max-w-5xl mx-auto w-full">
+                <p className="text-[9px] sm:text-xs tracking-[0.35em] sm:tracking-[0.6em] text-[#38B6FF]/90 uppercase font-medium whitespace-nowrap overflow-hidden text-ellipsis max-w-full">
+                  {slide.overline || "TECH FOR A BRIGHTER TOMORROW"}
+                </p>
 
-                {/* Layer 5: Vignette Overlay */}
-                <div 
-                  className="absolute inset-0 pointer-events-none" 
-                  style={{ background: "radial-gradient(85% 65% at 50% 45%, transparent 35%, rgba(6,13,23,0.85) 100%)" }} 
-                />
+                <h1 
+                  className="brand-foil mt-3 sm:mt-5 font-display text-[clamp(1.75rem,5.8vw,5.5rem)] 2xl:text-[6rem] font-medium leading-[0.95] sm:leading-[0.9] tracking-[0.04em] sm:tracking-[0.06em] lg:tracking-[0.08em] select-none uppercase whitespace-nowrap max-w-full"
+                  style={{ filter: "drop-shadow(0 8px 35px rgba(29, 78, 216, 0.45)) drop-shadow(0 2px 10px rgba(56, 182, 255, 0.3))" }}
+                >
+                  {slide.title || "SMART COMPUTER"}
+                </h1>
 
-                {/* Top Bar Metadata */}
-                <div className="relative z-10 flex items-center justify-between px-6 pt-16 sm:pt-20 text-[9px] sm:text-[10px] tracking-[0.35em] sm:tracking-[0.5em] text-[#38B6FF]/80 sm:px-12 font-mono sm:font-sans">
-                  <span>{slide.vol || "VOL. I"}</span>
-                  <span className="hidden sm:inline">{slide.edition || "SHAFAYAT HOSSAIN · FOUNDER"}</span>
-                  <span>{slide.yearRoman || "EST. 2026"}</span>
-                </div>
-
-                {/* Center Hero */}
-                <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-4 sm:px-6 text-center my-auto py-4 sm:py-6 max-w-5xl mx-auto w-full">
-                  <p className="text-[9px] sm:text-xs tracking-[0.35em] sm:tracking-[0.6em] text-[#38B6FF]/90 uppercase font-medium whitespace-nowrap overflow-hidden text-ellipsis max-w-full">
-                    {slide.overline || "TECH FOR A BRIGHTER TOMORROW"}
-                  </p>
-
-                  <h1 
-                    className="brand-foil mt-3 sm:mt-5 font-display text-[clamp(1.75rem,6.2vw,5.75rem)] 2xl:text-[6.25rem] font-medium leading-[0.95] sm:leading-[0.9] tracking-[0.04em] sm:tracking-[0.06em] lg:tracking-[0.08em] select-none uppercase whitespace-nowrap max-w-full"
-                    style={{ filter: "drop-shadow(0 8px 35px rgba(29, 78, 216, 0.45)) drop-shadow(0 2px 10px rgba(56, 182, 255, 0.3))" }}
-                  >
-                    {slide.title || "SMART COMPUTER"}
-                  </h1>
-
-                  {(slide.titleHighlight || slide.secondaryTitle) && (
-                    <div className="mt-2 sm:mt-3 flex items-center justify-center gap-2 sm:gap-3 w-full max-w-xl mx-auto">
-                      <span className="h-px w-4 sm:w-8 md:w-12 bg-gradient-to-r from-transparent to-[#38B6FF]/60 shrink" />
-                      <span className="font-serif-i italic text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-sky-200/95 tracking-[0.15em] sm:tracking-[0.22em] uppercase font-light whitespace-nowrap">
-                        {slide.titleHighlight || slide.secondaryTitle || "& STATIONARY"}
-                      </span>
-                      <span className="h-px w-4 sm:w-8 md:w-12 bg-gradient-to-l from-transparent to-[#38B6FF]/60 shrink" />
-                    </div>
-                  )}
-
-                  <div className="mt-4 sm:mt-6 h-px w-32 sm:w-48 bg-gradient-to-r from-transparent via-[#38B6FF] to-transparent" />
-
-                  <p className="mt-4 sm:mt-5 max-w-2xl font-serif-i text-xs sm:text-base md:text-lg italic leading-relaxed text-[#E0F2FE]/85 px-2">
-                    {slide.subtitle || "Online Citizen Services, Digital Photo Lab, High-Speed Printing & Academic Stationery"}
-                  </p>
-
-                  <p className="mt-2 sm:mt-3 text-[9px] sm:text-[11px] uppercase tracking-[0.25em] sm:tracking-[0.45em] text-[#93C5FD]/70">
-                    {slide.volumeTag || "Smart Choices • Brighter Tomorrows"}
-                  </p>
-
-                  {/* Fast Action CTA buttons */}
-                  <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 pt-4 sm:pt-6">
-                    <a
-                      href={whatsappUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-4 sm:px-5 py-2.5 rounded-full border border-brand-sky/40 bg-[#0B192C]/80 hover:bg-[#1D4ED8]/30 hover:border-brand-sky text-sky-200 text-[10px] sm:text-[11px] tracking-[0.12em] sm:tracking-[0.18em] uppercase transition shadow-lg backdrop-blur-sm flex items-center gap-2"
-                    >
-                      <i className="fa-brands fa-whatsapp text-sm text-brand-sky"></i>
-                      <span>WhatsApp: {siteConfig.contact.phone}</span>
-                    </a>
-                    <a
-                      href={`tel:${siteConfig.contact.rawPhone}`}
-                      className="px-4 sm:px-5 py-2.5 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/30 text-slate-300 text-[10px] sm:text-[11px] tracking-[0.12em] sm:tracking-[0.18em] uppercase transition backdrop-blur-sm flex items-center gap-2"
-                    >
-                      <i className="fa-solid fa-phone text-[10px] text-brand-sky"></i>
-                      <span>Call: {siteConfig.contact.phone}</span>
-                    </a>
+                {(slide.titleHighlight || slide.secondaryTitle) && (
+                  <div className="mt-2 sm:mt-3 flex items-center justify-center gap-2 sm:gap-3 w-full max-w-2xl mx-auto">
+                    <span className="h-px w-4 sm:w-8 md:w-12 bg-gradient-to-r from-transparent to-[#38B6FF]/60 shrink" />
+                    <span className="font-serif-i italic text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-sky-200/95 tracking-[0.15em] sm:tracking-[0.22em] uppercase font-light whitespace-nowrap">
+                      {slide.titleHighlight || slide.secondaryTitle}
+                    </span>
+                    <span className="h-px w-4 sm:w-8 md:w-12 bg-gradient-to-l from-transparent to-[#38B6FF]/60 shrink" />
                   </div>
-                </div>
+                )}
 
-                {/* Bottom Bar Metadata */}
-                <div className="relative z-10 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 px-6 pb-20 sm:pb-16 text-[8.5px] sm:text-[10px] tracking-[0.15em] sm:tracking-[0.3em] text-[#93C5FD]/60 sm:px-12">
-                  <span className="min-w-0">{slide.series || "BESIDE CANTEEN GATE · MAIN ROAD"}</span>
-                  <a href="#services" className="animate-bounce text-[#38B6FF] hover:text-white transition" title="Scroll down">
-                    ↓
+                <div className="mt-4 sm:mt-6 h-px w-32 sm:w-48 bg-gradient-to-r from-transparent via-[#38B6FF] to-transparent" />
+
+                <p className="mt-4 sm:mt-5 max-w-2xl font-serif-i text-xs sm:text-base md:text-lg italic leading-relaxed text-[#E0F2FE]/85 px-2">
+                  {slide.subtitle}
+                </p>
+
+                <p className="mt-2 sm:mt-3 text-[9px] sm:text-[11px] uppercase tracking-[0.25em] sm:tracking-[0.45em] text-[#93C5FD]/70">
+                  {slide.volumeTag}
+                </p>
+
+                {/* Fast Action Luxury CTA buttons */}
+                <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3.5 pt-5 sm:pt-7">
+                  <a
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-5 sm:px-6 py-2.5 sm:py-3 rounded-full border border-brand-sky/50 bg-[#0B192C]/85 hover:bg-[#1D4ED8] hover:border-brand-sky text-sky-200 hover:text-white text-[10px] sm:text-[11px] tracking-[0.14em] sm:tracking-[0.18em] uppercase transition-all duration-300 shadow-xl backdrop-blur-md flex items-center gap-2.5 hover:scale-105"
+                  >
+                    <i className="fa-brands fa-whatsapp text-sm sm:text-base text-brand-sky"></i>
+                    <span>WhatsApp: {siteConfig.contact.phone}</span>
                   </a>
-                  <span className="min-w-0">{slide.location || "LEARN · WORK · GROW TOGETHER"}</span>
+                  <a
+                    href={`tel:${siteConfig.contact.rawPhone}`}
+                    className="px-5 sm:px-6 py-2.5 sm:py-3 rounded-full border border-white/15 bg-white/5 hover:bg-white/10 hover:border-white/30 text-slate-200 text-[10px] sm:text-[11px] tracking-[0.14em] sm:tracking-[0.18em] uppercase transition-all duration-300 backdrop-blur-md flex items-center gap-2.5 hover:scale-105"
+                  >
+                    <i className="fa-solid fa-phone text-[10px] text-brand-sky"></i>
+                    <span>Call: {siteConfig.contact.phone}</span>
+                  </a>
                 </div>
               </div>
-            ) : (
-              <>
-                {/* Ambient Background Glow */}
-                <div className="absolute right-10 top-1/4 w-80 sm:w-96 h-80 sm:h-96 bg-brand-teal/20 rounded-full blur-3xl pointer-events-none"></div>
-                <div className="absolute left-1/4 bottom-10 w-72 h-72 bg-brand-sky/15 rounded-full blur-3xl pointer-events-none"></div>
 
-                <div className="max-w-6xl mx-auto px-6 pt-20 w-full relative z-10">
-                  {/* SLIDE TYPE 1: Brand Emblem & Official Identity */}
-                  {slide.type === 'brand' && (
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-                      <div className="lg:col-span-7 space-y-5 animate-fadeIn">
-                        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 border border-white/15 text-brand-sky text-xs font-mono uppercase tracking-widest">
-                          <span className="w-2 h-2 rounded-full bg-brand-sky animate-ping"></span>
-                          <span>{slide.pill}</span>
-                        </div>
+              {/* Bottom Bar Metadata */}
+              <div className="relative z-10 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 px-6 pb-20 sm:pb-16 text-[8.5px] sm:text-[10px] tracking-[0.15em] sm:tracking-[0.3em] text-[#93C5FD]/60 sm:px-12">
+                <span className="min-w-0">{slide.series || "BESIDE CANTEEN GATE · MAIN ROAD"}</span>
+                <a href="#services" className="animate-bounce text-[#38B6FF] hover:text-white transition" title="Scroll down">
+                  ↓
+                </a>
+                <span className="min-w-0">{slide.location || "LEARN · WORK · GROW TOGETHER"}</span>
+              </div>
 
-                        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight uppercase leading-[1.1] font-sans">
-                          {slide.title} <br />
-                          <span className="text-brand-sky">{slide.titleHighlight}</span>
-                        </h1>
-
-                        <div className="text-xs sm:text-sm font-mono tracking-widest text-sky-300 font-semibold uppercase">
-                          {slide.subtitle}
-                        </div>
-
-                        <p className="text-sm sm:text-base text-gray-300 leading-relaxed max-w-xl">
-                          {slide.description}
-                        </p>
-
-                        {/* 4 Pillars Grid */}
-                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1 max-w-xl">
-                          {siteConfig.pillars.map((pillar) => (
-                            <div key={pillar.id} className="bg-white/5 border border-white/10 rounded-xl p-2.5 text-center backdrop-blur-sm">
-                              <i className={`fa-solid fa-${pillar.icon} ${pillar.color} text-base mb-1 block`}></i>
-                              <span className="text-[11px] font-mono uppercase tracking-wider text-gray-200 block font-bold">
-                                {pillar.label}
-                              </span>
-                            </div>
-                          ))}
-                        </div>
-
-                        {/* Fast Action Buttons */}
-                        <div className="flex flex-wrap items-center gap-3 pt-2">
-                          <a
-                            href={whatsappUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="px-5 py-3 rounded-xl bg-brand-blue hover:bg-brand-blueLight text-white font-bold text-xs sm:text-sm flex items-center gap-2 shadow-lg transition"
-                          >
-                            <i className="fa-brands fa-whatsapp text-lg"></i>
-                            <span>WhatsApp: {siteConfig.contact.phone}</span>
-                          </a>
-
-                          <a
-                            href={`tel:${siteConfig.contact.rawPhone}`}
-                            className="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-xs sm:text-sm flex items-center gap-2 transition"
-                          >
-                            <i className="fa-solid fa-phone text-xs text-brand-sky"></i>
-                            <span>Call: {siteConfig.contact.phone}</span>
-                          </a>
-
-                          <a
-                            href="#services"
-                            className="px-3 py-3 text-xs font-mono uppercase tracking-wider text-gray-400 hover:text-white transition flex items-center gap-1"
-                          >
-                            <span>Services &darr;</span>
-                          </a>
-                        </div>
-                      </div>
-
-                      {/* Right Column: Official Logo Emblem */}
-                      <div className="lg:col-span-5 flex flex-col items-center justify-center">
-                        <div className="relative w-full max-w-sm sm:max-w-md flex flex-col items-center group">
-                          <div className="absolute inset-0 bg-white/20 rounded-full blur-3xl group-hover:bg-white/30 transition-all duration-700"></div>
-                          <img
-                            src={slide.image}
-                            alt={slide.imageAlt}
-                            className="relative w-64 sm:w-80 lg:w-96 h-auto object-contain logo-white-shadow group-hover:scale-105 transition-transform duration-500"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  )}
-
-              {/* SLIDE TYPE 2: Alphabet Inspired Wooden Blocks */}
-              {slide.type === 'blocks' && (
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-                  <div className="lg:col-span-6 space-y-5">
-                    <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 border border-white/15 text-sky-300 text-xs font-mono uppercase tracking-widest">
-                      <span>{slide.pill}</span>
-                    </div>
-
-                    <h2 className="text-3xl sm:text-5xl lg:text-5xl font-black text-white tracking-tight uppercase leading-[1.12] font-sans">
-                      {slide.title} <br />
-                      <span className="text-brand-sky">{slide.titleHighlight}</span>
-                    </h2>
-
-                    <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
-                      {slide.description}
-                    </p>
-
-                    <div className="flex flex-wrap items-center gap-3 pt-2">
-                      <a
-                        href={whatsappUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="px-5 py-3 rounded-xl bg-brand-blue hover:bg-brand-blueLight text-white font-bold text-xs sm:text-sm flex items-center gap-2 shadow-lg transition"
-                      >
-                        <i className="fa-brands fa-whatsapp text-lg"></i>
-                        <span>WhatsApp: {siteConfig.contact.phone}</span>
-                      </a>
-
-                      <a
-                        href={`tel:${siteConfig.contact.rawPhone}`}
-                        className="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-xs sm:text-sm flex items-center gap-2 transition"
-                      >
-                        <i className="fa-solid fa-phone text-xs text-brand-sky"></i>
-                        <span>Call: {siteConfig.contact.phone}</span>
-                      </a>
-
-                      <a
-                        href="#services"
-                        className="px-3 py-3 text-xs font-mono uppercase tracking-wider text-gray-400 hover:text-white transition flex items-center gap-1"
-                      >
-                        <span>Services &darr;</span>
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="lg:col-span-6 flex flex-col items-center justify-center">
-                    <div className="relative w-full max-w-lg flex flex-col items-center group">
-                      <div className="w-full flex items-center justify-center p-2">
-                        <img
-                          src={slide.image}
-                          alt={slide.imageAlt}
-                          className="w-full h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.55)] transform group-hover:scale-105 transition-transform duration-500"
-                        />
-                      </div>
-
-                      <div className="mt-4 bg-brand-forestDark/80 border border-white/20 px-4 py-2 rounded-2xl shadow-2xl backdrop-blur-md flex items-center gap-3">
-                        <img src={slide.badgeLogo} alt="SCS Logo" className="w-8 h-8 object-contain logo-white-shadow-sm" />
-                        <div className="text-left font-mono">
-                          <span className="text-[10px] uppercase tracking-widest text-brand-sky block font-bold">
-                            {slide.badgeText}
-                          </span>
-                          <span className="text-xs font-bold text-white block">{siteConfig.businessName}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* SLIDE TYPE 3: Department Services Showcases */}
-              {slide.type === 'department' && (
-                <div className="max-w-3xl space-y-6">
-                  <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-sky-300">
-                    <span>{slide.deptTag}</span>
-                  </div>
-
-                  <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight">
-                    {slide.title} <br />
-                    <span className="text-brand-sky">{slide.titleHighlight}</span>
-                  </h2>
-
-                  <p className="text-sm sm:text-lg text-gray-300 leading-relaxed">
-                    {slide.description}
-                  </p>
-
-                  {slide.tipBox && (
-                    <div className="bg-white/10 border border-white/15 p-4 rounded-2xl max-w-xl text-xs text-gray-200">
-                      {slide.tipBox}
-                    </div>
-                  )}
-
-                  <div className="flex flex-wrap items-center gap-4 pt-2">
-                    <a
-                      href={whatsappUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-6 py-3.5 rounded-xl bg-brand-sky hover:bg-[#1EA7F5] text-brand-forestDark font-bold text-sm flex items-center gap-2 shadow-lg transition"
-                    >
-                      <i className="fa-brands fa-whatsapp text-lg"></i>
-                      <span>{slide.ctaText}</span>
-                    </a>
-
-                    <a
-                      href="#services"
-                      className="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-sm transition"
-                    >
-                      View Services &rarr;
-                    </a>
-                  </div>
-                </div>
-              )}
-
-                </div>
-              </>
-            )}
+            </div>
           </div>
         );
       })}
 
-      {/* Minimalist Bottom Slider Controls Bar */}
+      {/* Monograph Bottom Slider Controls Bar */}
       <div className="absolute bottom-8 left-0 right-0 z-20">
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
           
           {/* Slide Indicator & Dot Buttons */}
           <div className="flex items-center gap-4">
-            <span className="text-xs font-mono font-bold tracking-widest text-brand-sky">
+            <span className="text-xs font-mono font-bold tracking-widest text-[#38B6FF]">
               0{currentSlide + 1} / 0{totalSlides}
             </span>
             <div className="flex items-center gap-2">
@@ -422,7 +223,7 @@ export default function HeroSlider() {
                   aria-label={`Go to slide ${i + 1}`}
                   onClick={() => goToSlide(i)}
                   className={`h-2.5 rounded-full transition-all duration-300 ${
-                    i === currentSlide ? 'bg-white w-6' : 'bg-white/30 w-2.5 hover:bg-white/60'
+                    i === currentSlide ? 'bg-[#38B6FF] w-7 shadow-[0_0_10px_#38B6FF]' : 'bg-white/30 w-2.5 hover:bg-white/60'
                   }`}
                 />
               ))}
@@ -432,10 +233,10 @@ export default function HeroSlider() {
           {/* Scroll Down Prompt */}
           <a
             href="#services"
-            className="hidden sm:flex items-center gap-2 text-xs font-mono text-gray-400 hover:text-white transition"
+            className="hidden sm:flex items-center gap-2 text-xs font-mono tracking-widest uppercase text-[#93C5FD]/60 hover:text-white transition"
           >
-            <span>Scroll down for services</span>
-            <span className="animate-bounce">&darr;</span>
+            <span>Scroll down for departments</span>
+            <span className="animate-bounce text-[#38B6FF]">&darr;</span>
           </a>
 
           {/* Prev / Next Controls */}
@@ -443,14 +244,14 @@ export default function HeroSlider() {
             <button
               onClick={prevSlide}
               aria-label="Previous Slide"
-              className="w-10 h-10 rounded-full border border-white/20 hover:border-white hover:bg-white/10 text-white flex items-center justify-center transition"
+              className="w-10 h-10 rounded-full border border-white/20 bg-[#0B192C]/80 hover:border-[#38B6FF] hover:bg-[#1D4ED8]/40 text-white flex items-center justify-center transition shadow-lg"
             >
               <i className="fa-solid fa-chevron-left text-xs"></i>
             </button>
             <button
               onClick={nextSlide}
               aria-label="Next Slide"
-              className="w-10 h-10 rounded-full border border-white/20 hover:border-white hover:bg-white/10 text-white flex items-center justify-center transition"
+              className="w-10 h-10 rounded-full border border-white/20 bg-[#0B192C]/80 hover:border-[#38B6FF] hover:bg-[#1D4ED8]/40 text-white flex items-center justify-center transition shadow-lg"
             >
               <i className="fa-solid fa-chevron-right text-xs"></i>
             </button>

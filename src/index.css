@@ -4,16 +4,19 @@
 
 @layer base {
   body {
-    @apply font-sans bg-white text-slate-900 antialiased overflow-x-hidden;
+    @apply font-sans bg-[#060D17] text-[#F8FAFC] antialiased overflow-x-hidden;
+    background-color: #060D17;
+    color: #F8FAFC;
   }
 
   ::selection {
-    @apply bg-brand-forest text-white;
+    background-color: #1D4ED8;
+    color: #FFFFFF;
   }
 }
 
 .abc-link {
-  color: #0B192C;
+  color: #38B6FF;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
@@ -22,7 +25,7 @@
 }
 
 .abc-link:hover {
-  color: #1D4ED8;
+  color: #93C5FD;
   transform: translateX(3px);
 }
 
@@ -35,19 +38,22 @@
   filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.85)) drop-shadow(0 2px 10px rgba(255, 255, 255, 0.5));
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar - Dark Midnight Navy with Sky-Blue Hover */
 ::-webkit-scrollbar {
   width: 8px;
+  height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #060D17;
 }
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #132D54;
   border-radius: 4px;
+  border: 1px solid rgba(56, 182, 255, 0.15);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #38B6FF;
+  border-color: #38B6FF;
 }
 
 /* Monograph Editorial Typography & Foil (Deep Navy & Cobalt/Sky Blue Palette) */
@@ -61,6 +67,13 @@
 
 .brand-foil {
   background: linear-gradient(100deg, #1D4ED8 0%, #38B6FF 20%, #F0F9FF 34%, #38B6FF 50%, #1D4ED8 65%, #93C5FD 80%, #1E40AF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.brand-foil-silver {
+  background: linear-gradient(100deg, #94A3B8 0%, #E2E8F0 25%, #FFFFFF 50%, #CBD5E1 75%, #94A3B8 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

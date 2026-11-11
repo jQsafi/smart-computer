@@ -70,17 +70,17 @@ export default function Navbar() {
   return (
     <header
       aria-hidden={!isVisible}
-      className={`fixed top-0 left-0 right-0 z-50 bg-brand-forestDark/90 backdrop-blur-md border-b border-white/10 shadow-lg transition-all duration-300 transform ${
+      className={`fixed top-0 left-0 right-0 z-50 bg-[#060D17]/90 backdrop-blur-xl border-b border-white/10 shadow-[0_4px_30px_rgba(6,13,23,0.85)] transition-all duration-300 transform ${
         isVisible
           ? 'translate-y-0 opacity-100 pointer-events-auto'
           : '-translate-y-full opacity-0 pointer-events-none'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-6 py-3.5 flex items-center justify-between">
         
         {/* Logo & Brand Identity */}
         <a href="#hero-slider" className="flex items-center gap-3 group">
-          <div className="w-11 h-11 flex-shrink-0">
+          <div className="w-10 h-10 flex-shrink-0">
             <img 
               src="assets/logo.png" 
               alt={siteConfig.businessName} 
@@ -89,32 +89,32 @@ export default function Navbar() {
           </div>
           <div>
             <span className="text-xs sm:text-sm font-extrabold tracking-tight text-white uppercase block">
-              Smart Computer <span className="text-brand-sky">&amp; Stationary</span>
+              Smart Computer <span className="text-[#38B6FF]">&amp; Stationary</span>
             </span>
-            <span className="text-[10px] text-sky-300 tracking-wider block font-medium">
-              {siteConfig.proprietor.name} • Canteen Gate
+            <span className="text-[10px] text-[#93C5FD]/80 tracking-wider block font-mono">
+              {siteConfig.proprietor.name} · Canteen Gate
             </span>
           </div>
         </a>
 
         {/* Navigation & Header Actions */}
         <div className="flex items-center gap-3 sm:gap-6 text-xs font-semibold">
-          <a href="#services" className="text-gray-300 hover:text-white transition hidden md:inline-block">
-            Services
+          <a href="#services" className="text-slate-300 hover:text-[#38B6FF] transition hidden md:inline-block font-mono tracking-wider uppercase text-[11px]">
+            Departments
           </a>
-          <a href="#notices" className="text-gray-300 hover:text-white transition hidden md:inline-block">
-            Notices
+          <a href="#notices" className="text-slate-300 hover:text-[#38B6FF] transition hidden md:inline-block font-mono tracking-wider uppercase text-[11px]">
+            Circulars
           </a>
-          <a href="#about" className="text-gray-300 hover:text-white transition hidden md:inline-block">
-            About
+          <a href="#about" className="text-slate-300 hover:text-[#38B6FF] transition hidden md:inline-block font-mono tracking-wider uppercase text-[11px]">
+            Colophon
           </a>
 
           {/* Direct Call Link */}
           <a 
             href={`tel:${siteConfig.contact.rawPhone}`} 
-            className="text-white hover:text-brand-sky transition hidden sm:flex items-center gap-1.5"
+            className="text-white hover:text-[#38B6FF] transition hidden sm:flex items-center gap-1.5 font-mono text-[11px]"
           >
-            <i className="fa-solid fa-phone text-[10px] text-brand-sky"></i>
+            <i className="fa-solid fa-phone text-[10px] text-[#38B6FF]"></i>
             <span>{siteConfig.contact.phone}</span>
           </a>
 
@@ -123,9 +123,9 @@ export default function Navbar() {
             href={whatsappUrl} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="px-4 py-2 rounded-full bg-brand-blue text-white hover:bg-brand-blueLight transition flex items-center gap-2 shadow-lg font-bold"
+            className="px-4 py-2 rounded-full border border-[#38B6FF]/50 bg-[#1D4ED8] hover:bg-[#2563EB] text-white transition-all flex items-center gap-2 shadow-[0_0_15px_rgba(56,182,255,0.35)] font-semibold text-xs tracking-wider uppercase hover:scale-105"
           >
-            <i className="fa-brands fa-whatsapp text-sm"></i>
+            <i className="fa-brands fa-whatsapp text-sm text-[#38B6FF]"></i>
             <span>WhatsApp Order</span>
           </a>
         </div>
