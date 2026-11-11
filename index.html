@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="bn" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Computer and Stationary — Shafayat Hossain</title>
+  <meta name="description" content="Smart Computer and Stationary. Founded by Shafayat Hossain. Located beside School & College Canteen Gate. Online citizen services, printing, photo lab, training & stationery. Call/WhatsApp: 01711-652361">
+
+  <!-- Open Graph & Social Sharing Meta -->
+  <meta property="og:title" content="Smart Computer and Stationary — Shafayat Hossain">
+  <meta property="og:description" content="অনলাইন সার্ভিস, ডিজিটাল ফটো ল্যাব, প্রিন্টিং ও ট্রেনিং জোন। স্কুল অ্যান্ড কলেজ ক্যান্টিন গেট সংলগ্ন। যোগাযোগ: 01711-652361">
+  <meta property="og:image" content="assets/logo.png">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0A3622">
+
+  <!-- Favicon & PWA Manifest -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Hind Siliguri -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              forest: '#0A3622',
+              forestDark: '#05180f',
+              teal: '#138A72',
+              tealLight: '#19A98C',
+              sky: '#38B6FF',
+              dark: '#0f172a',
+              muted: '#64748b',
+              border: '#e2e8f0',
+              bgLight: '#FAFAF9',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '"Hind Siliguri"', 'system-ui', 'sans-serif'],
+            bn: ['"Hind Siliguri"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', 'Hind Siliguri', sans-serif;
+      background-color: #FFFFFF;
+      color: #0F172A;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    ::selection {
+      background-color: #0A3622;
+      color: #FFFFFF;
+    }
+    .abc-link {
+      color: #0A3622;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+    .abc-link:hover {
+      color: #138A72;
+      transform: translateX(3px);
+    }
+
+    /* Slider Specific Styles */
+    .slider-container {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      overflow: hidden;
+    }
+    .slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.8s;
+      display: flex;
+      align-items: center;
+    }
+    .slide.active {
+      opacity: 1;
+      visibility: visible;
+      z-index: 10;
+    }
+    .slide-content {
+      transform: translateY(20px);
+      opacity: 0;
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s, opacity 0.8s ease 0.2s;
+    }
+    .slide.active .slide-content {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+  <!-- 1. FULLSCREEN SLIDER (First Content) -->
+  <section id="hero-slider" class="slider-container bg-brand-forestDark text-white relative">
+
+    <!-- Top Minimalist Glass Navigation (Overlaid on Fullscreen Slider) -->
+    <header class="absolute top-0 left-0 right-0 z-30 border-b border-white/10 bg-brand-forestDark/60 backdrop-blur-md">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        
+        <!-- Logo & Title -->
+        <a href="#hero-slider" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 flex-shrink-0">
+            <img src="assets/logo.png" alt="Smart Computer and Stationary" class="w-full h-full object-contain drop-shadow-md">
+          </div>
+          <div>
+            <span class="text-xs sm:text-sm font-extrabold tracking-tight text-white uppercase block">
+              Smart Computer <span class="text-brand-sky">&amp; Stationary</span>
+            </span>
+            <span class="text-[10px] text-emerald-300 tracking-wider block font-medium">
+              Shafayat Hossain • Canteen Gate
+            </span>
+          </div>
+        </a>
+
+        <!-- Header Actions -->
+        <div class="flex items-center gap-3 sm:gap-6 text-xs font-semibold">
+          <a href="#services" class="text-gray-300 hover:text-white transition hidden md:inline-block">Services</a>
+          <a href="#about" class="text-gray-300 hover:text-white transition hidden md:inline-block">About</a>
+          <a href="tel:01711652361" class="text-white hover:text-brand-sky transition hidden sm:flex items-center gap-1.5">
+            <i class="fa-solid fa-phone text-[10px] text-brand-sky"></i> 01711-652361
+          </a>
+          <a href="https://wa.me/8801711652361?text=%E0%A6%B9%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%8B%20%E0%A6%B6%E0%A6%BE%E0%A6%AB%E0%A6%BE%E0%A7%9F%E0%A7%87%E0%A6%A4%20%E0%A6%AD%E0%A6%BE%E0%A6%87!%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20Smart%20Computer%20%E0%A6%A5%E0%A7%87%E0%A6%95%E0%A7%87%20%E0%A6%B8%E0%A7%87%E0%A6%AC%E0%A6%BE%20%E0%A6%A8%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank"
+             class="px-4 py-2 rounded-full bg-[#25D366] text-white hover:bg-[#20BA5A] transition flex items-center gap-2 shadow-lg font-bold">
+            <i class="fa-brands fa-whatsapp text-sm"></i>
+            <span>WhatsApp Order</span>
+          </a>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- SLIDE 1: Brand Emblem & Official Identity -->
+    <div class="slide active" style="background: linear-gradient(135deg, #03140c 0%, #0A3622 50%, #062417 100%);">
+      <!-- Ambient background decoration -->
+      <div class="absolute right-10 top-1/4 w-[32rem] h-[32rem] bg-brand-teal/20 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute left-1/4 bottom-10 w-80 h-80 bg-brand-sky/15 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-6xl mx-auto px-6 pt-20 w-full relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          
+          <!-- Left Column: Business & Proprietor Info -->
+          <div class="lg:col-span-7 slide-content space-y-5">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 border border-white/15 text-brand-sky text-xs font-mono uppercase tracking-widest">
+              <span class="w-2 h-2 rounded-full bg-brand-sky animate-ping"></span>
+              <span>Smart Choices • Brighter Tomorrows</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight uppercase leading-[1.1] font-sans">
+              Smart Computer <br>
+              <span class="text-brand-sky">&amp; Stationary</span>
+            </h1>
+
+            <div class="text-xs sm:text-sm font-mono tracking-widest text-emerald-300 font-semibold uppercase">
+              Tech for a Brighter Tomorrow • Learn, Work, Grow Together
+            </div>
+
+            <p class="text-sm sm:text-base text-gray-300 font-bn leading-relaxed max-w-xl">
+              স্বত্বাধিকারী <strong class="text-white font-semibold">শাফায়েত হোসেন (Shafayat Hossain)</strong>-এর পরিচালনায় স্কুল ও কলেজ ক্যান্টিন গেট সংলগ্ন বিশ্বস্ত কম্পিউটার সেবা, দ্রুততম প্রিন্টিং ও প্রিমিয়াম স্টেশনারি সেন্টার।
+            </p>
+
+            <!-- 4 Core Pillars from the Official Emblem -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1 max-w-xl">
+              <div class="bg-white/5 border border-white/10 rounded-xl p-2.5 text-center backdrop-blur-sm">
+                <i class="fa-solid fa-laptop text-brand-sky text-base mb-1 block"></i>
+                <span class="text-[11px] font-mono uppercase tracking-wider text-gray-200 block font-bold">Computers</span>
+              </div>
+              <div class="bg-white/5 border border-white/10 rounded-xl p-2.5 text-center backdrop-blur-sm">
+                <i class="fa-solid fa-print text-emerald-400 text-base mb-1 block"></i>
+                <span class="text-[11px] font-mono uppercase tracking-wider text-gray-200 block font-bold">Accessories</span>
+              </div>
+              <div class="bg-white/5 border border-white/10 rounded-xl p-2.5 text-center backdrop-blur-sm">
+                <i class="fa-solid fa-pen-ruler text-brand-sky text-base mb-1 block"></i>
+                <span class="text-[11px] font-mono uppercase tracking-wider text-gray-200 block font-bold">Stationary</span>
+              </div>
+              <div class="bg-white/5 border border-white/10 rounded-xl p-2.5 text-center backdrop-blur-sm">
+                <i class="fa-solid fa-book-open text-emerald-400 text-base mb-1 block"></i>
+                <span class="text-[11px] font-mono uppercase tracking-wider text-gray-200 block font-bold">School Needs</span>
+              </div>
+            </div>
+
+            <!-- Quick WhatsApp & Call Action Buttons -->
+            <div class="flex flex-wrap items-center gap-3 pt-2">
+              <a href="https://wa.me/8801711652361?text=%E0%A6%B9%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%8B%20%E0%A6%B6%E0%A6%BE%E0%A6%AB%E0%A6%BE%E0%A7%9F%E0%A7%87%E0%A6%A4%20%E0%A6%AD%E0%A6%BE%E0%A6%87!%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20Smart%20Computer%20%E0%A6%A5%E0%A7%87%E0%A6%95%E0%A7%87%20%E0%A6%B8%E0%A7%87%E0%A6%AC%E0%A6%BE%20%E0%A6%A8%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank"
+                 class="px-5 py-3 rounded-xl bg-[#25D366] hover:bg-[#20BA5A] text-white font-bold text-xs sm:text-sm flex items-center gap-2 shadow-lg transition">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>WhatsApp: 01711-652361</span>
+              </a>
+
+              <a href="tel:01711652361"
+                 class="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-xs sm:text-sm flex items-center gap-2 transition">
+                <i class="fa-solid fa-phone text-xs text-brand-sky"></i>
+                <span>কল: 01711-652361</span>
+              </a>
+
+              <a href="#services"
+                 class="px-3 py-3 text-xs font-mono uppercase tracking-wider text-gray-400 hover:text-white transition flex items-center gap-1">
+                <span>Services &darr;</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Official Logo Emblem (Transparent 1024x1024) -->
+          <div class="lg:col-span-5 slide-content flex flex-col items-center justify-center">
+            <div class="relative w-full max-w-sm sm:max-w-md flex flex-col items-center group">
+              <!-- Glow backplate -->
+              <div class="absolute inset-0 bg-brand-sky/15 rounded-full blur-2xl group-hover:bg-brand-sky/25 transition-all duration-700"></div>
+              
+              <img src="assets/logo.png" alt="Smart Computer and Stationary Official Logo" 
+                   class="relative w-64 sm:w-80 lg:w-96 h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.7)] group-hover:scale-105 transition-transform duration-500">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2: Alphabet Inspired Style (Wooden Blocks spelling SMART COMPUTER) -->
+    <div class="slide" style="background: linear-gradient(135deg, #051a11 0%, #0a3320 50%, #062316 100%);">
+      <!-- Ambient background decoration -->
+      <div class="absolute right-0 top-1/3 w-96 h-96 bg-brand-teal/15 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-6xl mx-auto px-6 pt-20 w-full relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+          
+          <!-- Left Column -->
+          <div class="lg:col-span-6 slide-content space-y-5">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 border border-white/15 text-emerald-400 text-xs font-mono uppercase tracking-widest">
+              <span>[ Minimalist Concept ]</span>
+              <span>•</span>
+              <span>abc.xyz Inspired</span>
+            </div>
+
+            <h2 class="text-3xl sm:text-5xl lg:text-5xl font-black text-white tracking-tight uppercase leading-[1.12] font-sans">
+              Smart Computer <br>
+              <span class="text-brand-sky">&amp; Stationary</span>
+            </h2>
+
+            <p class="text-sm sm:text-base text-gray-300 font-bn leading-relaxed">
+              গুগল ও অ্যালফাবেট (abc.xyz) অনুপ্রেরণায় আধুনিক, পরিচ্ছন্ন ও ছাত্রবান্ধব সেবায় আমরা প্রতিশ্রুতিবদ্ধ। স্কুল ও কলেজ গেট সংলগ্ন সকল শিক্ষার্থী ও অভিভাবকদের প্রধান গন্তব্য।
+            </p>
+
+            <div class="flex flex-wrap items-center gap-3 pt-2">
+              <a href="https://wa.me/8801711652361?text=%E0%A6%B9%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%8B%20%E0%A6%B6%E0%A6%BE%E0%A6%AB%E0%A6%BE%E0%A7%9F%E0%A7%87%E0%A6%A4%20%E0%A6%AD%E0%A6%BE%E0%A6%87!%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20Smart%20Computer%20%E0%A6%A5%E0%A7%87%E0%A6%95%E0%A7%87%20%E0%A6%B8%E0%A7%87%E0%A6%AC%E0%A6%BE%20%E0%A6%A8%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank"
+                 class="px-5 py-3 rounded-xl bg-[#25D366] hover:bg-[#20BA5A] text-white font-bold text-xs sm:text-sm flex items-center gap-2 shadow-lg transition">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>WhatsApp: 01711-652361</span>
+              </a>
+
+              <a href="tel:01711652361"
+                 class="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-xs sm:text-sm flex items-center gap-2 transition">
+                <i class="fa-solid fa-phone text-xs text-brand-sky"></i>
+                <span>কল: 01711-652361</span>
+              </a>
+
+              <a href="#services"
+                 class="px-3 py-3 text-xs font-mono uppercase tracking-wider text-gray-400 hover:text-white transition flex items-center gap-1">
+                <span>Services &darr;</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Wooden Alphabet Blocks (abc.xyz style) -->
+          <div class="lg:col-span-6 slide-content flex flex-col items-center justify-center">
+            <div class="relative w-full max-w-lg flex flex-col items-center group">
+              <div class="w-full flex items-center justify-center p-2">
+                <img src="assets/smart_blocks.png" alt="Wooden Alphabet Blocks spelling SMART COMPUTER" 
+                     class="w-full h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.55)] transform group-hover:scale-105 transition-transform duration-500">
+              </div>
+
+              <div class="mt-4 bg-brand-forestDark/80 border border-white/20 px-4 py-2 rounded-2xl shadow-2xl backdrop-blur-md flex items-center gap-3">
+                <img src="assets/logo.png" alt="SCS Logo" class="w-8 h-8 object-contain">
+                <div class="text-left font-mono">
+                  <span class="text-[10px] uppercase tracking-widest text-brand-sky block font-bold">Alphabet Style</span>
+                  <span class="text-xs font-bold text-white block">Smart Computer and Stationary</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3: অনলাইন ও নাগরিক সেবা (Online & Citizen Services) -->
+    <div class="slide" style="background: linear-gradient(135deg, #06241a 0%, #0A3622 60%, #0a3d2c 100%);">
+      <div class="absolute left-1/4 bottom-10 w-96 h-96 bg-brand-sky/15 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-6xl mx-auto px-6 pt-20 w-full relative z-10">
+        <div class="max-w-3xl slide-content space-y-6">
+          <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-emerald-400">
+            <span>[ Department 01 ]</span>
+            <span>•</span>
+            <span>Online Citizen Services</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight font-bn">
+            সরকারি চাকরি ও কলেজ-ভার্সিটি <br>
+            <span class="text-brand-sky">ভর্তি আবেদনের শতভাগ নির্ভুল সেবা</span>
+          </h2>
+
+          <p class="text-sm sm:text-lg text-gray-300 font-bn leading-relaxed">
+            বিসিএস, প্রাথমিক সহকারী শিক্ষক, বাংলাদেশ রেলওয়ে, ডিফেন্স ও যেকোনো সরকারি-বেসরকারি চাকরির অনলাইন আবেদন। একাদশ শ্রেণি ও বিশ্ববিদ্যালয় ভর্তি ফর্ম পূরণ, NID ও জন্ম নিবন্ধন সংশোধন এবং ই-টিন (e-TIN) সনদ।
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="https://wa.me/8801711652361?text=%E0%A6%B9%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%8B%20%E0%A6%B6%E0%A6%BE%E0%A6%AB%E0%A6%BE%E0%A7%9F%E0%A7%87%E0%A6%A4%20%E0%A6%AD%E0%A6%BE%E0%A6%87!%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20%E0%A6%85%E0%A6%A8%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%A8%20%E0%A6%9A%E0%A6%BE%E0%A6%95%E0%A6%B0%E0%A6%BF%20%E0%A6%AC%E0%A6%BE%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%20%E0%A6%86%E0%A6%AC%E0%A7%87%E0%A6%A6%E0%A6%A8%20%E0%A6%95%E0%A6%B0%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank"
+               class="px-6 py-3.5 rounded-xl bg-brand-sky hover:bg-[#1EA7F5] text-brand-forestDark font-bold text-sm flex items-center gap-2 shadow-lg transition">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>আবেদন সহায়তা নিন (01711-652361)</span>
+            </a>
+
+            <a href="#services"
+               class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-sm transition">
+              সেবাসমূহ দেখুন &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 4: ফটো ল্যাব, ফটোকপি ও প্রিন্টিং (Photo Lab & Document Printing) -->
+    <div class="slide" style="background: linear-gradient(135deg, #041b26 0%, #072e27 60%, #0A3622 100%);">
+      <div class="absolute right-10 top-20 w-96 h-96 bg-brand-teal/20 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-6xl mx-auto px-6 pt-20 w-full relative z-10">
+        <div class="max-w-3xl slide-content space-y-6">
+          <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-brand-sky">
+            <span>[ Department 02 &amp; 03 ]</span>
+            <span>•</span>
+            <span>Lab Photo &amp; High-Speed Print</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight font-bn">
+            ২ মিনিটে পাসপোর্ট ছবি ও <br>
+            <span class="text-emerald-400">হাই-স্পিড লেজার ফটোকপি</span>
+          </h2>
+
+          <p class="text-sm sm:text-lg text-gray-300 font-bn leading-relaxed">
+            ল্যাব কোয়ালিটি পাসপোর্ট ছবি প্রিন্ট, ড্রেস চেঞ্জ ও ব্যাকগ্রাউন্ড রিটাচ। আল্ট্রা স্পিড লেজার ফটোকপি, কালার প্রিন্ট, অ্যাসাইনমেন্ট ও থিসিস স্পাইরাল বাইন্ডিং এবং জরুরি কাগজপত্রের ওয়াটারপ্রুফ লেমিনেশন।
+          </p>
+
+          <div class="bg-white/10 border border-white/15 p-4 rounded-2xl max-w-xl text-xs text-gray-200 font-bn">
+            <span class="font-bold text-brand-sky block mb-1">⚡ লাইনে না দাঁড়িয়ে সরাসরি প্রিন্ট নিন:</span>
+            হোয়াটসঅ্যাপে ফাইল পাঠান এবং ক্যান্টিন গেট থেকে রেডি প্রিন্ট সংগ্রহ করুন!
+          </div>
+
+          <div class="flex flex-wrap items-center gap-4 pt-1">
+            <a href="https://wa.me/8801711652361?text=%E0%A6%B9%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%8B%20%E0%A6%B6%E0%A6%BE%E0%A6%AB%E0%A6%BE%E0%A7%9F%E0%A7%87%E0%A6%A4%20%E0%A6%AD%E0%A6%BE%E0%A6%87!%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20%E0%A6%AB%E0%A6%BE%E0%A6%87%E0%A6%B2%20%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%A8%E0%A7%8D%E0%A6%9F%20%E0%A6%AC%E0%A6%BE%20%E0%A6%9B%E0%A6%AC%E0%A6%BF%20%E0%A6%85%E0%A6%B0%E0%A7%8D%E0%A6%A1%E0%A6%BE%E0%A6%B0%20%E0%A6%95%E0%A6%B0%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank"
+               class="px-6 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#20BA5A] text-white font-bold text-sm flex items-center gap-2.5 shadow-lg transition">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>হোয়াটসঅ্যাপে ফাইল পাঠান</span>
+            </a>
+
+            <a href="tel:01711652361"
+               class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-sm transition">
+              <i class="fa-solid fa-phone text-xs text-brand-sky mr-1"></i> 01711-652361
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 5: কম্পিউটার ট্রেনিং ও ৯৯ টাকা কর্নার (Training & Stationery) -->
+    <div class="slide" style="background: linear-gradient(135deg, #091f14 0%, #0c3523 60%, #134e34 100%);">
+      <div class="absolute left-10 top-1/4 w-96 h-96 bg-brand-sky/15 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-6xl mx-auto px-6 pt-20 w-full relative z-10">
+        <div class="max-w-3xl slide-content space-y-6">
+          <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-amber-300">
+            <span>[ Department 04 &amp; 05 ]</span>
+            <span>•</span>
+            <span>Training &amp; Stationery</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight font-bn">
+            কম্পিউটার ট্রেনিং একাডেমি ও <br>
+            <span class="text-brand-sky">৯৯ টাকা স্টুডেন্ট কর্নার</span>
+          </h2>
+
+          <p class="text-sm sm:text-lg text-gray-300 font-bn leading-relaxed">
+            সার্টিফিকেট ইন অফিস অ্যাপ্লিকেশন, দ্রুত টাইপিং ও বেসিক গ্রাফিক্স ডিজাইন। শিক্ষার্থীদের জন্য এসি ল্যাবে ১ জন ১ কম্পিউটার নিশ্চয়তা। সাথে খাতা, কলম, জ্যামিতি বক্স, ক্যালকুলেটর ও মোবাইল-পিসি গ্যাজেটের বিশাল কালেকশন।
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="https://wa.me/8801711652361?text=%E0%A6%B9%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%8B%20%E0%A6%B6%E0%A6%BE%E0%A6%AB%E0%A6%BE%E0%A7%9F%E0%A7%87%E0%A6%A4%20%E0%A6%AD%E0%A6%BE%E0%A6%87!%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20%E0%A6%95%E0%A6%AE%E0%A7%8D%E0%A6%AA%E0%A6%BF%E0%A6%89%E0%A6%9F%E0%A6%BE%E0%A6%B0%20%E0%A6%95%E0%A7%8B%E0%A6%B0%E0%A7%8D%E0%A6%B8%E0%A7%87%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%20%E0%A6%AC%E0%A6%BE%20%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%87%E0%A6%B6%E0%A6%A8%E0%A6%BE%E0%A6%B0%E0%A6%BF%20%E0%A6%AC%E0%A6%BF%E0%A6%B7%E0%A7%9F%E0%A7%87%20%E0%A6%9C%E0%A6%BE%E0%A6%A8%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank"
+               class="px-6 py-3.5 rounded-xl bg-brand-forest hover:bg-brand-teal border border-emerald-500/40 text-white font-bold text-sm flex items-center gap-2 shadow-lg transition">
+              <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i>
+              <span>কোর্স ও পণ্যের বিস্তারিত জানুন</span>
+            </a>
+
+            <a href="tel:01711652361"
+               class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-sm transition">
+              <i class="fa-solid fa-phone text-xs text-brand-sky mr-1"></i> 01711-652361
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Minimalist Slider Navigation Controls (Bottom Bar) -->
+    <div class="absolute bottom-8 left-0 right-0 z-20">
+      <div class="max-w-6xl mx-auto px-6 flex items-center justify-between">
+        
+        <!-- Slide Indicator (Alphabet Style Number: 01 / 05) -->
+        <div class="flex items-center gap-4">
+          <span id="slide-number" class="text-xs font-mono font-bold tracking-widest text-brand-sky">
+            01 / 05
+          </span>
+          <div class="flex items-center gap-2">
+            <button class="dot-btn w-6 h-2.5 rounded-full bg-white transition-all duration-300" onclick="goToSlide(0)"></button>
+            <button class="dot-btn w-2.5 h-2.5 rounded-full bg-white/30 transition-all duration-300" onclick="goToSlide(1)"></button>
+            <button class="dot-btn w-2.5 h-2.5 rounded-full bg-white/30 transition-all duration-300" onclick="goToSlide(2)"></button>
+            <button class="dot-btn w-2.5 h-2.5 rounded-full bg-white/30 transition-all duration-300" onclick="goToSlide(3)"></button>
+            <button class="dot-btn w-2.5 h-2.5 rounded-full bg-white/30 transition-all duration-300" onclick="goToSlide(4)"></button>
+          </div>
+        </div>
+
+        <!-- Scroll down prompt -->
+        <a href="#services" class="hidden sm:flex items-center gap-2 text-xs font-mono text-gray-400 hover:text-white transition">
+          <span>Scroll down for services</span>
+          <span class="animate-bounce">&darr;</span>
+        </a>
+
+        <!-- Prev / Next Controls -->
+        <div class="flex items-center gap-2">
+          <button id="prev-slide" onclick="prevSlide()" class="w-10 h-10 rounded-full border border-white/20 hover:border-white hover:bg-white/10 text-white flex items-center justify-center transition">
+            <i class="fa-solid fa-chevron-left text-xs"></i>
+          </button>
+          <button id="next-slide" onclick="nextSlide()" class="w-10 h-10 rounded-full border border-white/20 hover:border-white hover:bg-white/10 text-white flex items-center justify-center transition">
+            <i class="fa-solid fa-chevron-right text-xs"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 2. MAIN CONTENT (Alphabet Minimalist Layout) -->
+  <main class="max-w-5xl mx-auto px-6 py-16 sm:py-20 flex-grow w-full space-y-20">
+
+    <!-- Overview Statement Section -->
+    <section class="space-y-6">
+      
+      <div class="flex items-center gap-3 text-xs font-mono uppercase tracking-widest text-brand-teal">
+        <span class="inline-block w-2 h-2 rounded-full bg-brand-teal"></span>
+        <span>Executive Summary</span>
+      </div>
+
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-forest tracking-tight leading-snug">
+        প্রযুক্তি, শিক্ষা ও স্টেশনারির স্মার্ট সমাধান
+      </h2>
+
+      <p class="text-base sm:text-lg text-slate-700 leading-relaxed font-bn">
+        <strong class="font-bold text-brand-forest">Smart Computer and Stationary</strong> হলো স্কুল ও কলেজ প্রাঙ্গণে শিক্ষার্থী, শিক্ষক ও অভিভাবকদের জন্য একটি আধুনিক ডিজিটাল সেবা কেন্দ্র। স্বত্বাধিকারী <strong class="text-brand-forest">শাফায়েত হোসেন</strong>-এর পরিচালনায় প্রতিষ্ঠানটি সকল প্রকার অনলাইন চাকরির আবেদন, ২ মিনিটে ইনস্ট্যান্ট পাসপোর্ট ছবি, হাই-স্পিড প্রিন্ট ও ফটোকপি, কম্পিউটার প্রশিক্ষণ একাডেমি এবং স্কুল-কলেজ স্টেশনারি সামগ্রী এক ছাদের নিচে সরবরাহ করে।
+      </p>
+
+      <!-- Direct Contact Strip -->
+      <div class="pt-2 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm font-semibold border-t border-brand-border pt-6">
+        <div>
+          <span class="text-brand-muted text-xs block uppercase font-mono tracking-wider">Proprietor</span>
+          <span class="text-brand-forest text-base">Shafayat Hossain (শাফায়েত হোসেন)</span>
+        </div>
+
+        <div>
+          <span class="text-brand-muted text-xs block uppercase font-mono tracking-wider">Mobile & Phone</span>
+          <a href="tel:01711652361" class="text-brand-forest hover:text-brand-teal transition text-base">
+            01711-652361
+          </a>
+        </div>
+
+        <div>
+          <span class="text-brand-muted text-xs block uppercase font-mono tracking-wider">WhatsApp</span>
+          <a href="https://wa.me/8801711652361" target="_blank" class="text-brand-teal hover:underline text-base flex items-center gap-1.5">
+            <i class="fa-brands fa-whatsapp text-emerald-600"></i> 01711-652361
+          </a>
+        </div>
+
+        <div>
+          <span class="text-brand-muted text-xs block uppercase font-mono tracking-wider">Location</span>
+          <span class="text-slate-700 text-base">স্কুল অ্যান্ড কলেজ ক্যান্টিন গেট সংলগ্ন</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 3. SERVICES INDEX (Alphabet Clean Structured List) -->
+    <section id="services" class="space-y-10 pt-4">
+      
+      <div class="border-b border-brand-forest pb-3 flex items-baseline justify-between">
+        <h2 class="text-xl sm:text-2xl font-black text-brand-forest tracking-tight uppercase font-mono">
+          Services Index
+        </h2>
+        <span class="text-xs font-mono text-brand-muted uppercase tracking-wider">
+          05 Core Departments
+        </span>
+      </div>
+
+      <!-- Services List Items -->
+      <div class="divide-y divide-brand-border">
+
+        <!-- 01: Online & Citizen Services -->
+        <article class="py-8 group">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-start">
+            <div class="md:col-span-2 font-mono text-xs font-bold text-brand-teal tracking-widest">
+              [ 01 ]
+            </div>
+            <div class="md:col-span-7 space-y-2">
+              <h3 class="text-xl font-bold text-brand-forest group-hover:text-brand-teal transition">
+                অনলাইন ও নাগরিক সেবা (Online & Citizen Services)
+              </h3>
+              <p class="text-sm text-slate-600 leading-relaxed font-bn">
+                বিসিএস, প্রাথমিক সহকারী শিক্ষক, রেলওয়ে, ডিফেন্স ও সরকারি-বেসরকারি চাকরির নির্ভুল অনলাইন আবেদন। স্কুল, কলেজ ও বিশ্ববিদ্যালয়ের ভর্তি ফর্ম পূরণ, NID ও জন্ম নিবন্ধন সংশোধন এবং ই-টিন (e-TIN) সার্ভিস।
+              </p>
+            </div>
+            <div class="md:col-span-3 md:text-right pt-2 md:pt-0">
+              <a href="https://wa.me/8801711652361?text=%E0%A6%B9%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%8B%20%E0%A6%B6%E0%A6%BE%E0%A6%AB%E0%A6%BE%E0%A7%9F%E0%A7%87%E0%A6%A4%20%E0%A6%AD%E0%A6%BE%E0%A6%87!%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20%E0%A6%85%E0%A6%A8%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%A8%20%E0%A6%9A%E0%A6%BE%E0%A6%95%E0%A6%B0%E0%A6%BF%20%E0%A6%AC%E0%A6%BE%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%20%E0%A6%86%E0%A6%AC%E0%A7%87%E0%A6%A6%E0%A6%A8%20%E0%A6%95%E0%A6%B0%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank" class="abc-link text-xs">
+                <span>আবেদন সহায়তা</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 02: Digital Photo Lab & CV -->
+        <article class="py-8 group">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-start">
+            <div class="md:col-span-2 font-mono text-xs font-bold text-brand-teal tracking-widest">
+              [ 02 ]
+            </div>
+            <div class="md:col-span-7 space-y-2">
+              <h3 class="text-xl font-bold text-brand-forest group-hover:text-brand-teal transition">
+                ডিজিটাল ফটো ল্যাব ও সিভি মেকিং (Digital Photo Lab & CV)
+              </h3>
+              <p class="text-sm text-slate-600 leading-relaxed font-bn">
+                ২ মিনিটে ল্যাব কোয়ালিটি পাসপোর্ট ও স্ট্যাম্প সাইজ ছবি প্রিন্ট। ড্রেস কোড পরিবর্তন (স্যুট/টাই) ও ব্যাকগ্রাউন্ড চেঞ্জ। আন্তর্জাতিক মানের ATS-Friendly প্রফেশনাল রেজুমি ও আধুনিক বায়োডাটা প্রস্তুতকরণ।
+              </p>
+            </div>
+            <div class="md:col-span-3 md:text-right pt-2 md:pt-0">
+              <a href="https://wa.me/8801711652361?text=%E0%A6%B9%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%8B%20%E0%A6%B6%E0%A6%BE%E0%A6%AB%E0%A6%BE%E0%A7%9F%E0%A7%87%E0%A6%A4%20%E0%A6%AD%E0%A6%BE%E0%A6%87!%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20%E0%A6%AA%E0%A6%BE%E0%A6%B8%E0%A6%AA%E0%A7%8B%E0%A6%B0%E0%A7%8D%E0%A6%9F%20%E0%A6%9B%E0%A6%AC%E0%A6%BF%20%E0%A6%AC%E0%A6%BE%20%E0%A6%B8%E0%A6%BF%E0%A6%AD%E0%A6%BF%20%E0%A6%AC%E0%A6%BE%E0%A6%A8%E0%A6%BE%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank" class="abc-link text-xs">
+                <span>ছবি / সিভি অর্ডার</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 03: Printing, Photocopy & Binding -->
+        <article class="py-8 group">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-start">
+            <div class="md:col-span-2 font-mono text-xs font-bold text-brand-teal tracking-widest">
+              [ 03 ]
+            </div>
+            <div class="md:col-span-7 space-y-2">
+              <h3 class="text-xl font-bold text-brand-forest group-hover:text-brand-teal transition">
+                ফটোকপি, প্রিন্ট ও স্পাইরাল বাইন্ডিং (Printing & Binding)
+              </h3>
+              <p class="text-sm text-slate-600 leading-relaxed font-bn">
+                সাদাকালো আল্ট্রা হাই-স্পিড লেজার ফটোকপি ও প্রিন্ট। প্রাণবন্ত রঙিন কালার প্রিন্ট (ইনকজেট ও লেজার পেপার)। অ্যাসাইনমেন্ট, প্রজেক্ট রিপোর্ট ও থিসিস স্পাইরাল বাইন্ডিং এবং জরুরি কাগজপত্রের ওয়াটারপ্রুফ লেমিনেশন।
+              </p>
+            </div>
+            <div class="md:col-span-3 md:text-right pt-2 md:pt-0">
+              <a href="https://wa.me/8801711652361?text=%E0%A6%B9%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%8B%20%E0%A6%B6%E0%A6%BE%E0%A6%AB%E0%A6%BE%E0%A7%9F%E0%A7%87%E0%A6%A4%20%E0%A6%AD%E0%A6%BE%E0%A6%87!%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20%E0%A6%A1%E0%A6%95%E0%A7%81%E0%A6%AE%E0%A7%87%E0%A6%A8%E0%A7%8D%E0%A6%9F%20%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%A8%E0%A7%8D%E0%A6%9F/%E0%A6%AB%E0%A6%9F%E0%A7%8B%E0%A6%95%E0%A6%AA%E0%A6%BF%20%E0%A6%95%E0%A6%B0%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank" class="abc-link text-xs">
+                <span>ফাইল পাঠান</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 04: Computer Training Academy -->
+        <article class="py-8 group">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-start">
+            <div class="md:col-span-2 font-mono text-xs font-bold text-brand-teal tracking-widest">
+              [ 04 ]
+            </div>
+            <div class="md:col-span-7 space-y-2">
+              <h3 class="text-xl font-bold text-brand-forest group-hover:text-brand-teal transition">
+                কম্পিউটার প্রশিক্ষণ একাডেমি (Computer Training Academy)
+              </h3>
+              <p class="text-sm text-slate-600 leading-relaxed font-bn">
+                সার্টিফিকেট ইন কম্পিউটার অফিস অ্যাপ্লিকেশন (Word, Excel, PowerPoint)। দ্রুত বাংলা ও ইংরেজি টাইপিং কোর্স। বেসিক গ্রাফিক্স ডিজাইন ও ক্যানভা প্রো। সম্পূর্ণ শীতাতপ নিয়ন্ত্রিত ল্যাবে ১ জন শিক্ষার্থীর জন্য ১টি কম্পিউটার।
+              </p>
+            </div>
+            <div class="md:col-span-3 md:text-right pt-2 md:pt-0">
+              <a href="https://wa.me/8801711652361?text=%E0%A6%B9%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%8B%20%E0%A6%B6%E0%A6%BE%E0%A6%AB%E0%A6%BE%E0%A7%9F%E0%A7%87%E0%A6%A4%20%E0%A6%AD%E0%A6%BE%E0%A6%87!%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20%E0%A6%95%E0%A6%AE%E0%A7%8D%E0%A6%AA%E0%A6%BF%E0%A6%89%E0%A6%9F%E0%A6%BE%E0%A6%B0%20%E0%A6%95%E0%A7%8B%E0%A6%B0%E0%A7%8D%E0%A6%B8%E0%A7%87%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%20%E0%A6%B9%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank" class="abc-link text-xs">
+                <span>কোর্স বিস্তারিত</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 05: Student Stationery & Gadgets -->
+        <article class="py-8 group">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-start">
+            <div class="md:col-span-2 font-mono text-xs font-bold text-brand-teal tracking-widest">
+              [ 05 ]
+            </div>
+            <div class="md:col-span-7 space-y-2">
+              <div class="flex items-center gap-2">
+                <h3 class="text-xl font-bold text-brand-forest group-hover:text-brand-teal transition">
+                  স্টুডেন্ট স্টেশনারি ও গ্যাজেট (Stationery & Gadgets)
+                </h3>
+                <span class="text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded bg-brand-bgLight text-brand-forest border border-brand-border">
+                  ৯৯ টাকা কর্নার
+                </span>
+              </div>
+              <p class="text-sm text-slate-600 leading-relaxed font-bn">
+                স্কুল-কলেজের প্রয়োজনীয় সব খাতা, স্পাইরাল নোটবুক, জেল পেন, জ্যামিতি বক্স, সাইন্টিফিক ক্যালকুলেটর, আর্ট পেপার, কালার কিট, OTG অ্যাডাপ্টার ও মোবাইল-পিসি গ্যাজেট সামগ্রী।
+              </p>
+            </div>
+            <div class="md:col-span-3 md:text-right pt-2 md:pt-0">
+              <a href="https://wa.me/8801711652361?text=%E0%A6%B9%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%8B%20%E0%A6%B6%E0%A6%BE%E0%A6%AB%E0%A6%BE%E0%A7%9F%E0%A7%87%E0%A6%A4%20%E0%A6%AD%E0%A6%BE%E0%A6%87!%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%87%E0%A6%B6%E0%A6%A8%E0%A6%BE%E0%A6%B0%E0%A6%BF/%E0%A6%97%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%9C%E0%A7%87%E0%A6%9F%20%E0%A6%86%E0%A6%87%E0%A6%9F%E0%A7%87%E0%A6%AE%20%E0%A6%AC%E0%A7%81%E0%A6%95%20%E0%A6%95%E0%A6%B0%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank" class="abc-link text-xs">
+                <span>স্টেশনারি বুক করুন</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- 4. Fast WhatsApp File Upload Utility Box -->
+    <section class="bg-brand-bgLight border border-brand-border rounded-2xl p-8 sm:p-10 space-y-4">
+      <div class="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-brand-teal">
+        <i class="fa-brands fa-whatsapp text-base text-[#25D366]"></i>
+        <span>Direct File Transfer</span>
+      </div>
+      <h3 class="text-2xl font-bold text-brand-forest font-bn">
+        লাইনে না দাঁড়িয়ে সরাসরি হোয়াটসঅ্যাপে ফাইল পাঠান
+      </h3>
+      <p class="text-slate-600 text-sm font-bn leading-relaxed max-w-2xl">
+        বাসা বা ক্লাসরুম থেকেই আপনার অ্যাসাইনমেন্ট, ছবি বা চাকরির যেকোনো ডকুমেন্ট আমাদের নম্বরে পাঠিয়ে দিন। দোকানে এসে সরাসরি প্রস্তুত প্রিন্ট কপি সংগ্রহ করুন।
+      </p>
+      <div class="pt-2">
+        <a href="https://wa.me/8801711652361?text=%E0%A6%B9%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%8B%20%E0%A6%B6%E0%A6%BE%E0%A6%AB%E0%A6%BE%E0%A7%9F%E0%A7%87%E0%A6%A4%20%E0%A6%AD%E0%A6%BE%E0%A6%87!%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20%E0%A6%AB%E0%A6%BE%E0%A6%87%E0%A6%B2%20%E0%A6%AA%E0%A6%BE%E0%A6%A0%E0%A6%BE%E0%A6%9A%E0%A7%8D%E0%A6%9B%E0%A6%BF%20%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%A8%E0%A7%8D%E0%A6%9F%20%E0%A6%95%E0%A6%B0%E0%A6%BE%E0%A6%B0%20%E0%A6%9C%E0%A6%A8%E0%A7%8D%E0%A6%AF%E0%A5%A4" target="_blank"
+           class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-forest text-white text-xs font-bold hover:bg-brand-teal transition shadow-sm">
+          <i class="fa-brands fa-whatsapp text-base text-[#25D366]"></i>
+          <span>Send File on WhatsApp (01711-652361)</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 5. About & Contact Grid (Alphabet Clean Contact Block) -->
+    <section id="about" class="pt-6 border-t border-brand-border">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 text-sm">
+        
+        <div class="md:col-span-4 space-y-3">
+          <span class="text-xs font-mono uppercase tracking-wider text-brand-muted block">Identity</span>
+          <div class="flex items-center gap-3">
+            <img src="assets/logo.png" alt="Smart Computer and Stationary Official Logo" class="w-12 h-12 object-contain drop-shadow-sm flex-shrink-0">
+            <div>
+              <div class="font-extrabold text-brand-forest text-base sm:text-lg leading-tight">
+                Smart Computer and Stationary
+              </div>
+              <p class="text-xs text-slate-500 font-bn">
+                অনলাইন সার্ভিস, প্রিন্টিং ও ট্রেনিং জোন।
+              </p>
+            </div>
+          </div>
+          <div class="pt-2">
+            <span class="text-xs text-brand-muted block uppercase font-mono tracking-wider">Proprietor</span>
+            <div class="font-bold text-slate-800">
+              Shafayat Hossain (শাফায়েত হোসেন)
+            </div>
+            <span class="text-[11px] text-brand-teal font-mono block mt-0.5 font-medium">Tech for a Brighter Tomorrow</span>
+          </div>
+        </div>
+
+        <div class="md:col-span-4 space-y-3">
+          <span class="text-xs font-mono uppercase tracking-wider text-brand-muted block">Direct Contact</span>
+          <div class="space-y-1.5 font-medium">
+            <div>
+              <span class="text-brand-muted text-xs block">Mobile:</span>
+              <a href="tel:01711652361" class="text-brand-forest font-bold hover:text-brand-teal text-base">
+                01711-652361
+              </a>
+            </div>
+            <div>
+              <span class="text-brand-muted text-xs block">WhatsApp:</span>
+              <a href="https://wa.me/8801711652361" target="_blank" class="text-brand-teal font-bold hover:underline text-base">
+                01711-652361
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:col-span-4 space-y-3">
+          <span class="text-xs font-mono uppercase tracking-wider text-brand-muted block">Location & Hours</span>
+          <p class="text-slate-700 font-bn text-xs leading-relaxed">
+            স্কুল অ্যান্ড কলেজ ক্যান্টিন গেট সংলগ্ন (প্রধান ফটকের ডানে), মেইন রোড।
+          </p>
+          <div class="text-xs text-brand-muted pt-1">
+            <span class="block text-slate-800 font-semibold">শনিবার — বৃহস্পতিবার:</span>
+            <span>সকাল ৮:০০ – রাত ৯:০০</span>
+            <span class="block text-slate-800 font-semibold mt-1">শুক্রবার:</span>
+            <span>বিকেল ৩:০০ – রাত ৯:০০</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Minimalist Alphabet Style Footer -->
+  <footer class="border-t border-brand-border py-8 bg-white text-xs text-brand-muted">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div>
+        &copy; 2026 Smart Computer and Stationary. Shafayat Hossain.
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="tel:01711652361" class="hover:text-brand-forest transition">Call: 01711-652361</a>
+        <a href="https://wa.me/8801711652361" target="_blank" class="hover:text-brand-teal transition">WhatsApp: 01711-652361</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slider Functionality Script -->
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dotBtns = document.querySelectorAll('.dot-btn');
+    const slideNumberDisplay = document.getElementById('slide-number');
+    let autoPlayInterval = null;
+
+    function showSlide(index) {
+      if (index >= slides.length) index = 0;
+      if (index < 0) index = slides.length - 1;
+
+      slides.forEach((s, i) => {
+        if (i === index) {
+          s.classList.add('active');
+        } else {
+          s.classList.remove('active');
+        }
+      });
+
+      dotBtns.forEach((dot, i) => {
+        if (i === index) {
+          dot.classList.remove('bg-white/30');
+          dot.classList.add('bg-white', 'w-6');
+        } else {
+          dot.classList.add('bg-white/30');
+          dot.classList.remove('bg-white', 'w-6');
+        }
+      });
+
+      if (slideNumberDisplay) {
+        slideNumberDisplay.textContent = `0${index + 1} / 0${slides.length}`;
+      }
+
+      currentSlide = index;
+    }
+
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentSlide - 1);
+    }
+
+    function goToSlide(index) {
+      showSlide(index);
+      resetAutoPlay();
+    }
+
+    function startAutoPlay() {
+      autoPlayInterval = setInterval(nextSlide, 5500);
+    }
+
+    function resetAutoPlay() {
+      clearInterval(autoPlayInterval);
+      startAutoPlay();
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') {
+        nextSlide();
+        resetAutoPlay();
+      } else if (e.key === 'ArrowLeft') {
+        prevSlide();
+        resetAutoPlay();
+      }
+    });
+
+    // Touch swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const sliderEl = document.getElementById('hero-slider');
+
+    if (sliderEl) {
+      sliderEl.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      sliderEl.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+      }, { passive: true });
+
+      // Pause on hover
+      sliderEl.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
+      sliderEl.addEventListener('mouseleave', () => startAutoPlay());
+    }
+
+    function handleSwipe() {
+      const threshold = 50;
+      if (touchEndX < touchStartX - threshold) {
+        nextSlide();
+        resetAutoPlay();
+      } else if (touchEndX > touchStartX + threshold) {
+        prevSlide();
+        resetAutoPlay();
+      }
+    }
+
+    // Initialize
+    showSlide(0);
+    startAutoPlay();
+
+    // Service Worker Registration for PWA / offline support
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').catch(() => {});
+      });
+    }
+  </script>
+
+  <!-- Floating Action Buttons (Sticky WhatsApp & Call) -->
+  <div class="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-2.5">
+    <a href="tel:01711652361" 
+       class="w-11 h-11 rounded-full bg-brand-forest hover:bg-brand-teal text-white shadow-xl flex items-center justify-center text-sm border border-white/20 transition-transform hover:scale-105"
+       title="কল করুন: 01711-652361">
+      <i class="fa-solid fa-phone text-brand-sky"></i>
+    </a>
+
+    <a href="https://wa.me/8801711652361?text=%E0%A6%B9%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%8B%20%E0%A6%B6%E0%A6%BE%E0%A6%AB%E0%A6%BE%E0%A7%9F%E0%A7%87%E0%A6%A4%20%E0%A6%AD%E0%A6%BE%E0%A6%87!%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20Smart%20Computer%20%E0%A6%A5%E0%A7%87%E0%A6%95%E0%A7%87%20%E0%A6%B8%E0%A7%87%E0%A6%AC%E0%A6%BE%20%E0%A6%A8%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank"
+       class="relative group flex items-center gap-2 bg-[#25D366] text-white px-3.5 py-2.5 rounded-full shadow-2xl hover:bg-[#20BA5A] transition-transform hover:scale-105"
+       title="হোয়াটসঅ্যাপে মেসেজ পাঠান">
+      <span class="absolute -top-1 -right-1 flex h-3 w-3">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-400"></span>
+      </span>
+      <i class="fa-brands fa-whatsapp text-xl"></i>
+      <span class="font-bold text-xs hidden sm:inline">01711-652361</span>
+    </a>
+  </div>
+
+</body>
+</html>

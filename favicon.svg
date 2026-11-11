@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A3622"/>
+      <stop offset="50%" stop-color="#138A72"/>
+      <stop offset="100%" stop-color="#38B6FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="24" fill="#061e13"/>
+  <rect x="5" y="5" width="90" height="90" rx="20" fill="none" stroke="url(#grad)" stroke-width="3"/>
+  
+  <!-- Monitor frame -->
+  <rect x="18" y="22" width="64" height="42" rx="6" fill="#0A3622" stroke="#38B6FF" stroke-width="3"/>
+  <!-- Monitor Stand -->
+  <path d="M42 64 L38 78 L62 78 L58 64 Z" fill="#138A72"/>
+  <line x1="32" y1="78" x2="68" y2="78" stroke="#38B6FF" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Open Book inside monitor -->
+  <path d="M26 50 C32 45 42 45 50 49 C58 45 68 45 74 50 L74 34 C68 30 58 30 50 34 C42 30 32 30 26 34 Z" fill="#138A72" stroke="#ffffff" stroke-width="1.5"/>
+  <line x1="50" y1="34" x2="50" y2="49" stroke="#ffffff" stroke-width="1.5"/>
+  
+  <!-- Stylus / Stationery Pen -->
+  <polygon points="62,26 66,22 70,26 66,30" fill="#38B6FF"/>
+  <polygon points="56,32 62,26 66,30 60,36" fill="#ffffff"/>
+  <polygon points="52,36 56,32 60,36 56,40" fill="#38B6FF"/>
+  <polygon points="49,39 52,36 53,40" fill="#facc15"/>
+</svg>
+

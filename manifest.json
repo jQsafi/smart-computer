@@ -1,0 +1,17 @@
+{
+  "name": "Smart Computer & Stationery",
+  "short_name": "Smart Computer",
+  "description": "অনলাইন সার্ভিস, প্রিন্টিং ও ট্রেনিং জোন - স্কুল অ্যান্ড কলেজ ক্যান্টিন গেট সংলগ্ন",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0A3622",
+  "theme_color": "#0A3622",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
+

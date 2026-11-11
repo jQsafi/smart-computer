@@ -1,0 +1,202 @@
+/* Smart Computer & Stationery - Custom Stylesheet */
+
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --forest-dark: #061e13;
+  --forest-primary: #0A3622;
+  --forest-light: #0E492E;
+  --teal-primary: #138A72;
+  --teal-light: #19A98C;
+  --teal-soft: #e6f6f2;
+  --sky-blue: #38B6FF;
+  --sky-hover: #1ba5f2;
+  --white: #ffffff;
+  --off-white: #f8fafc;
+  --gray-text: #64748b;
+  --dark-text: #0f172a;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', 'Hind Siliguri', sans-serif;
+}
+
+body {
+  color: var(--dark-text);
+  background-color: #f8fafc;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0A3622;
+}
+::-webkit-scrollbar-thumb {
+  background: #138A72;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #38B6FF;
+}
+
+/* Bengali Typography Optimization */
+.bn-font {
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+/* Glassmorphism effects */
+.glass-nav {
+  background: rgba(10, 54, 34, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(56, 182, 255, 0.15);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.glass-dark {
+  background: rgba(10, 54, 34, 0.7);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(56, 182, 255, 0.2);
+}
+
+/* Glow effects */
+.glow-sky {
+  box-shadow: 0 0 25px rgba(56, 182, 255, 0.35);
+}
+
+.glow-teal {
+  box-shadow: 0 10px 30px rgba(19, 138, 114, 0.25);
+}
+
+.glow-subtle {
+  box-shadow: 0 4px 20px rgba(10, 54, 34, 0.08);
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes pulseSlow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.03);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 3s ease-in-out infinite;
+}
+
+/* Marquee / Ticker */
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 32s linear infinite;
+}
+
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+/* Badges & Tags */
+.badge-urgent {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+}
+
+.badge-fresh {
+  background: linear-gradient(135deg, #138A72 0%, #0E492E 100%);
+  color: white;
+}
+
+.badge-sky {
+  background: rgba(56, 182, 255, 0.15);
+  color: #0284c7;
+  border: 1px solid rgba(56, 182, 255, 0.4);
+}
+
+/* Custom interactive input range */
+input[type=range] {
+  accent-color: #138A72;
+}
+
+/* Button hover transitions */
+.btn-primary {
+  background: linear-gradient(135deg, #138A72 0%, #0A3622 100%);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #19A98C 0%, #0E492E 100%);
+  box-shadow: 0 10px 25px -5px rgba(19, 138, 114, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+  background: #25D366;
+  color: white;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-whatsapp:hover {
+  background: #20BA5A;
+  box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-sky {
+  background: linear-gradient(135deg, #38B6FF 0%, #0091EA 100%);
+  color: white;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-sky:hover {
+  background: linear-gradient(135deg, #60C5FF 0%, #0084D4 100%);
+  box-shadow: 0 10px 25px -5px rgba(56, 182, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Card hover animation */
+.hover-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 30px -10px rgba(10, 54, 34, 0.15);
+}
+
+/* Custom Modal Backdrop */
+.modal-backdrop {
+  background-color: rgba(6, 30, 19, 0.75);
+  backdrop-filter: blur(6px);
+}
+
