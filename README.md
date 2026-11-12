@@ -3,7 +3,8 @@
 > *Proprietor: Shafayat Hossain*  
 > *Location: Beside School & College Canteen Gate*  
 > *Contact / WhatsApp: 01711-652361*  
-> **Live URL:** [https://jqsafi.github.io/smart-computer/](https://jqsafi.github.io/smart-computer/)
+> **Live URL (Wasmer Edge):** [https://smart-computer.wasmer.app](https://smart-computer.wasmer.app)  
+> **Live URL (GitHub Pages):** [https://jqsafi.github.io/smart-computer/](https://jqsafi.github.io/smart-computer/)
 
 A modern, responsive, and typography-first single-page application built with **React 18**, **Vite**, **Tailwind CSS**, and Google Fonts (`Plus Jakarta Sans`).
 
