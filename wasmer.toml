@@ -1,6 +1,6 @@
 [package]
 name = "jqsafi/smart-computer"
-version = "0.1.0"
+version = "0.1.1"
 description = "Smart Computer and Stationary Website - Digital services, photo lab, printing, training & stationery"
 
 [dependencies]
