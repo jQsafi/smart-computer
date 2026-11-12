@@ -1,0 +1,18 @@
+[package]
+name = "smart-computer"
+version = "0.1.0"
+description = "Smart Computer and Stationary Website - Digital services, photo lab, printing, training & stationery"
+
+[dependencies]
+"wasmer/static-web-server" = "^1"
+
+[fs]
+"/public" = "dist"
+
+[[command]]
+name = "script"
+module = "wasmer/static-web-server:webserver"
+runner = "wasi"
+
+[command.annotations.wasi]
+main-args = ["--root", "/public", "--port", "8080", "--page404", "/public/index.html", "--index-files", "index.html"]
