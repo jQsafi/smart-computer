@@ -1,18 +1,22 @@
-// Smart Computer Service Worker
-const CACHE_NAME = 'smart-computer-v1';
-const ASSETS_TO_CACHE = [
+// Smart Computer & Stationary - Modern Offline Service Worker
+const CACHE_NAME = 'smart-computer-v2';
+
+const OFFLINE_CORE_ASSETS = [
   './',
   './index.html',
-  './css/style.css',
-  './js/app.js',
+  './manifest.json',
   './favicon.svg',
-  './manifest.json'
+  './assets/logo.png',
+  './assets/logo.webp',
+  './assets/smart_blocks.png'
 ];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(ASSETS_TO_CACHE);
+      return cache.addAll(OFFLINE_CORE_ASSETS).catch((err) => {
+        console.warn('[SW] Non-critical cache failed during install:', err);
+      });
     })
   );
   self.skipWaiting();
@@ -30,9 +34,21 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  // Network first, falling back to cache
+  if (event.request.method !== 'GET') return;
+
   event.respondWith(
-    fetch(event.request).catch(() => caches.match(event.request))
+    fetch(event.request)
+      .then((networkResponse) => {
+        if (networkResponse && networkResponse.status === 200) {
+          const responseToCache = networkResponse.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, responseToCache).catch(() => {});
+          });
+        }
+        return networkResponse;
+      })
+      .catch(() => {
+        return caches.match(event.request);
+      })
   );
 });
-

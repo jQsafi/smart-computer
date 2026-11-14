@@ -4,7 +4,8 @@
 > *Location: Beside School & College Canteen Gate*  
 > *Contact / WhatsApp: 01711-652361*  
 > **Live URL (Wasmer Edge):** [https://smart-computer.wasmer.app](https://smart-computer.wasmer.app)  
-> **Live URL (GitHub Pages):** [https://jqsafi.github.io/smart-computer/](https://jqsafi.github.io/smart-computer/)
+> **Live URL (GitHub Pages):** [https://jqsafi.github.io/smart-computer/](https://jqsafi.github.io/smart-computer/)  
+> **Project Audit & Roadmap:** [PROJECT_AUDIT_REPORT.md](docs/PROJECT_AUDIT_REPORT.md)
 
 A modern, responsive, and typography-first single-page application built with **React 18**, **Vite**, **Tailwind CSS**, and Google Fonts (`Plus Jakarta Sans`).
 

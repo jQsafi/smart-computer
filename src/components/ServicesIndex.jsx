@@ -10,7 +10,7 @@ const romanNumerals = {
   "05": "V"
 };
 
-export default function ServicesIndex() {
+export default function ServicesIndex({ onOpenEnrollModal }) {
   const [activeDepartment, setActiveDepartment] = useState('ALL');
 
   const filteredServices = activeDepartment === 'ALL'
@@ -161,20 +161,32 @@ export default function ServicesIndex() {
                 </div>
 
                 {/* Column 3: Frosted Pill Action Link */}
-                <div className="lg:col-span-3 lg:text-right pt-3 lg:pt-0 flex flex-col lg:items-end justify-between h-full">
-                  <a
-                    href={serviceWhatsAppUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-5 py-2.5 rounded-full border border-brand-sky/40 bg-[#0B192C]/80 hover:bg-[#1D4ED8] hover:border-brand-sky text-sky-200 hover:text-white text-xs tracking-wider uppercase transition-all duration-300 shadow-lg backdrop-blur-sm inline-flex items-center gap-2 group-hover:scale-105"
-                  >
-                    <i className="fa-brands fa-whatsapp text-sm text-[#38B6FF] group-hover:text-white transition-colors"></i>
-                    <span>Contact Desk</span>
-                    <span>&rarr;</span>
-                  </a>
+                <div className="lg:col-span-3 lg:text-right pt-3 lg:pt-0 flex flex-col lg:items-end justify-between h-full gap-2">
+                  {service.id === 'training' && onOpenEnrollModal ? (
+                    <button
+                      type="button"
+                      onClick={() => onOpenEnrollModal(service.title)}
+                      className="px-5 py-2.5 rounded-full border border-brand-sky/50 bg-[#1D4ED8] hover:bg-[#2563EB] text-white text-xs tracking-wider uppercase transition-all duration-300 shadow-[0_0_15px_rgba(56,182,255,0.35)] inline-flex items-center gap-2 group-hover:scale-105 font-semibold"
+                    >
+                      <i className="fa-solid fa-graduation-cap text-sm text-sky-300"></i>
+                      <span>Enroll in Academy</span>
+                      <span>&rarr;</span>
+                    </button>
+                  ) : (
+                    <a
+                      href={serviceWhatsAppUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-5 py-2.5 rounded-full border border-brand-sky/40 bg-[#0B192C]/80 hover:bg-[#1D4ED8] hover:border-brand-sky text-sky-200 hover:text-white text-xs tracking-wider uppercase transition-all duration-300 shadow-lg backdrop-blur-sm inline-flex items-center gap-2 group-hover:scale-105"
+                    >
+                      <i className="fa-brands fa-whatsapp text-sm text-[#38B6FF] group-hover:text-white transition-colors"></i>
+                      <span>Contact Desk</span>
+                      <span>&rarr;</span>
+                    </a>
+                  )}
 
                   <span className="hidden lg:block text-[10px] font-mono text-[#93C5FD]/50 uppercase tracking-widest mt-6">
-                    Direct Inquiry
+                    {service.id === 'training' ? "1 Workstation Per Student" : "Direct Inquiry"}
                   </span>
                 </div>
 

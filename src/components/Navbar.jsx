@@ -98,14 +98,23 @@ export default function Navbar() {
         </a>
 
         {/* Navigation & Header Actions */}
-        <div className="flex items-center gap-3 sm:gap-6 text-xs font-semibold">
-          <a href="#services" className="text-slate-300 hover:text-[#38B6FF] transition hidden md:inline-block font-mono tracking-wider uppercase text-[11px]">
+        <div className="flex items-center gap-3 sm:gap-5 text-xs font-semibold">
+          <a href="#services" className="text-slate-300 hover:text-[#38B6FF] transition hidden lg:inline-block font-mono tracking-wider uppercase text-[10.5px]">
             Departments
           </a>
-          <a href="#notices" className="text-slate-300 hover:text-[#38B6FF] transition hidden md:inline-block font-mono tracking-wider uppercase text-[11px]">
+          <a href="#notices" className="text-slate-300 hover:text-[#38B6FF] transition hidden md:inline-block font-mono tracking-wider uppercase text-[10.5px]">
             Circulars
           </a>
-          <a href="#about" className="text-slate-300 hover:text-[#38B6FF] transition hidden md:inline-block font-mono tracking-wider uppercase text-[11px]">
+          <a href="#print-calculator" className="text-slate-300 hover:text-[#38B6FF] transition hidden md:inline-block font-mono tracking-wider uppercase text-[10.5px]">
+            Calculator
+          </a>
+          <a href="#stationery-catalog" className="text-slate-300 hover:text-[#38B6FF] transition hidden lg:inline-block font-mono tracking-wider uppercase text-[10.5px]">
+            Stationery
+          </a>
+          <a href="#faq" className="text-slate-300 hover:text-[#38B6FF] transition hidden xl:inline-block font-mono tracking-wider uppercase text-[10.5px]">
+            FAQ
+          </a>
+          <a href="#about" className="text-slate-300 hover:text-[#38B6FF] transition hidden sm:inline-block font-mono tracking-wider uppercase text-[10.5px]">
             Colophon
           </a>
 

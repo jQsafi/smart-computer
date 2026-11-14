@@ -1,15 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import HeroSlider from './components/HeroSlider';
 import ExecutiveSummary from './components/ExecutiveSummary';
 import NoticeBoard from './components/NoticeBoard';
 import ServicesIndex from './components/ServicesIndex';
+import PrintCalculator from './components/PrintCalculator';
 import FileUploadBox from './components/FileUploadBox';
+import ProductCatalog from './components/ProductCatalog';
+import FAQAccordion from './components/FAQAccordion';
 import AboutContact from './components/AboutContact';
 import Footer from './components/Footer';
 import FloatingActions from './components/FloatingActions';
+import CourseEnrollModal from './components/CourseEnrollModal';
 
 export default function App() {
+  const [enrollModal, setEnrollModal] = useState({
+    isOpen: false,
+    courseTitle: "Certificate in Basic Computer Applications"
+  });
+
+  const handleOpenEnroll = (title) => {
+    setEnrollModal({
+      isOpen: true,
+      courseTitle: title || "Certificate in Basic Computer Applications"
+    });
+  };
+
+  const handleCloseEnroll = () => {
+    setEnrollModal(prev => ({ ...prev, isOpen: false }));
+  };
+
   return (
     <div className="min-h-screen flex flex-col justify-between bg-[#060D17] text-[#F8FAFC] selection:bg-[#1D4ED8] selection:text-white relative overflow-x-hidden">
       {/* Permanent Monograph Background: Atmospheric Radial Navy Glow */}
@@ -51,42 +71,77 @@ export default function App() {
 
       {/* 2. Main Editorial Monograph Content Area */}
       <main className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 py-16 sm:py-24 flex-grow w-full space-y-24 sm:space-y-28">
+        {/* SECTION I · EXECUTIVE MONOGRAPH */}
         <ExecutiveSummary />
 
-        {/* Delicate Gradient Section Divider */}
+        {/* Section Divider · II · */}
         <div className="flex items-center justify-center gap-4 py-2" aria-hidden="true">
           <span className="h-px flex-1 bg-gradient-to-r from-transparent via-[#38B6FF]/30 to-transparent" />
           <span className="text-[10px] font-mono tracking-[0.3em] text-[#38B6FF]/60 uppercase">· II ·</span>
           <span className="h-px flex-1 bg-gradient-to-l from-transparent via-[#38B6FF]/30 to-transparent" />
         </div>
 
+        {/* SECTION II · OFFICIAL GAZETTE & LIVE BULLETIN */}
         <NoticeBoard />
 
-        {/* Delicate Gradient Section Divider */}
+        {/* Section Divider · III · */}
         <div className="flex items-center justify-center gap-4 py-2" aria-hidden="true">
           <span className="h-px flex-1 bg-gradient-to-r from-transparent via-[#38B6FF]/30 to-transparent" />
           <span className="text-[10px] font-mono tracking-[0.3em] text-[#38B6FF]/60 uppercase">· III ·</span>
           <span className="h-px flex-1 bg-gradient-to-l from-transparent via-[#38B6FF]/30 to-transparent" />
         </div>
 
-        <ServicesIndex />
+        {/* SECTION III · DEPARTMENTAL COMPENDIUM */}
+        <ServicesIndex onOpenEnrollModal={handleOpenEnroll} />
 
-        {/* Delicate Gradient Section Divider */}
+        {/* Section Divider · IV · */}
         <div className="flex items-center justify-center gap-4 py-2" aria-hidden="true">
           <span className="h-px flex-1 bg-gradient-to-r from-transparent via-[#38B6FF]/30 to-transparent" />
           <span className="text-[10px] font-mono tracking-[0.3em] text-[#38B6FF]/60 uppercase">· IV ·</span>
           <span className="h-px flex-1 bg-gradient-to-l from-transparent via-[#38B6FF]/30 to-transparent" />
         </div>
 
-        <FileUploadBox />
+        {/* SECTION IV · RAPID REPRODUCTION COST LEDGER */}
+        <PrintCalculator />
 
-        {/* Delicate Gradient Section Divider */}
+        {/* Section Divider · V · */}
         <div className="flex items-center justify-center gap-4 py-2" aria-hidden="true">
           <span className="h-px flex-1 bg-gradient-to-r from-transparent via-[#38B6FF]/30 to-transparent" />
           <span className="text-[10px] font-mono tracking-[0.3em] text-[#38B6FF]/60 uppercase">· V ·</span>
           <span className="h-px flex-1 bg-gradient-to-l from-transparent via-[#38B6FF]/30 to-transparent" />
         </div>
 
+        {/* SECTION V · DIRECT WHATSAPP DOCUMENT DISPATCH */}
+        <FileUploadBox />
+
+        {/* Section Divider · VI · */}
+        <div className="flex items-center justify-center gap-4 py-2" aria-hidden="true">
+          <span className="h-px flex-1 bg-gradient-to-r from-transparent via-[#38B6FF]/30 to-transparent" />
+          <span className="text-[10px] font-mono tracking-[0.3em] text-[#38B6FF]/60 uppercase">· VI ·</span>
+          <span className="h-px flex-1 bg-gradient-to-l from-transparent via-[#38B6FF]/30 to-transparent" />
+        </div>
+
+        {/* SECTION VI · ACADEMIC SUPPLY & VALUE CORNER */}
+        <ProductCatalog />
+
+        {/* Section Divider · VII · */}
+        <div className="flex items-center justify-center gap-4 py-2" aria-hidden="true">
+          <span className="h-px flex-1 bg-gradient-to-r from-transparent via-[#38B6FF]/30 to-transparent" />
+          <span className="text-[10px] font-mono tracking-[0.3em] text-[#38B6FF]/60 uppercase">· VII ·</span>
+          <span className="h-px flex-1 bg-gradient-to-l from-transparent via-[#38B6FF]/30 to-transparent" />
+        </div>
+
+        {/* SECTION VII · PROCEDURAL CODEX & INQUIRIES */}
+        <FAQAccordion />
+
+        {/* Section Divider · VIII · */}
+        <div className="flex items-center justify-center gap-4 py-2" aria-hidden="true">
+          <span className="h-px flex-1 bg-gradient-to-r from-transparent via-[#38B6FF]/30 to-transparent" />
+          <span className="text-[10px] font-mono tracking-[0.3em] text-[#38B6FF]/60 uppercase">· VIII ·</span>
+          <span className="h-px flex-1 bg-gradient-to-l from-transparent via-[#38B6FF]/30 to-transparent" />
+        </div>
+
+        {/* SECTION VIII · INSTITUTIONAL REGISTRY & OPERATING LEDGER */}
         <AboutContact />
       </main>
 
@@ -95,6 +150,13 @@ export default function App() {
 
       {/* 4. Sticky Floating Contact Buttons */}
       <FloatingActions />
+
+      {/* 5. Course Enrollment Modal Dialog */}
+      <CourseEnrollModal
+        isOpen={enrollModal.isOpen}
+        onClose={handleCloseEnroll}
+        initialCourse={enrollModal.courseTitle}
+      />
     </div>
   );
 }
