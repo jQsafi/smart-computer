@@ -1,0 +1,20 @@
+{
+  "siteUrl": "https://www.smartcomputer.shop",
+  "googleSheets": {
+    "enabled": false,
+    "spreadsheetId": "",
+    "productsSheetName": "Products",
+    "servicesSheetName": "Services",
+    "csvUrl": ""
+  },
+  "facebook": {
+    "enabled": false,
+    "pageId": "",
+    "accessToken": ""
+  },
+  "sitemap": {
+    "autoPing": true,
+    "googlePing": true,
+    "bingPing": true
+  }
+}

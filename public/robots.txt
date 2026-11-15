@@ -1,0 +1,8 @@
+# robots.txt for Smart Computer and Stationary
+# Domain: https://www.smartcomputer.shop
+
+User-agent: *
+Allow: /
+
+# Canonical XML Sitemap
+Sitemap: https://www.smartcomputer.shop/sitemap.xml
