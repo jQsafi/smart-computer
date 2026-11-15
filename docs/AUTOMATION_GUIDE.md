@@ -90,10 +90,20 @@ npm run post:fb
 
 ---
 
-## 4. 🚀 Unified Execution Command
+## 4. 🚀 Automated Push & Deployment ("Push with Automation")
 
-To run all automations, build the site, and verify everything:
+Instead of manually running multiple terminal commands, you can now run a single automated command:
 ```powershell
-npm run automate
-npm run build
+npm run push
+# or
+npm run push:auto
 ```
+
+### What this one command does automatically:
+1. **Dynamic Automations:** Runs `npm run automate` (syncs Google Sheets prices, regenerates `sitemap.xml`, pings Google & Bing crawlers, stages Facebook post).
+2. **Version Bump:** Increments the package version in `wasmer.toml` (`0.1.x` ➔ `0.1.y`) so Wasmer Edge package publishing never encounters conflicts.
+3. **Production Build:** Runs `npm run build` to compile the optimized React bundle into `dist/`.
+4. **Git Commit & Push:** Stages all files, creates a timestamped commit with Dhaka local time, and pushes cleanly to GitHub `origin/main`.
+5. **Edge Deployment:** Deploys the package directly to Wasmer Edge CDN (`smartcomputer.shop`).
+6. **Dual CI/CD:** GitHub Actions automatically runs the build and deploys to GitHub Pages as a redundant mirror.
+

@@ -10,7 +10,9 @@
     "automate": "node scripts/run-automations.js",
     "sitemap": "node scripts/generate-sitemap.js --ping",
     "sync:sheets": "node scripts/sync-google-sheets.js",
-    "post:fb": "node scripts/facebook-bot.js"
+    "post:fb": "node scripts/facebook-bot.js",
+    "push": "node scripts/push-with-automation.js",
+    "push:auto": "node scripts/push-with-automation.js"
   },
   "dependencies": {
     "lucide-react": "^1.16.0",
