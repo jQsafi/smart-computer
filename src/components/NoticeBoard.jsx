@@ -1,91 +1,18 @@
 import React, { useState } from 'react';
 import { siteConfig } from '../data/siteConfig';
-
-const initialNotices = [
-  {
-    id: 1,
-    category: "JOB",
-    tag: "Govt Job Circular",
-    organization: "Bangladesh Railway",
-    posts: "560 Posts",
-    fee: "Tk 223",
-    title: "Bangladesh Railway Assistant Station Master & Various Posts Recruitment",
-    deadline: "30 Nov 2026",
-    status: "Urgent",
-    badgeColor: "border border-[#38B6FF]/40 bg-[#1D4ED8]/25 text-[#38B6FF]"
-  },
-  {
-    id: 2,
-    category: "ADMISSION",
-    tag: "College Admission",
-    organization: "Ministry of Education (Dhaka Board)",
-    posts: "Nationwide",
-    fee: "Tk 150",
-    title: "Class XI Online College Admission & Preference Choice Form Processing",
-    deadline: "15 Dec 2026",
-    status: "Active",
-    badgeColor: "border border-sky-400/40 bg-sky-500/15 text-sky-200"
-  },
-  {
-    id: 3,
-    category: "JOB",
-    tag: "Primary Teacher",
-    organization: "Directorate of Primary Education",
-    posts: "13,750 Posts",
-    fee: "Tk 112",
-    title: "Primary Assistant Teacher Recruitment (All Divisions Open)",
-    deadline: "25 Dec 2026",
-    status: "Active",
-    badgeColor: "border border-emerald-400/40 bg-emerald-500/20 text-emerald-200"
-  },
-  {
-    id: 4,
-    category: "ADMISSION",
-    tag: "University Admission",
-    organization: "University of Dhaka (DU)",
-    posts: "A, B, C & Fine Arts Units",
-    fee: "Tk 1,050",
-    title: "Dhaka University (DU) Undergraduate 1st Year Admission Test Form",
-    deadline: "05 Jan 2027",
-    status: "Active",
-    badgeColor: "border border-indigo-400/40 bg-indigo-500/20 text-indigo-200"
-  },
-  {
-    id: 5,
-    category: "JOB",
-    tag: "Teacher Registration",
-    organization: "NTRCA Dhaka",
-    posts: "School & College Levels",
-    fee: "Tk 350",
-    title: "19th Non-Government Teachers' Registration Examination (NTRCA)",
-    deadline: "10 Dec 2026",
-    status: "Urgent",
-    badgeColor: "border border-amber-400/40 bg-amber-500/20 text-amber-200"
-  },
-  {
-    id: 6,
-    category: "TRAINING",
-    tag: "Academic Training",
-    organization: "Smart Computer Academy",
-    posts: "Limited Seats (10 Only)",
-    fee: "Flexible Installments",
-    title: "Computer Office Applications & Touch Typing New Cohort Enrolling Now",
-    deadline: "Limited Seats (10 Only)",
-    status: "Enrolling",
-    badgeColor: "border border-purple-400/40 bg-purple-500/20 text-purple-200"
-  }
-];
+import { noticesData } from '../data/noticesData';
 
 export default function NoticeBoard() {
   const [filter, setFilter] = useState('ALL');
   const [search, setSearch] = useState('');
 
-  const filteredNotices = initialNotices.filter((n) => {
+  const filteredNotices = noticesData.filter((n) => {
     const matchesFilter = filter === 'ALL' || n.category === filter;
     const matchesSearch = search.trim() === '' || 
       n.title.toLowerCase().includes(search.toLowerCase()) ||
       n.organization.toLowerCase().includes(search.toLowerCase()) ||
-      n.tag.toLowerCase().includes(search.toLowerCase());
+      n.tag.toLowerCase().includes(search.toLowerCase()) ||
+      (n.portal && n.portal.toLowerCase().includes(search.toLowerCase()));
     return matchesFilter && matchesSearch;
   });
 
@@ -105,7 +32,7 @@ export default function NoticeBoard() {
             Live Circulars &amp; Academic Postings
           </h3>
           <p className="font-serif-i italic text-xs sm:text-sm text-[#E0F2FE]/70 mt-1">
-            Real-time government job circulars, autonomous bank recruitments &amp; college admissions
+            Real-time government job circulars, autonomous ministerial recruitments &amp; university admissions (Nov–Dec 2026)
           </p>
         </div>
 
@@ -116,7 +43,7 @@ export default function NoticeBoard() {
             <i className="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
             <input
               type="text"
-              placeholder="Search circulars..."
+              placeholder="Search Petrobangla, DU, C&AG..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="w-full pl-8 pr-3 py-1.5 bg-[#060D17] border border-white/15 focus:border-[#38B6FF] rounded-full text-xs text-white placeholder-slate-500 focus:outline-none"
@@ -133,10 +60,10 @@ export default function NoticeBoard() {
 
           <div className="flex flex-wrap items-center gap-1.5">
             {[
-              { id: 'ALL', label: 'All Notices' },
-              { id: 'JOB', label: 'Jobs' },
-              { id: 'ADMISSION', label: 'Admissions' },
-              { id: 'TRAINING', label: 'Training' }
+              { id: 'ALL', label: `All (${noticesData.length})` },
+              { id: 'JOB', label: `Jobs (${noticesData.filter(n => n.category === 'JOB').length})` },
+              { id: 'ADMISSION', label: `Admissions (${noticesData.filter(n => n.category === 'ADMISSION').length})` },
+              { id: 'TRAINING', label: `Training (${noticesData.filter(n => n.category === 'TRAINING').length})` }
             ].map((item) => (
               <button
                 key={item.id}
@@ -163,21 +90,28 @@ export default function NoticeBoard() {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {filteredNotices.map((notice) => {
-            const applyMsg = `Hello Shafayat! I would like assistance with the application for "${notice.title}" (${notice.organization}). Please let me know what documents are needed.`;
+            const applyMsg = `Hello Shafayat! I would like assistance with the online application for "${notice.title}" (${notice.organization}). Please let me know what documents, photo sizes, and signatures are required.`;
             const applyUrl = `${siteConfig.contact.whatsappLink}?text=${encodeURIComponent(applyMsg)}`;
 
             return (
               <div 
                 key={notice.id} 
-                className="bg-[#0B192C]/70 backdrop-blur-md border border-white/10 hover:border-[#38B6FF]/40 rounded-2xl p-5 sm:p-6 transition-all duration-300 flex flex-col justify-between group shadow-xl"
+                className="bg-[#0B192C]/70 backdrop-blur-md border border-white/10 hover:border-[#38B6FF]/40 rounded-2xl p-5 sm:p-6 transition-all duration-300 flex flex-col justify-between group shadow-xl hover:-translate-y-1"
               >
                 <div>
-                  {/* Card Tag & Organization */}
+                  {/* Card Tag, Status & Organization */}
                   <div className="flex items-center justify-between text-xs mb-3 font-mono">
-                    <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-semibold tracking-wider uppercase ${notice.badgeColor}`}>
-                      {notice.tag}
-                    </span>
-                    <span className="text-[10px] text-[#93C5FD]/70 truncate max-w-[120px]">
+                    <div className="flex items-center gap-1.5 flex-wrap">
+                      <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-semibold tracking-wider uppercase ${notice.badgeColor}`}>
+                        {notice.tag}
+                      </span>
+                      {notice.status === 'Urgent' && (
+                        <span className="px-2 py-0.5 rounded-full text-[9px] font-extrabold uppercase bg-red-500/20 text-red-300 border border-red-500/40 animate-pulse">
+                          Closing Soon
+                        </span>
+                      )}
+                    </div>
+                    <span className="text-[10px] text-[#93C5FD]/70 truncate max-w-[130px]" title={notice.organization}>
                       {notice.organization}
                     </span>
                   </div>
@@ -197,21 +131,30 @@ export default function NoticeBoard() {
                       <span className="text-slate-500 block text-[10px]">Official Fee:</span>
                       <span className="text-[#38B6FF] font-medium">{notice.fee}</span>
                     </div>
+                    {notice.portal && (
+                      <div className="col-span-2 pt-1 border-t border-white/5 flex items-center justify-between">
+                        <span className="text-slate-500 text-[10px]">Portal:</span>
+                        <span className="text-emerald-400 font-mono text-[10px] truncate max-w-[170px]">
+                          <i className="fa-solid fa-link text-[9px] mr-1"></i>
+                          {notice.portal}
+                        </span>
+                      </div>
+                    )}
                   </div>
                 </div>
 
                 {/* Card Footer Divider & CTA */}
                 <div className="pt-3 flex items-center justify-between border-t border-white/10 mt-2">
                   <div className="text-[10px] text-slate-400 font-mono">
-                    <span>Deadline: </span>
-                    <strong className="text-white font-semibold font-sans">{notice.deadline}</strong>
+                    <span className="block text-[9px] text-slate-500 uppercase">Application Deadline</span>
+                    <strong className="text-white font-semibold font-sans text-xs">{notice.deadline}</strong>
                   </div>
 
                   <a
                     href={applyUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3 py-1.5 rounded-full border border-[#38B6FF]/40 bg-[#1D4ED8]/30 hover:bg-[#1D4ED8] hover:border-[#38B6FF] text-sky-200 hover:text-white text-[11px] font-semibold tracking-wider uppercase transition-all duration-300 shadow-md flex items-center gap-1.5 group-hover:scale-105"
+                    className="px-3.5 py-1.5 rounded-full border border-[#38B6FF]/40 bg-[#1D4ED8]/30 hover:bg-[#1D4ED8] hover:border-[#38B6FF] text-sky-200 hover:text-white text-[11px] font-semibold tracking-wider uppercase transition-all duration-300 shadow-md flex items-center gap-1.5 group-hover:scale-105"
                   >
                     <span>Apply</span>
                     <span>&rarr;</span>
