@@ -63,11 +63,11 @@ export default function App() {
         aria-hidden="true"
       />
 
-      {/* 1. Fullscreen Hero Slider with Overlaid Navbar */}
-      <div className="relative z-10">
-        <Navbar />
-        <HeroSlider />
-      </div>
+      {/* Fixed Luxury Navigation Bar (Always Visible & Clickable) */}
+      <Navbar />
+
+      {/* 1. Fullscreen Hero Slider */}
+      <HeroSlider />
 
       {/* 2. Main Editorial Monograph Content Area */}
       <main className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 py-16 sm:py-24 flex-grow w-full space-y-24 sm:space-y-28">
