@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { siteConfig } from '../data/siteConfig';
+import { trackPrintCalculatorUsage } from '../utils/analytics';
 
 const SERVICE_RATES = {
   bw_copy: { label: "B&W Photocopy", rate: 2.0, bulkRate: 1.8, minBulk: 50, icon: "fa-copy" },
@@ -295,6 +296,7 @@ export default function PrintCalculator() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackPrintCalculatorUsage(currentService.label, pages, copies, grandTotal, 'order_dispatched')}
               className="w-full py-3.5 px-5 rounded-full border border-[#38B6FF]/50 bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#1D4ED8] hover:from-[#2563EB] hover:to-[#38B6FF] text-white font-semibold text-xs tracking-wider uppercase transition-all duration-300 shadow-[0_0_20px_rgba(56,182,255,0.35)] hover:shadow-[0_0_30px_rgba(56,182,255,0.6)] flex items-center justify-center gap-2.5 hover:scale-[1.02]"
             >
               <i className="fa-brands fa-whatsapp text-lg"></i>

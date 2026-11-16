@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { servicesData } from '../data/servicesData';
 import { siteConfig } from '../data/siteConfig';
+import { trackWhatsAppClick } from '../utils/analytics';
 
 const romanNumerals = {
   "01": "I",
@@ -177,6 +178,7 @@ export default function ServicesIndex({ onOpenEnrollModal }) {
                       href={serviceWhatsAppUrl}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() => trackWhatsAppClick('service_card', { service_id: service.id, service_name: service.title })}
                       className="px-5 py-2.5 rounded-full border border-brand-sky/40 bg-[#0B192C]/80 hover:bg-[#1D4ED8] hover:border-brand-sky text-sky-200 hover:text-white text-xs tracking-wider uppercase transition-all duration-300 shadow-lg backdrop-blur-sm inline-flex items-center gap-2 group-hover:scale-105"
                     >
                       <i className="fa-brands fa-whatsapp text-sm text-[#38B6FF] group-hover:text-white transition-colors"></i>

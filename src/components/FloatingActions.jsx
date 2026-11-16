@@ -1,5 +1,6 @@
 import React from 'react';
 import { siteConfig } from '../data/siteConfig';
+import { trackCallClick, trackWhatsAppClick } from '../utils/analytics';
 
 export default function FloatingActions() {
   const whatsappUrl = `${siteConfig.contact.whatsappLink}?text=${encodeURIComponent(siteConfig.contact.defaultWhatsAppMsg)}`;
@@ -9,6 +10,7 @@ export default function FloatingActions() {
       {/* Quick Phone Call Button */}
       <a
         href={`tel:${siteConfig.contact.rawPhone}`}
+        onClick={() => trackCallClick('floating_button')}
         className="w-12 h-12 rounded-full bg-[#0B192C]/90 backdrop-blur-md hover:bg-[#1D4ED8] text-white shadow-xl flex items-center justify-center text-sm border border-white/20 hover:border-[#38B6FF] transition-all hover:scale-110"
         title={`Direct Call: ${siteConfig.contact.phone}`}
         aria-label="Direct Telephone Call"
@@ -21,6 +23,7 @@ export default function FloatingActions() {
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => trackWhatsAppClick('floating_button', { destination: 'proprietor_direct' })}
         className="relative group flex items-center gap-2.5 bg-gradient-to-r from-[#1D4ED8] to-[#2563EB] hover:from-[#2563EB] hover:to-[#38B6FF] text-white px-4 py-3 rounded-full shadow-[0_0_25px_rgba(56,182,255,0.4)] border border-[#38B6FF]/50 transition-all hover:scale-105"
         title="Send Document / Inquiry on WhatsApp"
         aria-label="WhatsApp Dispatch Desk"

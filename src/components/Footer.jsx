@@ -1,5 +1,6 @@
 import React from 'react';
 import { siteConfig } from '../data/siteConfig';
+import { trackCallClick, trackWhatsAppClick } from '../utils/analytics';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -34,6 +35,7 @@ export default function Footer() {
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 font-mono text-[11px] text-slate-300">
             <a 
               href={`tel:${siteConfig.contact.rawPhone}`} 
+              onClick={() => trackCallClick('footer')}
               className="hover:text-[#38B6FF] transition-colors flex items-center gap-1.5"
             >
               <i className="fa-solid fa-phone text-[10px] text-[#38B6FF]"></i>
@@ -43,6 +45,7 @@ export default function Footer() {
               href={whatsappUrl} 
               target="_blank" 
               rel="noopener noreferrer" 
+              onClick={() => trackWhatsAppClick('footer', { destination: 'proprietor_direct' })}
               className="hover:text-[#38B6FF] transition-colors flex items-center gap-1.5"
             >
               <i className="fa-brands fa-whatsapp text-sm text-[#38B6FF]"></i>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { siteConfig } from '../data/siteConfig';
 import { noticesData } from '../data/noticesData';
+import { trackNoticeInteraction } from '../utils/analytics';
 
 export default function NoticeBoard() {
   const [filter, setFilter] = useState('ALL');
@@ -154,6 +155,7 @@ export default function NoticeBoard() {
                     href={applyUrl}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackNoticeInteraction(notice.title, notice.organization, 'apply_click')}
                     className="px-3.5 py-1.5 rounded-full border border-[#38B6FF]/40 bg-[#1D4ED8]/30 hover:bg-[#1D4ED8] hover:border-[#38B6FF] text-sky-200 hover:text-white text-[11px] font-semibold tracking-wider uppercase transition-all duration-300 shadow-md flex items-center gap-1.5 group-hover:scale-105"
                   >
                     <span>Apply</span>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { siteConfig } from '../data/siteConfig';
+import { trackCallClick, trackWhatsAppClick } from '../utils/analytics';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -88,6 +89,7 @@ export default function Navbar() {
           {/* Direct Call Button (Desktop/Tablet) */}
           <a 
             href={`tel:${siteConfig.contact.rawPhone}`} 
+            onClick={() => trackCallClick('navbar_desktop')}
             className="text-white hover:text-[#38B6FF] transition hidden sm:flex items-center gap-1.5 font-mono text-[11px] px-2.5 py-1.5 rounded-full hover:bg-white/5 border border-white/10"
             title="Direct Phone Call"
           >
@@ -100,6 +102,7 @@ export default function Navbar() {
             href={whatsappUrl} 
             target="_blank" 
             rel="noopener noreferrer"
+            onClick={() => trackWhatsAppClick('navbar_desktop')}
             className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-[#38B6FF]/50 bg-[#1D4ED8] hover:bg-[#2563EB] text-white transition-all flex items-center gap-1.5 sm:gap-2 shadow-[0_0_15px_rgba(56,182,255,0.35)] font-semibold text-[11px] sm:text-xs tracking-wider uppercase hover:scale-105 cursor-pointer"
           >
             <i className="fa-brands fa-whatsapp text-sm text-[#38B6FF]"></i>
@@ -140,6 +143,7 @@ export default function Navbar() {
             <div className="pt-3 border-t border-white/10 flex flex-col gap-2.5">
               <a
                 href={`tel:${siteConfig.contact.rawPhone}`}
+                onClick={() => trackCallClick('navbar_mobile_menu')}
                 className="flex items-center justify-center gap-2 py-2.5 rounded-xl border border-white/15 bg-white/5 text-white text-xs font-semibold"
               >
                 <i className="fa-solid fa-phone text-[#38B6FF] text-xs"></i>

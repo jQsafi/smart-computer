@@ -1,5 +1,6 @@
 import React from 'react';
 import { siteConfig } from '../data/siteConfig';
+import { trackCallClick, trackWhatsAppClick } from '../utils/analytics';
 
 export default function AboutContact() {
   const whatsappUrl = `${siteConfig.contact.whatsappLink}?text=${encodeURIComponent(siteConfig.contact.defaultWhatsAppMsg)}`;
@@ -80,6 +81,7 @@ export default function AboutContact() {
                 </span>
                 <a 
                   href={`tel:${siteConfig.contact.rawPhone}`} 
+                  onClick={() => trackCallClick('about_contact_section')}
                   className="text-lg sm:text-xl font-bold text-white hover:text-[#38B6FF] transition-colors block mt-0.5"
                 >
                   {siteConfig.contact.phone}
@@ -94,6 +96,7 @@ export default function AboutContact() {
                   href={whatsappUrl} 
                   target="_blank" 
                   rel="noopener noreferrer" 
+                  onClick={() => trackWhatsAppClick('about_contact_section', { destination: 'proprietor_direct' })}
                   className="text-base sm:text-lg font-bold text-[#38B6FF] hover:text-white transition-colors flex items-center gap-2 mt-0.5"
                 >
                   <i className="fa-brands fa-whatsapp text-lg"></i>

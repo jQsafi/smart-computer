@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { productsData } from '../data/productsData';
 import { siteConfig } from '../data/siteConfig';
+import { trackWhatsAppClick } from '../utils/analytics';
 
 export default function ProductCatalog() {
   const [filter, setFilter] = useState('ALL');
@@ -112,6 +113,7 @@ export default function ProductCatalog() {
                   href={orderUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick('product_catalog', { product_id: prod.id, product_title: prod.title, price: prod.price })}
                   className="w-full py-2.5 px-4 rounded-xl border border-[#38B6FF]/40 bg-[#1D4ED8]/25 hover:bg-[#1D4ED8] hover:border-[#38B6FF] text-sky-200 hover:text-white text-xs font-semibold tracking-wider uppercase transition-all duration-300 flex items-center justify-center gap-2 group-hover:scale-[1.02] shadow-md"
                 >
                   <i className="fa-brands fa-whatsapp text-sm text-[#38B6FF] group-hover:text-white"></i>

@@ -16,5 +16,8 @@
     "autoPing": true,
     "googlePing": true,
     "bingPing": true
+  },
+  "googleAnalytics": {
+    "measurementId": "G-CJ1RPJGERL"
   }
 }

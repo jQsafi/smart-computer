@@ -1,9 +1,15 @@
 import React from 'react';
 import { siteConfig } from '../data/siteConfig';
+import { trackWhatsAppClick, trackDocumentDispatch } from '../utils/analytics';
 
 export default function FileUploadBox() {
   const uploadMsg = "Hello Shafayat! I am sending files for printing and photocopy.";
   const uploadUrl = `${siteConfig.contact.whatsappLink}?text=${encodeURIComponent(uploadMsg)}`;
+
+  const handleDispatchClick = () => {
+    trackWhatsAppClick('file_upload_box', { type: 'document_dispatch' });
+    trackDocumentDispatch('print_or_copy');
+  };
 
   return (
     <section className="relative overflow-hidden rounded-3xl bg-[#0B192C]/70 backdrop-blur-xl border border-white/10 hover:border-[#38B6FF]/40 p-8 sm:p-12 transition-all duration-500 shadow-2xl group">
@@ -53,6 +59,7 @@ export default function FileUploadBox() {
             href={uploadUrl}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={handleDispatchClick}
             className="inline-flex items-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full border border-[#38B6FF]/60 bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#1D4ED8] hover:from-[#2563EB] hover:to-[#38B6FF] text-white font-semibold text-xs sm:text-sm tracking-[0.14em] uppercase transition-all duration-300 shadow-[0_0_25px_rgba(56,182,255,0.4)] hover:shadow-[0_0_35px_rgba(56,182,255,0.65)] hover:scale-[1.02]"
           >
             <i className="fa-brands fa-whatsapp text-lg sm:text-xl text-white"></i>

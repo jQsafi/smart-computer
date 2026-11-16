@@ -86,16 +86,40 @@ async function main() {
 
   run('git push origin main', 'Git Push to GitHub');
 
-  // Step 5: Wasmer Edge Deploy
+  // Step 5: Wasmer Edge Deploy (if Wasmer CLI is installed)
   console.log('\n▶ [Step 4: Wasmer Edge Deployment]');
-  const wasmerBin = path.join(os.homedir(), '.wasmer', 'bin', 'wasmer.exe');
-  const wasmerCmd = fs
-    .access(wasmerBin)
-    .then(() => `& "${wasmerBin}" deploy --publish-package --non-interactive`)
-    .catch(() => `wasmer deploy --publish-package --non-interactive`);
+  try {
+    const isWin = process.platform === 'win32';
+    const wasmerBinWin = path.join(os.homedir(), '.wasmer', 'bin', 'wasmer.exe');
+    let hasWasmer = false;
+    let deployCmd = 'wasmer deploy --publish-package --non-interactive';
 
-  const resolvedWasmerCmd = await wasmerCmd;
-  run(`powershell -Command "${resolvedWasmerCmd}"`, 'Wasmer Edge Deploy');
+    if (isWin) {
+      try {
+        await fs.access(wasmerBinWin);
+        deployCmd = `powershell -Command "& \\"${wasmerBinWin}\\" deploy --publish-package --non-interactive"`;
+        hasWasmer = true;
+      } catch {
+        deployCmd = 'powershell -Command "wasmer deploy --publish-package --non-interactive"';
+        hasWasmer = true;
+      }
+    } else {
+      try {
+        execSync('command -v wasmer', { stdio: 'ignore' });
+        hasWasmer = true;
+      } catch {
+        hasWasmer = false;
+      }
+    }
+
+    if (hasWasmer) {
+      run(deployCmd, 'Wasmer Edge Deploy');
+    } else {
+      console.log('ℹ Wasmer CLI not found on this device; deployment is handled automatically by GitHub Actions.');
+    }
+  } catch (err) {
+    console.warn('⚠️ Wasmer Edge deploy step skipped:', err.message);
+  }
 
   const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
   console.log('\n================================================================');

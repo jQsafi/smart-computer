@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { siteConfig } from '../data/siteConfig';
+import { trackCourseEnrollment } from '../utils/analytics';
 
 export default function CourseEnrollModal({ isOpen, onClose, initialCourse = "Certificate in Basic Computer Applications" }) {
   const [course, setCourse] = useState(initialCourse);
@@ -12,6 +13,8 @@ export default function CourseEnrollModal({ isOpen, onClose, initialCourse = "Ce
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    trackCourseEnrollment(course, 'enrollment_submitted', { shift, hasName: !!name, hasPhone: !!phone });
 
     const text = 
       `Hello Shafayat! I would like to enroll in Smart Computer Training Academy:\n\n` +
