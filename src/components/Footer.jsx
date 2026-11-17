@@ -34,6 +34,13 @@ export default function Footer() {
           {/* Quick Action Links */}
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 font-mono text-[11px] text-slate-300">
             <a 
+              href="blog.html" 
+              className="text-[#38B6FF] hover:text-white transition-colors flex items-center gap-1.5 font-bold"
+            >
+              <span>The Keyword Blog</span>
+              <span className="text-[9px] px-1.5 py-0.2 bg-blue-600 text-white rounded-full">New</span>
+            </a>
+            <a 
               href={`tel:${siteConfig.contact.rawPhone}`} 
               onClick={() => trackCallClick('footer')}
               className="hover:text-[#38B6FF] transition-colors flex items-center gap-1.5"

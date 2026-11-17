@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import HeroSlider from './components/HeroSlider';
 import ExecutiveSummary from './components/ExecutiveSummary';
@@ -12,8 +12,42 @@ import AboutContact from './components/AboutContact';
 import Footer from './components/Footer';
 import FloatingActions from './components/FloatingActions';
 import CourseEnrollModal from './components/CourseEnrollModal';
+import BlogApp from './blog/BlogApp';
 
 export default function App() {
+  const [isBlogRoute, setIsBlogRoute] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    return (
+      window.location.hostname.startsWith('blog.') ||
+      window.location.pathname.startsWith('/blog') ||
+      window.location.hash.startsWith('#blog') ||
+      window.location.hash.startsWith('#the-keyword') ||
+      window.location.hash.startsWith('#post=') ||
+      new URLSearchParams(window.location.search).get('view') === 'blog'
+    );
+  });
+
+  useEffect(() => {
+    const checkRoute = () => {
+      const isBlog = (
+        window.location.hostname.startsWith('blog.') ||
+        window.location.pathname.startsWith('/blog') ||
+        window.location.hash.startsWith('#blog') ||
+        window.location.hash.startsWith('#the-keyword') ||
+        window.location.hash.startsWith('#post=') ||
+        new URLSearchParams(window.location.search).get('view') === 'blog'
+      );
+      setIsBlogRoute(isBlog);
+    };
+
+    window.addEventListener('hashchange', checkRoute);
+    window.addEventListener('popstate', checkRoute);
+    return () => {
+      window.removeEventListener('hashchange', checkRoute);
+      window.removeEventListener('popstate', checkRoute);
+    };
+  }, []);
+
   const [enrollModal, setEnrollModal] = useState({
     isOpen: false,
     courseTitle: "Certificate in Basic Computer Applications"
@@ -29,6 +63,10 @@ export default function App() {
   const handleCloseEnroll = () => {
     setEnrollModal(prev => ({ ...prev, isOpen: false }));
   };
+
+  if (isBlogRoute) {
+    return <BlogApp />;
+  }
 
   return (
     <div className="min-h-screen flex flex-col justify-between bg-[#060D17] text-[#F8FAFC] selection:bg-[#1D4ED8] selection:text-white relative overflow-x-hidden">

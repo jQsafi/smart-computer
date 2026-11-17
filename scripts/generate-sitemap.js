@@ -20,13 +20,23 @@ async function generateSitemap() {
   const noticesPath = path.join(projectRoot, 'src', 'data', 'noticesData.js');
   const noticesFile = await fs.readFile(noticesPath, 'utf-8');
 
-  // Dynamically import notices data
+  // Dynamically import notices and blog data
   const { noticesData } = await import(`file://${noticesPath}`);
+  const blogPath = path.join(projectRoot, 'src', 'data', 'blogData.js');
+  let blogPosts = [];
+  try {
+    const blogModule = await import(`file://${blogPath}`);
+    blogPosts = blogModule.BLOG_POSTS || [];
+  } catch (err) {
+    console.warn('[Sitemap] Could not load blog posts:', err.message);
+  }
 
   const today = new Date().toISOString().split('T')[0];
 
   const coreUrls = [
     { loc: `${BASE_URL}/`, changefreq: 'daily', priority: '1.0' },
+    { loc: `${BASE_URL}/blog.html`, changefreq: 'daily', priority: '0.95' },
+    { loc: `https://blog.smartcomputer.shop/`, changefreq: 'daily', priority: '0.95' },
     { loc: `${BASE_URL}/#notices`, changefreq: 'daily', priority: '0.95' },
     { loc: `${BASE_URL}/#services`, changefreq: 'weekly', priority: '0.90' },
     { loc: `${BASE_URL}/#print-calculator`, changefreq: 'weekly', priority: '0.85' },
@@ -34,6 +44,22 @@ async function generateSitemap() {
     { loc: `${BASE_URL}/#faq`, changefreq: 'monthly', priority: '0.70' },
     { loc: `${BASE_URL}/#about`, changefreq: 'monthly', priority: '0.70' },
   ];
+
+  // Blog articles for deep indexing
+  const blogUrls = (blogPosts || []).flatMap((post) => [
+    {
+      loc: `https://blog.smartcomputer.shop/#post=${post.slug}`,
+      changefreq: 'weekly',
+      priority: '0.85',
+      lastmod: today,
+    },
+    {
+      loc: `${BASE_URL}/blog.html#post=${post.slug}`,
+      changefreq: 'weekly',
+      priority: '0.80',
+      lastmod: today,
+    }
+  ]);
 
   // Specific notice anchors for deep indexing
   const noticeUrls = (noticesData || []).map((notice) => ({
@@ -43,7 +69,7 @@ async function generateSitemap() {
     lastmod: today,
   }));
 
-  const allUrls = [...coreUrls, ...noticeUrls];
+  const allUrls = [...coreUrls, ...blogUrls, ...noticeUrls];
 
   const xmlContent = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"

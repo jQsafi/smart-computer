@@ -34,6 +34,7 @@ export default function Navbar() {
     { href: '#notices', label: 'Circulars' },
     { href: '#print-calculator', label: 'Calculator' },
     { href: '#stationery-catalog', label: 'Stationery' },
+    { href: 'blog.html', label: 'Blog', isBlog: true },
     { href: '#faq', label: 'FAQ' },
     { href: '#about', label: 'Colophon' },
   ];
@@ -77,9 +78,18 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-slate-300 hover:text-[#38B6FF] transition-colors tracking-wider uppercase text-[10.5px] lg:text-[11px] py-1 hover:underline underline-offset-4 decoration-[#38B6FF]"
+              className={`transition-colors tracking-wider uppercase text-[10.5px] lg:text-[11px] py-1 hover:underline underline-offset-4 decoration-[#38B6FF] inline-flex items-center gap-1.5 ${
+                link.isBlog
+                  ? 'text-[#38B6FF] font-bold hover:text-white'
+                  : 'text-slate-300 hover:text-[#38B6FF]'
+              }`}
             >
-              {link.label}
+              <span>{link.label}</span>
+              {link.isBlog && (
+                <span className="text-[9px] px-1.5 py-0.2 bg-gradient-to-r from-blue-500 to-sky-400 text-white font-bold rounded-full normal-case tracking-normal">
+                  Keyword
+                </span>
+              )}
             </a>
           ))}
         </nav>
