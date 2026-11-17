@@ -228,6 +228,26 @@ export default function BlogArticleView({ post, allPosts, onBack, onSelectPost }
                 </p>
               )}
 
+              {/* Relative Inline Media Figure (Image + Caption) */}
+              {section.media && (
+                <figure className="my-6 space-y-2">
+                  <div className="rounded-2xl overflow-hidden shadow-md border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-white/5">
+                    <img
+                      src={typeof section.media === 'string' ? section.media : (section.media.url || section.media.imageUrl)}
+                      alt={section.media.caption || section.heading}
+                      loading="lazy"
+                      className="w-full object-cover max-h-[460px]"
+                      style={{ aspectRatio: '16/9' }}
+                    />
+                  </div>
+                  {section.media.caption && (
+                    <figcaption className="text-xs text-center text-gray-500 dark:text-gray-400 italic font-serif">
+                      {section.media.caption}
+                    </figcaption>
+                  )}
+                </figure>
+              )}
+
               {section.quote && (
                 <blockquote className="my-6 pl-5 border-l-4 border-blue-600 dark:border-[#38B6FF] italic text-base sm:text-lg text-gray-800 dark:text-gray-200 bg-gray-50 dark:bg-white/5 py-3 pr-4 rounded-r-lg font-serif">
                   "{section.quote}"

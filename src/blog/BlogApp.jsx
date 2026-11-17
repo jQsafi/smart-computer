@@ -89,6 +89,15 @@ export default function BlogApp() {
     return BLOG_POSTS.find((p) => p.slug === activePostSlug || p.id === activePostSlug);
   }, [activePostSlug]);
 
+  // Synchronize document.title dynamically
+  useEffect(() => {
+    if (activePost) {
+      document.title = `${activePost.title} — The Keyword | Smart Computer`;
+    } else {
+      document.title = "The Keyword — Smart Computer & Stationary Official Blog";
+    }
+  }, [activePost]);
+
   // Lead featured story (for hero)
   const featuredPost = useMemo(() => {
     return BLOG_POSTS.find((p) => p.featured) || BLOG_POSTS[0];
