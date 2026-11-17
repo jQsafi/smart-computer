@@ -34,7 +34,7 @@ export default function Footer() {
           {/* Quick Action Links */}
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 font-mono text-[11px] text-slate-300">
             <a 
-              href="blog.html" 
+              href={typeof window !== 'undefined' && (window.location.hostname.includes('smartcomputer.shop') || window.location.hostname.includes('wasmer.app')) ? 'https://blog.smartcomputer.shop/' : 'blog.html'} 
               className="text-[#38B6FF] hover:text-white transition-colors flex items-center gap-1.5 font-bold"
             >
               <span>The Keyword Blog</span>

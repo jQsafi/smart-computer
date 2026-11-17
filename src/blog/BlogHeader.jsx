@@ -15,6 +15,10 @@ export default function BlogHeader({
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const mainShopUrl = typeof window !== 'undefined' && (window.location.hostname.includes('smartcomputer.shop') || window.location.hostname.includes('wasmer.app'))
+    ? 'https://www.smartcomputer.shop/'
+    : '/';
+
   return (
     <header className="sticky top-0 z-50 bg-white/95 dark:bg-[#0A121E]/95 backdrop-blur-md border-b border-gray-200/80 dark:border-white/10 transition-colors">
       {/* Top Google-style Brand Masthead */}
@@ -117,7 +121,7 @@ export default function BlogHeader({
 
             {/* Link to Main Shop (smartcomputer.shop) */}
             <a
-              href="/"
+              href={mainShopUrl}
               className="hidden sm:inline-flex items-center gap-1.5 px-4 py-1.5 text-xs font-semibold text-gray-700 dark:text-gray-200 bg-white dark:bg-white/10 border border-gray-300 dark:border-white/20 hover:border-blue-500 dark:hover:border-[#38B6FF] hover:text-blue-600 dark:hover:text-[#38B6FF] rounded-full shadow-sm hover:shadow transition-all"
             >
               <span>Main Shop</span>
@@ -163,7 +167,7 @@ export default function BlogHeader({
 
             <div className="pt-2 border-t border-gray-200 dark:border-white/10 px-2 flex justify-between items-center">
               <a
-                href="/"
+                href={mainShopUrl}
                 className="text-xs font-medium text-blue-600 dark:text-[#38B6FF] flex items-center gap-1"
               >
                 ← Return to Smart Computer Shop

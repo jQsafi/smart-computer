@@ -7,6 +7,10 @@ export default function BlogFooter({ onSelectCategory }) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const mainShopUrl = typeof window !== 'undefined' && (window.location.hostname.includes('smartcomputer.shop') || window.location.hostname.includes('wasmer.app'))
+    ? 'https://www.smartcomputer.shop/'
+    : '/';
+
   return (
     <footer className="border-t border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-[#060D17] text-gray-600 dark:text-gray-400 text-xs transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 space-y-12">
@@ -96,7 +100,7 @@ export default function BlogFooter({ onSelectCategory }) {
             <ul className="space-y-2 text-xs">
               <li>
                 <a 
-                  href="/" 
+                  href={mainShopUrl} 
                   className="hover:text-blue-600 dark:hover:text-[#38B6FF] flex items-center gap-1 transition-colors"
                 >
                   <span>Main Store Website</span>
@@ -105,7 +109,7 @@ export default function BlogFooter({ onSelectCategory }) {
               </li>
               <li>
                 <a 
-                  href="/#services" 
+                  href={`${mainShopUrl}#services`} 
                   className="hover:text-blue-600 dark:hover:text-[#38B6FF] transition-colors"
                 >
                   Service Catalog
@@ -113,7 +117,7 @@ export default function BlogFooter({ onSelectCategory }) {
               </li>
               <li>
                 <a 
-                  href="/#notices" 
+                  href={`${mainShopUrl}#notices`} 
                   className="hover:text-blue-600 dark:hover:text-[#38B6FF] transition-colors"
                 >
                   Live Circular Gazette
@@ -121,7 +125,7 @@ export default function BlogFooter({ onSelectCategory }) {
               </li>
               <li>
                 <a 
-                  href="/#print-calculator" 
+                  href={`${mainShopUrl}#print-calculator`} 
                   className="hover:text-blue-600 dark:hover:text-[#38B6FF] transition-colors"
                 >
                   Print Cost Calculator

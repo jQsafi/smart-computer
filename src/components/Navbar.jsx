@@ -29,12 +29,30 @@ export default function Navbar() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  const getBlogUrl = () => {
+    if (typeof window !== 'undefined') {
+      const host = window.location.hostname;
+      if (host.startsWith('blog.')) {
+        return '#the-keyword';
+      }
+      if (host.includes('smartcomputer.shop') || host.includes('wasmer.app')) {
+        return 'https://blog.smartcomputer.shop/';
+      }
+      if (host.includes('smartcomputer.com')) {
+        return 'https://blog.smartcomputer.com/';
+      }
+    }
+    return 'blog.html';
+  };
+
+  const blogUrl = getBlogUrl();
+
   const navLinks = [
     { href: '#services', label: 'Departments' },
     { href: '#notices', label: 'Circulars' },
     { href: '#print-calculator', label: 'Calculator' },
     { href: '#stationery-catalog', label: 'Stationery' },
-    { href: 'blog.html', label: 'Blog', isBlog: true },
+    { href: blogUrl, label: 'Blog', isBlog: true },
     { href: '#faq', label: 'FAQ' },
     { href: '#about', label: 'Colophon' },
   ];
@@ -76,7 +94,7 @@ export default function Navbar() {
         <nav className="hidden md:flex items-center gap-4 lg:gap-5 text-xs font-semibold font-mono">
           {navLinks.map((link) => (
             <a
-              key={link.href}
+              key={link.label}
               href={link.href}
               className={`transition-colors tracking-wider uppercase text-[10.5px] lg:text-[11px] py-1 hover:underline underline-offset-4 decoration-[#38B6FF] inline-flex items-center gap-1.5 ${
                 link.isBlog
@@ -86,8 +104,11 @@ export default function Navbar() {
             >
               <span>{link.label}</span>
               {link.isBlog && (
-                <span className="text-[9px] px-1.5 py-0.2 bg-gradient-to-r from-blue-500 to-sky-400 text-white font-bold rounded-full normal-case tracking-normal">
-                  Keyword
+                <span className="flex items-center gap-0.5 ml-0.5" aria-hidden="true" title="The Keyword Blog">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#4285F4]"></span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#EA4335]"></span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#FBBC05]"></span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#34A853]"></span>
                 </span>
               )}
             </a>
@@ -140,12 +161,23 @@ export default function Navbar() {
           <div className="flex flex-col space-y-3 font-mono text-xs uppercase tracking-wider">
             {navLinks.map((link) => (
               <a
-                key={link.href}
+                key={link.label}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-slate-200 hover:text-[#38B6FF] hover:bg-white/5 py-2.5 px-3 rounded-xl transition flex items-center justify-between border border-transparent hover:border-white/10"
+                className={`py-2.5 px-3 rounded-xl transition flex items-center justify-between border ${
+                  link.isBlog
+                    ? 'bg-blue-600/15 border-blue-500/30 text-[#38B6FF] font-bold'
+                    : 'text-slate-200 hover:text-[#38B6FF] hover:bg-white/5 border-transparent hover:border-white/10'
+                }`}
               >
-                <span>{link.label}</span>
+                <span className="flex items-center gap-2">
+                  <span>{link.label}</span>
+                  {link.isBlog && (
+                    <span className="text-[9px] px-2 py-0.5 rounded-full bg-blue-600 text-white font-mono normal-case tracking-normal">
+                      The Keyword
+                    </span>
+                  )}
+                </span>
                 <span className="text-[#38B6FF]">&rarr;</span>
               </a>
             ))}
