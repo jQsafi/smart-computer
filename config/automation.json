@@ -18,6 +18,7 @@
     "bingPing": true
   },
   "googleAnalytics": {
-    "measurementId": "G-CJ1RPJGERL"
+    "measurementId": "G-CJ1RPJGERL",
+    "gtmId": "GTM-5Q9MZCC5"
   }
 }

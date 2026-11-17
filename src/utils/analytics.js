@@ -9,13 +9,15 @@
  * - Printing cost calculations
  */
 
+export const GTM_CONTAINER_ID = 'GTM-5Q9MZCC5';
+
 export const GA_MEASUREMENT_ID = 
   (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_GA_MEASUREMENT_ID) ||
   (typeof window !== 'undefined' && window.GA_MEASUREMENT_ID) ||
   'G-CJ1RPJGERL';
 
 /**
- * Initialize Google Analytics 4 gtag.js script dynamically.
+ * Initialize Google Analytics 4 / Google Tag Manager script dynamically.
  * Safe to call even if no ID is configured yet (will log a helpful tip in development).
  */
 export function initGA(customId = '') {
@@ -24,9 +26,9 @@ export function initGA(customId = '') {
   const trackingId = (customId || GA_MEASUREMENT_ID || '').trim();
 
   // If already loaded in index.html, avoid duplicate script injection
-  if (typeof window.gtag === 'function' || document.querySelector(`script[src*="googletagmanager.com/gtag/js"]`)) {
+  if (typeof window.gtag === 'function' || document.querySelector(`script[src*="googletagmanager.com"]`)) {
     if (import.meta.env.DEV) {
-      console.info(`[Google Analytics] Active with ID: ${trackingId}`);
+      console.info(`[Analytics] Active with GTM/GA4 ID: ${trackingId}`);
     }
     return;
   }
@@ -71,13 +73,23 @@ export function initGA(customId = '') {
 }
 
 /**
- * Dispatch generic event to Google Analytics
+ * Dispatch generic event to Google Analytics & Google Tag Manager
  */
 export function trackEvent(action, params = {}) {
-  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-    window.gtag('event', action, params);
+  if (typeof window !== 'undefined') {
+    // 1. Push standard GTM custom event object into dataLayer
+    if (window.dataLayer && Array.isArray(window.dataLayer)) {
+      window.dataLayer.push({
+        event: action,
+        ...params,
+      });
+    }
+    // 2. Dispatch via gtag API
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', action, params);
+    }
   } else if (import.meta.env.DEV) {
-    console.debug(`[Google Analytics Event] ${action}:`, params);
+    console.debug(`[Analytics Event] ${action}:`, params);
   }
 }
 
