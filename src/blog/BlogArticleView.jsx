@@ -14,6 +14,42 @@ import {
 import { siteConfig } from '../data/siteConfig';
 import BlogStoryCard from './BlogStoryCard';
 
+// Utility to parse markdown-style links [text](https://...) inside article text
+function renderFormattedText(text) {
+  if (!text || typeof text !== 'string') return text;
+  const parts = [];
+  const linkRegex = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
+  let lastIndex = 0;
+  let match;
+  let key = 0;
+
+  while ((match = linkRegex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.substring(lastIndex, match.index));
+    }
+    const [, label, url] = match;
+    parts.push(
+      <a
+        key={`link-${key++}`}
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-600 dark:text-[#38B6FF] hover:underline inline-flex items-center gap-0.5 font-medium underline underline-offset-2"
+      >
+        <span>{label}</span>
+        <ExternalLink className="w-3 h-3 inline-block ml-0.5 opacity-70 flex-shrink-0" />
+      </a>
+    );
+    lastIndex = match.index + match[0].length;
+  }
+
+  if (lastIndex < text.length) {
+    parts.push(text.substring(lastIndex));
+  }
+
+  return parts.length > 0 ? parts : text;
+}
+
 export default function BlogArticleView({ post, allPosts, onBack, onSelectPost }) {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [copied, setCopied] = useState(false);
@@ -210,7 +246,7 @@ export default function BlogArticleView({ post, allPosts, onBack, onSelectPost }
         <div className="prose dark:prose-invert max-w-none text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed space-y-8">
           {/* Introduction */}
           <p className="text-base sm:text-lg leading-relaxed text-gray-800 dark:text-gray-200 font-normal">
-            {post.content.introduction}
+            {renderFormattedText(post.content.introduction)}
           </p>
 
           {/* Content Sections */}
@@ -224,9 +260,16 @@ export default function BlogArticleView({ post, allPosts, onBack, onSelectPost }
 
               {section.body && (
                 <p className="leading-relaxed">
-                  {section.body}
+                  {renderFormattedText(section.body)}
                 </p>
               )}
+
+              {/* Multi-paragraph support if provided */}
+              {section.paragraphs?.map((pText, pIdx) => (
+                <p key={pIdx} className="leading-relaxed">
+                  {renderFormattedText(pText)}
+                </p>
+              ))}
 
               {/* Relative Inline Media Figure (Image + Caption) */}
               {section.media && (
@@ -259,14 +302,64 @@ export default function BlogArticleView({ post, allPosts, onBack, onSelectPost }
                   {section.list.map((item, lIdx) => (
                     <li key={lIdx} className="flex items-start gap-3">
                       <span className="w-2 h-2 rounded-full bg-blue-600 dark:bg-[#38B6FF] mt-2 flex-shrink-0" />
-                      <span className="leading-relaxed">{item}</span>
+                      <span className="leading-relaxed">{renderFormattedText(item)}</span>
                     </li>
                   ))}
                 </ul>
               )}
+
+              {/* Section-level Links & Tool References */}
+              {section.links && section.links.length > 0 && (
+                <div className="my-4 p-4 rounded-2xl bg-blue-50/60 dark:bg-white/5 border border-blue-200/80 dark:border-white/10 space-y-2">
+                  <div className="text-xs font-bold uppercase tracking-wider text-blue-700 dark:text-[#38B6FF] flex items-center gap-1.5 font-mono">
+                    <ExternalLink className="w-3.5 h-3.5" />
+                    <span>Official Links &amp; Tools</span>
+                  </div>
+                  <div className="flex flex-wrap gap-2 pt-1">
+                    {section.links.map((linkItem, lkIdx) => (
+                      <a
+                        key={lkIdx}
+                        href={linkItem.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg bg-white dark:bg-gray-800 text-blue-600 dark:text-[#38B6FF] hover:text-blue-800 dark:hover:text-blue-300 border border-gray-200 dark:border-gray-700 shadow-sm transition-all"
+                      >
+                        <span>{linkItem.title || linkItem.label || linkItem.url}</span>
+                        <ExternalLink className="w-3 h-3 opacity-70 flex-shrink-0" />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           ))}
         </div>
+
+        {/* Verified Primary Sources & Reference Materials */}
+        {post.sources && post.sources.length > 0 && (
+          <div className="p-5 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 space-y-3">
+            <div className="text-xs font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 font-mono flex items-center gap-1.5">
+              <ExternalLink className="w-3.5 h-3.5" />
+              <span>Verified Sources &amp; Reference Materials</span>
+            </div>
+            <ul className="divide-y divide-gray-200 dark:divide-white/10 text-xs sm:text-sm">
+              {post.sources.map((src, srcIdx) => (
+                <li key={srcIdx} className="py-2.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                  <span className="font-medium text-gray-800 dark:text-gray-200">{src.title}</span>
+                  <a
+                    href={src.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 dark:text-[#38B6FF] hover:underline inline-flex items-center gap-1 text-xs font-mono"
+                  >
+                    <span>{src.domain || 'View Source'}</span>
+                    <ExternalLink className="w-3 h-3 flex-shrink-0" />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         {/* Post Tags */}
         {post.tags && post.tags.length > 0 && (

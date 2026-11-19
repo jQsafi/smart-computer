@@ -5,823 +5,895 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://www.smartcomputer.shop/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/#notices</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/#services</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/#print-calculator</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/#stationery-catalog</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/#faq</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/#about</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
   <url>
+    <loc>https://blog.smartcomputer.shop/#post=gemini-api-tool-retrieval-scalable-agent-swarms-2026</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.smartcomputer.shop/blog.html#post=gemini-api-tool-retrieval-scalable-agent-swarms-2026</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://blog.smartcomputer.shop/#post=gemini-computer-use-mac-desktop-automation-2026</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.smartcomputer.shop/blog.html#post=gemini-computer-use-mac-desktop-automation-2026</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://blog.smartcomputer.shop/#post=genie-4-gemini-api-foundation-world-models-2026</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.smartcomputer.shop/blog.html#post=genie-4-gemini-api-foundation-world-models-2026</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://blog.smartcomputer.shop/#post=guided-learning-google-classroom-socratic-ai-coaching-2026</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.smartcomputer.shop/blog.html#post=guided-learning-google-classroom-socratic-ai-coaching-2026</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://blog.smartcomputer.shop/#post=privacy-protections-intelligent-eyewear-ambient-sensors-2026</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.smartcomputer.shop/blog.html#post=privacy-protections-intelligent-eyewear-ambient-sensors-2026</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://blog.smartcomputer.shop/#post=granular-certificates-24-7-carbon-free-energy-computing-2026</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.smartcomputer.shop/blog.html#post=granular-certificates-24-7-carbon-free-energy-computing-2026</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://blog.smartcomputer.shop/#post=the-rise-of-digital-coworkers-multi-agent-ai-2026</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=the-rise-of-digital-coworkers-multi-agent-ai-2026</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=gemini-4-hydrogen-elite-reasoning-free-search-2026</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=gemini-4-hydrogen-elite-reasoning-free-search-2026</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=wafer-scale-inference-chips-breakthrough-2026</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=wafer-scale-inference-chips-breakthrough-2026</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=physical-world-ai-robotics-and-smart-glasses-2026</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=physical-world-ai-robotics-and-smart-glasses-2026</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=autonomous-cyber-defense-ai-vulnerability-hunters-2026</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=autonomous-cyber-defense-ai-vulnerability-hunters-2026</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=the-pragmatic-enterprise-ai-roi-and-clean-energy-2026</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=the-pragmatic-enterprise-ai-roi-and-clean-energy-2026</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=read-the-embeddinggemma-2-technical-report</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=read-the-embeddinggemma-2-technical-report</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=put-gemini-to-work-for-you</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=put-gemini-to-work-for-you</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=10-states-team-up-with-google-on-free-ai-training</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=10-states-team-up-with-google-on-free-ai-training</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=temporary-threads-are-now-available-in-ai-mode-in-search</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=temporary-threads-are-now-available-in-ai-mode-in-search</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=from-easier-entry-to-smarter-savings-heres-whats-new-in-google-home</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=from-easier-entry-to-smarter-savings-heres-whats-new-in-google-home</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=anyone-can-create-a-personal-avatar-of-themselves-in-google-vids-at-no-cost</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=anyone-can-create-a-personal-avatar-of-themselves-in-google-vids-at-no-cost</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=google-wallet-is-now-available-on-ios-in-the-us</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=google-wallet-is-now-available-on-ios-in-the-us</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=the-best-of-google-play-in-asia-pacific</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=the-best-of-google-play-in-asia-pacific</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=google-play-unveils-the-best-apps-games-and-books-of-2026</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=google-play-unveils-the-best-apps-games-and-books-of-2026</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=celebrate-100-years-of-colonial-williamsburg-online</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=celebrate-100-years-of-colonial-williamsburg-online</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=generate-longer-ai-videos-with-omni-12-flash-in-google-vids-at-no-cost</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=generate-longer-ai-videos-with-omni-12-flash-in-google-vids-at-no-cost</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=anyone-can-make-stunning-hd-videos-with-gemini-omni-in-google-vids</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=anyone-can-make-stunning-hd-videos-with-gemini-omni-in-google-vids</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=use-your-voice-to-get-more-done-in-gmail-docs-and-keep</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=use-your-voice-to-get-more-done-in-gmail-docs-and-keep</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=try-google-pics-easy-image-creation-and-editing-in-google-workspace</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=try-google-pics-easy-image-creation-and-editing-in-google-workspace</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=7-ways-to-kick-start-back-to-school-using-gemini-in-workspace</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=7-ways-to-kick-start-back-to-school-using-gemini-in-workspace</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=bring-your-spreadsheet-data-to-life-with-sheets-canvas</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=bring-your-spreadsheet-data-to-life-with-sheets-canvas</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=the-latest-ai-news-we-announced-in-july-2026</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=the-latest-ai-news-we-announced-in-july-2026</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=create-edit-and-star-in-videos-with-two-google-vids-updates</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=create-edit-and-star-in-videos-with-two-google-vids-updates</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=gemini-can-now-take-notes-in-google-meet-for-google-ai-pro-and-ultra-subscr</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=gemini-can-now-take-notes-in-google-meet-for-google-ai-pro-and-ultra-subscr</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=a-new-experiment-brings-better-group-meetings-to-google-beam</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=a-new-experiment-brings-better-group-meetings-to-google-beam</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=claim-your-google-cloud-credits-in-google-ai-studio</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=claim-your-google-cloud-credits-in-google-ai-studio</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=gemini-4-hydrogen-everyday-coding-and-agentic-workflows-for-developers</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=gemini-4-hydrogen-everyday-coding-and-agentic-workflows-for-developers</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=gemini-4-carbon-is-now-available-for-developers</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=gemini-4-carbon-is-now-available-for-developers</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=introducing-3-new-domains-eat-fly-and-here</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=introducing-3-new-domains-eat-fly-and-here</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=developers-can-now-build-with-google-maps-platform-in-ai-studio</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=developers-can-now-build-with-google-maps-platform-in-ai-studio</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=build-and-manage-connected-apps-in-one-place</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=build-and-manage-connected-apps-in-one-place</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=gemini-4-argon-is-now-available-for-developers</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=gemini-4-argon-is-now-available-for-developers</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=embeddinggemma-2-an-open-lightweight-multimodal-embedding-model</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=embeddinggemma-2-an-open-lightweight-multimodal-embedding-model</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=new-research-shows-how-guided-learning-supports-students</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=new-research-shows-how-guided-learning-supports-students</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=were-providing-funding-for-organizations-building-ai-for-teachers</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=were-providing-funding-for-organizations-building-ai-for-teachers</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=ai-in-the-learning-era</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=ai-in-the-learning-era</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=designing-responsible-ai-for-learning</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=designing-responsible-ai-for-learning</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=expanding-ai-educator-training-to-new-countries</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=expanding-ai-educator-training-to-new-countries</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=gemini-notebook-makes-hundreds-of-textbooks-available-to-help-students-lear</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=gemini-notebook-makes-hundreds-of-textbooks-available-to-help-students-lear</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=how-gemini-is-helping-students-and-teachers-in-the-classroom</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=how-gemini-is-helping-students-and-teachers-in-the-classroom</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=dive-into-new-topics-with-immersive-explorations-in-the-gemini-app</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=dive-into-new-topics-with-immersive-explorations-in-the-gemini-app</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=designing-for-privacy-on-intelligent-eyewear</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=designing-for-privacy-on-intelligent-eyewear</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=google-cloud-leaders-share-what-to-expect-in-cybersecurity-for-2027</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=google-cloud-leaders-share-what-to-expect-in-cybersecurity-for-2027</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=working-collaboratively-to-fight-scams-in-asia-pacific</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=working-collaboratively-to-fight-scams-in-asia-pacific</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=see-who-has-access-to-your-gmail-inbox-in-2-minutes</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=see-who-has-access-to-your-gmail-inbox-in-2-minutes</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=check-if-a-text-message-is-a-scam-using-circle-to-search</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=check-if-a-text-message-is-a-scam-using-circle-to-search</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=developing-gemini-4-argon-responsibly-and-safely</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=developing-gemini-4-argon-responsibly-and-safely</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=sign-in-quickly-and-securely-with-passkeys</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=sign-in-quickly-and-securely-with-passkeys</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=were-making-it-easier-to-identify-ai-generated-content-globally</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=were-making-it-easier-to-identify-ai-generated-content-globally</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=scientists-are-using-google-ai-to-help-restore-giant-kelp-forests</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=scientists-are-using-google-ai-to-help-restore-giant-kelp-forests</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=colorado-students-joined-a-google-hackathon-to-tackle-energy-grid-challenge</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=colorado-students-joined-a-google-hackathon-to-tackle-energy-grid-challenge</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=powering-sub-saharan-africa-beyond-the-grid</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=powering-sub-saharan-africa-beyond-the-grid</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=were-supporting-nature-restoration-through-sustainable-farming-in-brazil</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=were-supporting-nature-restoration-through-sustainable-farming-in-brazil</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=why-were-backing-americas-existing-nuclear-plants</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=why-were-backing-americas-existing-nuclear-plants</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=google-is-supporting-water-resilience-in-chile</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=google-is-supporting-water-resilience-in-chile</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=helping-bring-the-worlds-first-large-scale-near-zero-emissions-steel-plant-</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=helping-bring-the-worlds-first-large-scale-near-zero-emissions-steel-plant-</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://blog.smartcomputer.shop/#post=were-catalyzing-megaton-scale-climate-impact-in-brazil</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/blog.html#post=were-catalyzing-megaton-scale-climate-impact-in-brazil</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/#notice-1</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/#notice-2</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/#notice-3</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/#notice-4</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/#notice-5</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/#notice-6</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/#notice-7</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/#notice-8</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/#notice-9</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/#notice-10</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/#notice-11</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.smartcomputer.shop/#notice-12</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.80</priority>
   </url>
